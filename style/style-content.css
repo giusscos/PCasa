@@ -97,155 +97,155 @@ main .container{
 /* Prodotti Tipici */
 /* Peperoncino */
 .nduja{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-nduja.png);
+    background-image: url(/assets/prodotti-tipici/peperoncino/prodotti-tipici-nduja.png);
 }
 .crema-peperoncino{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-crema-peperoncino.png);
+    background-image: url(/assets/prodotti-tipici/peperoncino/prodotti-tipici-crema-peperoncino.png);
     background-color: #644f4f;
 }
 .bomba-cariatese{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-bomba-cariatese.png);
+    background-image: url(/assets/prodotti-tipici/peperoncino/prodotti-tipici-bomba-cariatese.png);
     background-color: #ff5100;
 }
 .peperoncino-melanzane{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-peperoncino-melanzane.png);
+    background-image: url(/assets/prodotti-tipici/peperoncino/prodotti-tipici-peperoncino-melanzane.png);
     background-color: #3d0066;
-}
-.cioccolata-peperoncino{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-barra-cioccolata-peperoncino.png);
-    background-color: #770000;
 }
 /* Fine Peperoncino */
 /* Fichi */
 .fichi-barattolo{
-    background: url(/assets/prodotti-tipici/prodotti-tipici-fichi.png)center bottom no-repeat;
+    background: url(/assets/prodotti-tipici/fichi/prodotti-tipici-fichi.png)center bottom no-repeat;
 }
 .fichi-confettura{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-fichi-confettura.png);
+    background-image: url(/assets/prodotti-tipici/fichi/prodotti-tipici-fichi-confettura.png);
 }
 .fichi-crocette{
-    background: url(/assets/prodotti-tipici/prodotti-tipici-fichi-crocette.png)center bottom no-repeat;
+    background: url(/assets/prodotti-tipici/fichi/prodotti-tipici-fichi-crocette.png)center bottom no-repeat;
     background-color: #adaa92;
 }
 .fichi-treccia{
-    background: url(/assets/prodotti-tipici/prodotti-tipici-fichi-treccia.png)center bottom no-repeat;
+    background: url(/assets/prodotti-tipici/fichi/prodotti-tipici-fichi-treccia.png)center bottom no-repeat;
     background-color: #b19191;
 }
 .fichi-mielata{
-    background: url(/assets/prodotti-tipici/prodotti-tipici-fichi-mielata.png)center bottom no-repeat;
+    background: url(/assets/prodotti-tipici/fichi/prodotti-tipici-fichi-mielata.png)center bottom no-repeat;
     background-color: #4e0000;
 }
 .fichi-baba{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-fichi-baba.png);
+    background-image: url(/assets/prodotti-tipici/fichi/prodotti-tipici-fichi-baba.png);
     background-color: #8a3200;
 }
 /* Fine Fichi */
 /* Cioccolata  */
+.cioccolata-peperoncino{
+    background-image: url(/assets/prodotti-tipici/cioccolata/prodotti-tipici-barra-cioccolata-peperoncino.png);
+    background-color: #770000;
+}
 .cioccolata-arancia{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-barra-cioccolata-arancia.png);
+    background-image: url(/assets/prodotti-tipici/cioccolata/prodotti-tipici-barra-cioccolata-arancia.png);
     background-color: #948a00;
 }
 .cioccolata-cedro{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-barra-cioccolata-cedro.png);
+    background-image: url(/assets/prodotti-tipici/cioccolata/prodotti-tipici-barra-cioccolata-cedro.png);
     background-color: #00571d;
 }
 .cioccolata-liquirizia{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-barra-cioccolata-liquirizia.png);
+    background-image: url(/assets/prodotti-tipici/cioccolata/prodotti-tipici-barra-cioccolata-liquirizia.png);
     background-color: #007694;
 }
 .cioccolata-crema-peperoncino{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-crema-cioccolato-peperoncino.png);
+    background-image: url(/assets/prodotti-tipici/cioccolata/prodotti-tipici-crema-cioccolato-peperoncino.png);
     background-color: #af3200;
 }
 .cioccolata-crema-ceraso{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-crema-ceraso.png);
+    background-image: url(/assets/prodotti-tipici/cioccolata/prodotti-tipici-crema-ceraso.png);
     background-color: #8f0000;
 }
 /* Fine Cioccolata  */
 /* Marmellata */
 .marmellata-peperoncino{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-marmellata-peperoncino.png);
+    background-image: url(/assets/prodotti-tipici/marmellata/prodotti-tipici-marmellata-peperoncino.png);
     background-color: #640000;
 }
 .marmellata-cipolla-rossa-tropea{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-marmellata-cipolla-rossa-tropea.png);
+    background-image: url(/assets/prodotti-tipici/marmellata/prodotti-tipici-marmellata-cipolla-rossa-tropea.png);
     background-color: #5e0056;
 }
 .marmellata-fragole{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-marmellata-fragole.png);
+    background-image: url(/assets/prodotti-tipici/marmellata/prodotti-tipici-marmellata-fragole.png);
     background-color: #ff2525;
 }
 .marmellata-arancia{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-marmellata-arancia.png);
+    background-image: url(/assets/prodotti-tipici/marmellata/prodotti-tipici-marmellata-arancia.png);
     background-color: #ffae00;
 }
 .marmellata-fichi{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-marmellata-fichi.png);
+    background-image: url(/assets/prodotti-tipici/marmellata/prodotti-tipici-marmellata-fichi.png);
     background-color: #396e0d;
 }
 .marmellata-liquirizia{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-marmellata-liquirizia.png);
+    background-image: url(/assets/prodotti-tipici/marmellata/prodotti-tipici-marmellata-liquirizia.png);
     background-color: #000225;
 }
 /* Fine Marmellata */
-/* Alcolici */
-.alcolici-vini{
-    background-image: url(/assets/prodotti-tipici//alcolici/alcolici-vini.png);
+/* Da bere */
+.da-bere-vini{
+    background-image: url(/assets/prodotti-tipici/da-bere/da-bere-vini.png);
     background-color: #00410b;
 }
-.liquore-melonello{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-liquore-melonello.png);
+.da-bere-liquore-melonello{
+    background-image: url(/assets/prodotti-tipici/da-bere/da-bere-liquore-melonello.png);
     background-color: #945900;
 }
-.alcolici-arancia-cedro{
-    background-image: url(/assets/prodotti-tipici//alcolici/alcolici-cioccolata-arancia-cedro.png);
+.da-bere-liquore-arancia-cedro{
+    background-image: url(/assets/prodotti-tipici/da-bere/da-bere-cioccolata-arancia-cedro.png);
     background-color: #411f00;
 }
-.grappa-fichi{
-    background-image: url(/assets/prodotti-tipici/prodotti-tipici-grappa-fichi.png);
+.da-bere-grappa-fichi{
+    background-image: url(/assets/prodotti-tipici/da-bere/da-bere-grappa-fichi.png);
     background-color: #8e9645;
 }
-/* Fine Alcolici  */
+/* Fine Da bere  */
 /* Fine Prodotti Tipici */
 /* Detersivi */
 .ammorbidente-olimpia{
-    background-image: url(/assets/detersivi/detersivi-ammorbidente-olimpia.png);
+    background-image: url(/assets/detersivi/ammorbidente/detersivi-ammorbidente-olimpia.png);
     background-color: #61605c;
 }
 .ammorbidente-muschio-bianco{
-    background-image: url(/assets/detersivi/detersivi-ammorbidente-muschio-bianco.png);
+    background-image: url(/assets/detersivi/ammorbidente/detersivi-ammorbidente-muschio-bianco.png);
     background-color: #61605c;
 }
 .ammorbidente-fior-dash{
-    background-image: url(/assets/detersivi/detersivi-ammorbidente-fiori-loto.png);
+    background-image: url(/assets/detersivi/ammorbidente/detersivi-ammorbidente-fiori-loto.png);
     background-color: #61605c;
 }
 .lavatrice-olimpia{
-    background-image: url(/assets/detersivi/detersivi-lavatrice-olimpia.png);
+    background-image: url(/assets/detersivi/lavatrice/detersivi-lavatrice-olimpia.png);
     background-color: #61605c;
 }
 .lavatrice-carboni-attivi{
-    background-image: url(/assets/detersivi/detersivi-lavatrice-carboni-attivi.png);
+    background-image: url(/assets/detersivi/lavatrice/detersivi-lavatrice-carboni-attivi.png);
     background-color: #61605c;
 }
 .lavatrice-fior-dash{
-    background-image: url(/assets/detersivi/detersivi-lavatrice-fior-dash.png);
+    background-image: url(/assets/detersivi/lavatrice/detersivi-lavatrice-fior-dash.png);
     background-color: #61605c;
 }
 .lavatrice-kikko{
-    background-image: url(/assets/detersivi/detersivi-lavatrice-kikko.png);
+    background-image: url(/assets/detersivi/lavatrice/detersivi-lavatrice-kikko.png);
     background-color: #61605c;
 }
 .lavatrice-muschio-bianco{
-    background-image: url(/assets/detersivi/detersivi-lavatrice-muschio-bianco.png);
+    background-image: url(/assets/detersivi/lavatrice/detersivi-lavatrice-muschio-bianco.png);
     background-color: #61605c;
 }
 .altri-multiuso-vetri{
-    background-image: url(/assets/detersivi/detersivi-altri-multiuso-vetri.png);
+    background-image: url(/assets/detersivi/altri/detersivi-altri-multiuso-vetri.png);
     background-color: #61605c;
 }
 .altri-sapone-dove{
-    background-image: url(/assets/detersivi/detersivi-altri-sapone-dove.png);
+    background-image: url(/assets/detersivi/altri/detersivi-altri-sapone-dove.png);
     background-color: #61605c;
 }
 /* Fine Detersivi */

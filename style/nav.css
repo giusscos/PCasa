@@ -22,6 +22,7 @@ header{
     width: 100%;
     background-color: var(--nav-bar);   
     backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
 }
 .container{
     max-width: 1600px;
