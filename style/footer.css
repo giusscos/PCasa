@@ -58,6 +58,57 @@ footer .container{
     padding: 0;
     padding-left: 5px;
 }
+#amm::before{
+    content: "Ammorbidente";
+}
+#lav::before{
+    content: "Lavatrice";
+}
+#alt::before{
+    content: "Altro";
+}
+#ter::before{
+    content: "Terracotta";
+}
+#cer::before{
+    content: "Ceramica";
+}
+#sou::before{
+    content: "Souvenir";
+}
+#pep::before{
+    content: "Peperoncino";
+}
+#fic::before{
+    content: "Fico";
+}
+#cio::before{
+    content: "Cioccolata";
+}
+#mar::before{
+    content: "Marmellata";
+}
+#dab::before{
+    content: "Da Bere";
+}
+#ema::before{
+    content: "Email";
+}
+#cel::before{
+    content: "Cellulare";
+}
+#fac::before{
+    content: "Facebook";
+}
+#map::before{
+    content: "Mappa Google";
+}
+#ideato::before{
+    content: "Ideato & Sviluppato da:";
+}
+#me::before{
+    content: "Giuseppe Pio Cosenza";
+}
 @media screen and (max-width: 600px){
     .footer-group{
         flex-basis: 50%;

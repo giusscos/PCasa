@@ -64,6 +64,21 @@ header .container{
 .nav-link-pcasa:hover{
     opacity: 1;
 }
+#det::before{
+    content: "Detersivi alla Spina";
+}
+#art::before{
+    content: "Artigianato";
+}
+#pro::before{
+    content: "Prodotti Tipici";
+}
+#dov::before{
+    content: "Dove Siamo";
+}
+#con::before{
+    content: "Contatti";
+}
 @media screen and (max-width: 730px){
     header{
         height: 30px;
