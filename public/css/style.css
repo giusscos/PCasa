@@ -90,6 +90,7 @@ nav{
     font-weight: 600;
     position: absolute;
     right: 20px;
+    z-index: 101;
 }
 .menu-button{
     color: #fff;
@@ -163,7 +164,7 @@ nav{
         display: flex;     
     }
     .active > .nav-container > .show-menu{
-        top: 20px;
+        top: 5vh;
     }
 }
 @media screen and (max-width: 375px){
@@ -172,7 +173,7 @@ nav{
         margin: 0 10px;
     }
     .active > .nav-container > .show-menu{
-        top: 15vh;
+        top: 12vh;
     }
 }
 main{
