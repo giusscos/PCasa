@@ -364,7 +364,7 @@ footer {
     color: rgba(15, 50, 73, 1);
 }
 .map{
-    height: 90vh;
+    height: 80vh;
 }
 @media screen and (max-width: 330px){
     .contact-top{
