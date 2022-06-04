@@ -16,7 +16,7 @@ const createNav = () => {
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a class="menu-link capitalize" href="./store.html" title="Negozio Online">
+                    <a class="menu-link capitalize" href="https://pcasa.sumupstore.com/" title="Negozio Online">
                         store
                     </a>
                 </li>
@@ -49,25 +49,25 @@ const createFooter = () => {
         <div class="info-container">
             <div class="location-container capitalize">
                 <strong>pcasa</strong>
-                via trinita', 9, cariati (CS), italia
+                via trinita' n. 9, cariati (CS), italia
             </div>
-            P.IVA: XX00000000 <br>
-            Email: esempio@esempio.ese   
+            <!-- P.IVA: XX00000000 <br> -->
+            Email: rosamprimocerio@gmail.com   
         </div>
         <div class="info-container">
             <ul class="info-list">
                 <li>
-                    <a href="#" class="info-link">
+                    <a href="https://pcasa.sumupstore.com/pagina/termini-e-condizioni" class="info-link">
                         Terms & Conditions
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="info-link">
+                    <a href="https://pcasa.sumupstore.com/pagina/informativa-sulla-privacy" class="info-link">
                         Privacy Policy
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="info-link">
+                    <a href="https://pcasa.sumupstore.com/politica-sui-cookie" class="info-link">
                         Cookie
                     </a>
                 </li>
