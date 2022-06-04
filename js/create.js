@@ -4,20 +4,20 @@ const createNav = () => {
     nav.innerHTML = `
     <div class="nav-container">
         <div class="logo-container">
-            <a href="./index.html">
+            <a href="https://pcasa.it">
                 <img src="./assets/logo_pcasa.png" alt="logo pcasa" title="Pcasa">
             </a>
         </div>
         <div class="menu-container">
             <ul class="menu-nav">
                 <li class="menu-item">
-                    <a class="menu-link capitalize" href="./index.html" title="Home">
+                    <a class="menu-link capitalize" href="https://pcasa.it" title="Home">
                         home
                     </a>
                 </li>
                 <li class="menu-item">
                     <a class="menu-link capitalize" href="https://pcasa.sumupstore.com/" title="Negozio Online">
-                        store
+                        negozio
                     </a>
                 </li>
                 <li class="menu-item">
@@ -84,7 +84,7 @@ const createFooter = () => {
 }
 
 const createComingSoon = () => {
-    let main = document.querySelector(".main");
+    let main = document.querySelector(".main-soon");
 
     main.innerHTML = `
     <a class="link-product" href="./index.html">

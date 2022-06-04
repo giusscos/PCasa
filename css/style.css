@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -6,21 +6,26 @@
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
-:root{
-    --first-opac: rgba(15, 73, 18, 0.7);
+
+:root {
+    --first-opac: rgba(15, 50, 73, 0.7);
 }
-.uppercase{
+
+.uppercase {
     text-transform: uppercase;
 }
-.capitalize{
+
+.capitalize {
     text-transform: capitalize;
 }
-.root-container{
+
+.root-container {
     width: 80%;
     margin: auto;
     transition: 0.3s ease-in-out;
 }
-nav{
+
+nav {
     width: 80%;
     height: 8vh;
     z-index: 100;
@@ -31,8 +36,10 @@ nav{
     backdrop-filter: blur(35px);
     -webkit-backdrop-filter: blur(35px);
     transition: 0.3s ease-in-out;
+    border-radius: 0px 0px 20px 20px;
 }
-.nav-container{
+
+.nav-container {
     padding: 0px 20px;
     margin: auto;
     height: 100%;
@@ -43,12 +50,14 @@ nav{
     align-items: center;
     position: relative;
 }
-.logo-container{
+
+.logo-container {
     width: 160px;
     height: 100%;
     position: relative;
 }
-.logo-container img{
+
+.logo-container img {
     width: 100%;
     position: absolute;
     top: 50%;
@@ -56,14 +65,17 @@ nav{
     transform: translate(-50%, -50%);
     transition: 0.3s ease-in-out;
 }
-.logo-container img:hover{
+
+.logo-container img:hover {
     width: 90%;
 }
-.menu-container{
+
+.menu-container {
     width: 100%;
     height: 100%;
 }
-.menu-nav{
+
+.menu-nav {
     width: 100%;
     height: 100%;
     display: flex;
@@ -72,7 +84,8 @@ nav{
     align-items: center;
     margin-left: 30px;
 }
-.menu-link{
+
+.menu-link {
     color: #fff;
     font-size: 25px;
     font-weight: 600;
@@ -80,11 +93,13 @@ nav{
     text-decoration: none;
     transition: 0.3s ease-in-out;
 }
-.menu-link:hover{
+
+.menu-link:hover {
     opacity: 1;
     text-decoration: 3px underline;
 }
-.show-menu{
+
+.show-menu {
     display: none;
     font-size: 20px;
     font-weight: 600;
@@ -92,59 +107,73 @@ nav{
     right: 20px;
     z-index: 101;
 }
-.menu-button{
+
+.menu-button {
     color: #fff;
     cursor: pointer;
 }
-@media screen and (max-width: 1000px){
-    .root-container{
+
+@media screen and (max-width: 1000px) {
+    .root-container {
         width: 100%;
         margin: 0;
     }
-    nav{
+
+    nav {
         width: 100%;
         left: 0;
     }
-    .nav-container{
+
+    .nav-container {
         width: 100%;
         margin: 0;
     }
-    .menu-nav{
+
+    .menu-nav {
         margin: 0;
         justify-content: space-evenly;
     }
 }
-@media screen and (max-width: 600px){
-    nav{
+
+@media screen and (max-width: 600px) {
+    nav {
         height: 10vh;
     }
-    nav.active{
+
+    nav.active {
         height: 100vh;
     }
-    .nav-container{
+
+    .nav-container {
         justify-content: center;
         padding: 0;
     }
-    .nav-container > .menu-container{
+
+    .nav-container>.menu-container {
         display: none;
     }
-    .active > .nav-container{
+
+    .active>.nav-container {
         display: flex;
         flex-direction: column;
         justify-content: start;
     }
-    .active > .nav-container > .menu-container{
+
+    .active>.nav-container>.menu-container {
         display: flex;
     }
-    .active .logo-container{
+
+    .active .logo-container {
         height: 10vh;
         margin: 10px 0;
     }
-    .menu-container{
+
+    .menu-container {
         position: relative;
         width: 0%;
     }
-    .menu-nav{
+
+    .menu-nav {
         z-index: 100;
         padding-bottom: 100px;
         position: absolute;
@@ -154,34 +183,39 @@ nav{
         justify-content: space-around;
         transition: 0.3s ease-in-out;
     }
-    .menu-nav.active{
+
+    .menu-nav.active {
         top: 0;
         left: 0;
         height: 90vh;
         width: 100vh;
     }
-    .show-menu{
-        display: flex;     
+
+    .show-menu {
+        display: flex;
     }
-    .active > .nav-container > .show-menu{
+
+    .active>.nav-container>.show-menu {
         top: 5vh;
     }
 }
-@media screen and (max-width: 375px){
-    .nav-container{
+
+@media screen and (max-width: 375px) {
+    .nav-container {
         justify-content: start;
         margin: 0 10px;
     }
-    .active > .nav-container > .show-menu{
+
+    .active>.nav-container>.show-menu {
         top: 12vh;
     }
 }
-main{
+main {
     margin-top: 8vh;
     width: 100%;
     height: 100%;
 }
-.product-container{
+.product-container {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -190,16 +224,20 @@ main{
     position: relative;
     border-bottom: 10px solid #fff;
 }
-#soap{
+
+#soap {
     background-image: url(/assets/home/detersivi-alla-spina.jpg);
 }
-#local-food{
+
+#local-food {
     background-image: url(https://media-assets.lacucinaitaliana.it/photos/61fb0b811416da9622104adc/16:9/w_2560%2Cc_limit/nduja.jpg);
 }
-#art{
+
+#art {
     background-image: url(/assets/home/artigianato-pignata-tarzaruli.jpg);
 }
-.name-product{
+
+.name-product {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -215,29 +253,33 @@ main{
     -webkit-backdrop-filter: blur(35px);
     transition: 0.3s ease-in-out;
 }
-.title{
+
+.title {
     font-size: 70px;
 }
-@media screen and (max-width: 600px){
-    .name-product{
+
+@media screen and (max-width: 600px) {
+    main {
+        margin-top: 10vh;
+    }
+    .name-product {
         font-size: 18px;
     }
-    .title{
+    .title {
         font-size: 30px;
     }
 }
-@media screen and (max-width: 375px){
-    .name-product{
+@media screen and (max-width: 375px) {
+    .name-product {
         width: 100%;
         padding: 0px 15px;
         font-size: 16px;
     }
-    .title{
+    .title {
         font-size: 25px;
     }
 }
-
-footer{
+footer {
     background-color: #161616;
     color: #fff;
     width: 100%;
@@ -246,7 +288,8 @@ footer{
     display: flex;
     flex-direction: column;
 }
-.footer-container{
+
+.footer-container {
     width: 100%;
     height: 100%;
     text-align: left;
@@ -256,42 +299,75 @@ footer{
     align-items: flex-end;
     flex-wrap: wrap;
 }
-.info-container{
+
+.info-container {
     margin: 30px 0px;
 }
-.location-container{
+
+.location-container {
     display: flex;
     flex-direction: column;
 }
-.location-container strong{
+
+.location-container strong {
     font-size: 40px;
 }
-.info-link{
+.info-link {
     color: #fff;
     font-size: 20px;
     text-decoration: none;
     opacity: 0.8;
     transition: 0.3s ease-in-out;
 }
-.info-link:hover{
+.info-link:hover {
     opacity: 1;
     text-decoration: 2px underline;
 }
-.copy-container{
+.copy-container {
     text-align: center;
     opacity: 0.8;
     padding-top: 20px;
 }
-@media screen and (max-width: 505px){
-    .info-container{
+@media screen and (max-width: 505px) {
+    .info-container {
         text-align: center;
     }
 }
-@media screen and (max-width: 330px){
-    .location-container strong{
+@media screen and (max-width: 330px) {
+    .location-container strong {
         font-size: 30px;
     }
-    .info-link{
+    .info-link {
         font-size: 18px;
+    }
+}
+/* Contact */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: rgba(15, 50, 73, 1);
+}
+.contact-top{
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contact-top h3,
+.contact-top .menu-link{
+    margin: 0 10px;
+    color: rgba(15, 50, 73, 1);
+}
+.map{
+    height: 70vh;
+}
+@media screen and (max-width: 330px){
+    .contact-top{
+        font-size: 17px;
     }
 }
