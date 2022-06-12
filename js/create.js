@@ -5,7 +5,7 @@ const createNav = () => {
     <div class="nav-container">
         <div class="logo-container">
             <a href="https://pcasa.it">
-                <img src="./assets/logo_pcasa.png" alt="logo pcasa" title="Pcasa">
+                <img src="./assets/logo_pcasa.webp" alt="logo pcasa" title="Pcasa">
             </a>
         </div>
         <div class="menu-container">
