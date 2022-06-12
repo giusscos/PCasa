@@ -1,5 +1,5 @@
 const createNav = () => {
-    let nav = document.querySelector(".navigation");
+    let nav = document.getElementById("nav");
 
     nav.innerHTML = `
     <div class="nav-container">
@@ -34,7 +34,7 @@ const createNav = () => {
         </div>
         <div class="show-menu">
             <span class="menu-button capitalize" onclick="activeMenu()">
-                &#9776; menu
+                &#9776; men&ugrave;
             </span>
         </div>
     </div>
@@ -78,6 +78,9 @@ const createFooter = () => {
         copyright &copy; tutti i diritti riservati
         <div class="author">
             Designed and Coded by <a href="https://giusscos.netlify.app" class="info-link" target="_blank">Giusscos</a>
+        </div>   
+        <div class="author" style="color: lightblue">
+            Sito in aggiornamento - Prossimamente Versione Definitiva 
         </div>   
     </div>
     `;

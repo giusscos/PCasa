@@ -1,19 +1,16 @@
-let clicked = true;
+let clicked = false;
 
 function activeMenu() {
     let nav = document.getElementById("nav");
-    let link = document.querySelector(".menu-nav");
+    let button = document.querySelector(".menu-button");
 
-    if(clicked){
+    if(!clicked){
         nav.classList.add("active");
-        setTimeout(() => {link.classList.add("active");}, 200);
-        clicked = false;
-    } else if(!clicked) {
-        link.classList.remove("active");
-        setTimeout(() => {nav.classList.remove("active");}, 200);
+        button.classList.add("clicked");
         clicked = true;
-    }
-    else {
-        console.log("Error XXX The Menu Is Not Working!");
+    } else {
+        nav.classList.remove("active");
+        button.classList.remove("clicked");
+        clicked = false;
     }
 }
