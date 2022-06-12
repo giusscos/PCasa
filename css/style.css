@@ -374,3 +374,14 @@ footer {
         font-size: 17px;
     }
 }
+.container-faq{
+    margin: 40px 30px;
+}
+.container-faq > .question,
+.container-faq .answer > .menu-link{
+    color: rgba(15, 50, 73, 1);
+}
+.container-faq > .answer,
+.container-faq > .answer > .menu-link{
+    font-size: 20px;
+}

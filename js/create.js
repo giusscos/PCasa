@@ -51,8 +51,8 @@ const createFooter = () => {
                 <strong>pcasa</strong>
                 via trinita' n. 9, cariati (CS), italia
             </div>
-            <!-- P.IVA: XX00000000 <br> -->
-            Email: rosamprimocerio@gmail.com   
+            P.IVA: IT03401820786 <br> 
+            Email: <a href="mailto:rosamprimocerio@gmail.com" class="info-link" target="_blank">rosamprimocerio@gmail.com</a>   
         </div>
         <div class="info-container">
             <ul class="info-list">
@@ -77,7 +77,7 @@ const createFooter = () => {
     <div class="copy-container capitalize">
         copyright &copy; tutti i diritti riservati
         <div class="author">
-            Designed and Coded by <a class="info-link" href="https://giusscos.netlify.app" target="_blank">Giusscos</a>
+            Designed and Coded by <a href="https://giusscos.netlify.app" class="info-link" target="_blank">Giusscos</a>
         </div>   
     </div>
     `;
