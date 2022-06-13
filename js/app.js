@@ -1,5 +1,7 @@
 let clicked = false;
 
+console.log(clicked);
+
 function activeMenu() {
     let nav = document.getElementById("nav");
     let button = document.querySelector(".menu-button");
