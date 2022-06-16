@@ -17,7 +17,7 @@ const createNav = () => {
                 </li>
                 <li class="menu-item">
                     <a class="menu-link capitalize" href="https://pcasa.sumupstore.com/" title="Negozio Online">
-                        negozio
+                        negozio online
                     </a>
                 </li>
                 <li class="menu-item">
@@ -45,7 +45,7 @@ const createFooter = () => {
     let footer = document.querySelector(".footer");
 
     footer.innerHTML = `
-    <div class="footer-container">
+    <div class="root-container footer-container">
         <div class="info-container">
             <div class="location-container capitalize">
                 <strong>pcasa</strong>
@@ -74,7 +74,7 @@ const createFooter = () => {
             </ul>
         </div> 
     </div>
-    <div class="copy-container capitalize">
+    <div class="root-container copy-container capitalize">
         copyright &copy; tutti i diritti riservati
         <div class="author">
             Designed and Coded by <a href="https://giusscos.netlify.app" class="info-link" target="_blank">Giusscos</a>
