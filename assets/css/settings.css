@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --first-opac: rgba(15, 50, 73, 0.7);
+    --first: rgba(15, 50, 73);
+}
+ul,
+li,
+menu{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.root-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    transition: 0.3s ease-in-out;
+}
