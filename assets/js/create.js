@@ -42,7 +42,7 @@ const createNav = () => {
 }
 
 const createFooter = () => {
-    let footer = document.querySelector(".footer");
+    let footer = document.getElementById("footer");
 
     footer.innerHTML = `
     <div class="root-container footer-container">
@@ -75,7 +75,7 @@ const createFooter = () => {
         </div> 
     </div>
     <div class="root-container copy-container capitalize">
-        copyright &copy; tutti i diritti riservati
+        &copy; copyright 2022 tutti i diritti riservati
         <div class="author">
             Designed and Coded by <a href="https://giusscos.netlify.app" class="info-link" target="_blank">Giusscos</a>
         </div>   

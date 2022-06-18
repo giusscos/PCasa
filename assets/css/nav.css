@@ -79,6 +79,7 @@ nav {
 @media screen and (max-width: 700px) {
     .active{
         height: 100vh;
+        background-color: var(--first-opac-darker);
     }
     .logo-container{
         position: absolute;
@@ -104,12 +105,8 @@ nav {
     .show-menu{
         display: flex;
     }
-    .show-menu:hover > .menu-button{
-        background-color: #fff;
-        color: var(--first-opac);
-    }
     .clicked{
         background-color: #fff;
-        color: var(--first-opac);
+        color: var(--first-opac-darker);
     }
 }
