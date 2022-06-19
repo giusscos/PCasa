@@ -125,8 +125,12 @@ section > h1{
     align-items: center;
     border-radius: 5px;
     justify-content: center;
-    background-color: #fbfbfb;
+    background-color: #eee;
     flex-direction: row-reverse;
+}
+.item-grid__argo > .info__argo > .img__argo{
+    height: 500px;
+    width: 500px;
 }
 @media screen and (max-width: 1000px){
     .container-grid__argo{
