@@ -128,8 +128,11 @@ section > h1{
     background-color: #eee;
     flex-direction: row-reverse;
 }
+.item-grid__argo > .info__argo{
+    justify-content: center;
+}
 .item-grid__argo > .info__argo > .img__argo{
-    height: 500px;
+    padding: 0px;
     width: 500px;
 }
 @media screen and (max-width: 1000px){
@@ -152,7 +155,6 @@ section > h1{
         padding-top: 300px;
     }
     .item-grid__argo > .info__argo > .img__argo{
-        padding: 20px;
     }
 }
 @media screen and (max-width: 500px){
