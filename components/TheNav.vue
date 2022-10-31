@@ -43,25 +43,39 @@ export default {
 };
 </script>
 <stytle lang="scss" scoped>
+@import "~/assets/css/main.scss";
+
 .navigation {
   &.open {
-    .nav {
-      z-index: 100;
-
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      pointer-events: auto;
+    &::after,
+    &::before {
+      display: block;
+      content: "";
 
       position: fixed;
       top: 0;
-      left: 0;
       right: 0;
       bottom: 0;
+
+      width: 100%;
+      height: 100%;
+
+      border-bottom-left-radius: 0;
+    }
+
+    &::after {
+      transition: $fast-transition 400ms;
+    }
+    &::before {
+      transition: $fast-transition 200ms;
+    }
+
+    .nav {
+      overflow: auto;
+      pointer-events: auto;
     }
 
     .lines {
-      z-index: 100;
       .line {
         &.top {
           top: 50%;
@@ -75,13 +89,46 @@ export default {
     }
   }
 
-  .nav {
+  &::after,
+  &::before {
+    z-index: 10;
+    display: block;
+    content: "";
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
     width: 0;
     height: 0;
+  }
+  &::after {
+    border-bottom-left-radius: 300%;
+    background-color: $color-seco;
+    transition: $fast-transition 300ms;
+  }
+  &::before {
+    border-bottom-left-radius: 75%;
+    background-color: $color-prim-blur;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transition: $fast-transition 600ms;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
     overflow: hidden;
     pointer-events: none;
   }
+
   .lines {
+    z-index: 100;
     cursor: pointer;
 
     position: relative;
@@ -103,8 +150,8 @@ export default {
       width: 40px;
       border-radius: 3px;
 
-      background-color: #000;
-      transition: 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      background-color: $color-prim;
+      transition: $fast-transition;
     }
   }
 }

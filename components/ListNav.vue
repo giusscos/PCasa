@@ -14,18 +14,39 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import '~/assets/css/main.scss';
 .list_wrapper{
+  z-index: 100;
   display: flex;
   flex-direction: column;
   
-  gap: 2.5rem;
+  gap: $big-size;
   align-items: center;
   justify-content: center;
 
   .list-item{
+    overflow: hidden;
     .item-link{
-      font-size: 2.75rem;
-      padding: 2rem 0;
+      display: block;
+      text-align: center;
+
+      font-size: $ultra-size;
+      color: $color-prim;
+
+      padding: $bigger-size 0;
+      transform: translateY(100%);
+      transition: $custom-fast-transition 0ms;
+    }
+  }
+}
+
+.open{
+  .list_wrapper{
+    .list-item{
+      .item-link{
+        transform: translateY(0%);
+        transition-delay: 700ms;
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
     <header class="main_header">
         <TheLogo class="the-logo" />
-        <TheNav />
+        <TheNav class="the-nav" />
     </header>
 </template>
 <script>
@@ -16,7 +16,11 @@ export default {
     
     padding: 1.5rem 1rem;
     .the-logo{
+        z-index: 100;
         margin-right: auto;
+    }
+    .the-nav{
+        z-index: 100;
     }
 }
 </style>
