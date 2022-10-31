@@ -1,13 +1,14 @@
 <template>
   <div>
+    <TheHeader />
     <h1>
-      Ciao Nuxt
+      Home
     </h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
 }
 </script>
