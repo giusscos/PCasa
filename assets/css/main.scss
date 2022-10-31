@@ -1,2 +1,8 @@
 @import './vars.scss';
 @import './reset.scss';
+
+.container{
+    margin: 0 auto;
+    padding: 0 $small-size;
+    max-width: $xl;
+}

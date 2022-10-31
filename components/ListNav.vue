@@ -14,19 +14,19 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '~/assets/css/main.scss';
-.list_wrapper{
+@import "~/assets/css/main.scss";
+.list_wrapper {
   z-index: 100;
   display: flex;
   flex-direction: column;
-  
+
   gap: $big-size;
   align-items: center;
   justify-content: center;
 
-  .list-item{
+  .list-item {
     overflow: hidden;
-    .item-link{
+    .item-link {
       display: block;
       text-align: center;
 
@@ -40,12 +40,25 @@ export default {
   }
 }
 
-.open{
-  .list_wrapper{
-    .list-item{
-      .item-link{
+.open {
+  .list_wrapper {
+    .list-item {
+      .item-link {
         transform: translateY(0%);
         transition-delay: 700ms;
+      }
+    }
+  }
+}
+
+@media (min-width: $md) {
+  .list_wrapper {
+    flex-direction: row;
+    .list-item {
+      .item-link {
+        padding: $small-size 0;
+        font-size: $small-size;
+        transform: translateY(0%);
       }
     }
   }

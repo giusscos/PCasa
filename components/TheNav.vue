@@ -40,6 +40,13 @@ export default {
       this.isOpen = !this.isOpen;
     },
   },
+  mounted() {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 641) {
+        this.isOpen = false;
+      }
+    });
+  },
 };
 </script>
 <stytle lang="scss" scoped>
@@ -131,9 +138,12 @@ export default {
     z-index: 100;
     cursor: pointer;
 
-    position: relative;
+    position: fixed;
+    top: 0;
+    right: $smaller-size;
     height: 50px;
     width: 50px;
+    transition: $fast-transition 100ms;
 
     .line {
       position: absolute;
@@ -151,7 +161,22 @@ export default {
       border-radius: 3px;
 
       background-color: $color-prim;
-      transition: $fast-transition;
+      transition: $fast-transition 100ms;
+    }
+  }
+}
+
+@media (min-width: $md) {
+  .navigation {
+    .lines {
+      right: -100px;
+    }
+
+    .nav {
+      position: relative;
+
+      overflow: auto;
+      pointer-events: auto;
     }
   }
 }

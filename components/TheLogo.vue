@@ -10,6 +10,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import '~/assets/css/main.scss';
 .logo_wrapper {
   position: relative;
   .logo-link {
@@ -21,6 +22,7 @@ export default {
   }
   .logo {
     font-size: 3rem;
+    color: $color-prim;
   }
 }
 </style>
