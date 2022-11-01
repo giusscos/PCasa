@@ -1,5 +1,5 @@
 <template>
-  <nav class="navigation" :class="isOpen ? 'open' : ''">
+  <nav class="navigation">
     <ListNav class="nav" :routes="routes" />
     <div class="lines" @click="setOpen">
       <span class="line top"></span>
@@ -37,6 +37,14 @@ export default {
   },
   methods: {
     setOpen() {
+      const bodyEl = document.querySelector("body");
+
+      if (!this.isOpen) {
+        bodyEl.classList.add("open");
+      } else {
+        bodyEl.classList.remove("open");
+      }
+
       this.isOpen = !this.isOpen;
     },
   },
@@ -52,20 +60,14 @@ export default {
 <stytle lang="scss" scoped>
 @import "~/assets/css/main.scss";
 
-.navigation {
-  &.open {
+.open {
+  .navigation {
     &::after,
     &::before {
-      display: block;
-      content: "";
-
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
+      z-index: 0;
 
       width: 100%;
-      height: 100%;
+      height: 100vh;
 
       border-bottom-left-radius: 0;
     }
@@ -96,10 +98,10 @@ export default {
       }
     }
   }
-
+}
+.navigation {
   &::after,
   &::before {
-    z-index: 10;
     display: block;
     content: "";
 
@@ -125,6 +127,7 @@ export default {
   }
 
   .nav {
+    z-index: 100;
     position: fixed;
     top: 0;
     right: 0;

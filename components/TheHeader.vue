@@ -20,19 +20,17 @@ export default {
     top: 0;
     left: 0;
     right: 0;
-    
+
     padding: 0 $small-size 0;
-    background-color: $color-seco-darker;
+    background-color: $color-seco-darker-blur;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     .container{
         display: flex;
         align-items: center;
     }
     .the-logo{
-        z-index: 100;
         margin-right: auto;
-    }
-    .the-nav{
-        z-index: 100;
     }
 }
 </style>

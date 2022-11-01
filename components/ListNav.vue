@@ -1,6 +1,6 @@
 <template>
   <ul class="list_wrapper">
-    <li class="list-item" v-for="(item, i) in routes" :key="`${i}route`">
+    <li class="list-item" v-for="(item, i) in routes" :key="`${i}route`" @click="setClose">
       <NuxtLink class="item-link" :to="item.route">{{ item.name }}</NuxtLink>
     </li>
   </ul>
@@ -11,12 +11,18 @@ export default {
   props: {
     routes: Array,
   },
+  methods: {
+    setClose() {
+      const openedEl = document.querySelector(".open");
+      
+      openedEl.classList.remove("open");
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
 @import "~/assets/css/main.scss";
 .list_wrapper {
-  z-index: 100;
   display: flex;
   flex-direction: column;
 
@@ -52,6 +58,7 @@ export default {
 
 .open {
   .list_wrapper {
+    height: 100vh;
     .list-item {
       .item-link {
         transform: translateY(0%);

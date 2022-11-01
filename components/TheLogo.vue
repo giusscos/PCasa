@@ -12,6 +12,7 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/css/main.scss';
 .logo_wrapper {
+  // z-index: 100;
   position: relative;
   .logo-link {
     position: absolute;
