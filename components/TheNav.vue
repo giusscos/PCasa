@@ -30,19 +30,19 @@ const routes = [
 export default {
   name: "TheNav",
   data() {
-    return {
+    return {  
       routes,
       isOpen: false,
+      bodyEl: document.querySelector("body"),
     };
   },
   methods: {
     setOpen() {
-      const bodyEl = document.querySelector("body");
 
       if (!this.isOpen) {
-        bodyEl.classList.add("open");
+        this.bodyEl.classList.add("open");
       } else {
-        bodyEl.classList.remove("open");
+        this.bodyEl.classList.remove("open");
       }
 
       this.isOpen = !this.isOpen;
@@ -52,6 +52,7 @@ export default {
     window.addEventListener("resize", () => {
       if (window.innerWidth >= 641) {
         this.isOpen = false;
+        this.bodyEl.classList.remove('open')
       }
     });
   },

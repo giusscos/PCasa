@@ -1,6 +1,11 @@
 <template>
   <ul class="list_wrapper">
-    <li class="list-item" v-for="(item, i) in routes" :key="`${i}route`" @click="setClose">
+    <li
+      class="list-item"
+      v-for="(item, i) in routes"
+      :key="`${i}route`"
+      @click="setClose"
+    >
       <NuxtLink class="item-link" :to="item.route">{{ item.name }}</NuxtLink>
     </li>
   </ul>
@@ -14,7 +19,7 @@ export default {
   methods: {
     setClose() {
       const openedEl = document.querySelector(".open");
-      
+
       openedEl.classList.remove("open");
     },
   },
@@ -43,13 +48,13 @@ export default {
       transform: translateY(100%);
       transition: $custom-fast-transition 0ms;
 
-      &:hover{
+      &:hover {
         color: $color-link;
         filter: brightness(1.2);
         -webkit-filter: brightness(1.2);
       }
 
-      &.nuxt-link-exact-active{
+      &.nuxt-link-exact-active {
         color: $color-link;
       }
     }

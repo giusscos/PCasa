@@ -18,6 +18,9 @@ html {
 
 body{
     min-width: 300px;
+    &.open{
+        overflow-y: hidden;
+    }
 }
 
 a {

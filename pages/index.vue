@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <section class="hero">
+    <section class="hero plastic">
       <div class="container">
         <div class="hero-content">
           <h1 class="hero-title">
@@ -8,6 +8,17 @@
             in modo intelligente
           </h1>
           <NuxtLink to="/" class="hero-link"> Scopri come </NuxtLink>
+        </div>
+      </div>
+    </section>
+    <section class="hero ceramic">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Ceramica di stile<br />
+            da mastri artigiani locali
+          </h1>
+          <NuxtLink to="/" class="hero-link"> Scopri chi </NuxtLink>
         </div>
       </div>
     </section>
@@ -23,12 +34,17 @@ export default {
 @import "~/assets/css/main.scss";
 .hero {
   height: 90vh;
-  background-image: url("~assets/images/plastic-bottles-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   background-position: bottom center;
-
+  &.plastic{
+    background-image: url("~assets/images/plastic-bottles-hero.jpg");
+  }
+  &.ceramic{
+    background-image: url("~assets/images/ceramics-hero.jpg");
+  }
+  
   .container {
     height: 100%;
     display: flex;
