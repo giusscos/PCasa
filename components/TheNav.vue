@@ -71,6 +71,7 @@ export default {
     }
 
     &::after {
+      background-color: $color-seco-darker;
       transition: $fast-transition 400ms;
     }
     &::before {

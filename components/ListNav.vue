@@ -36,6 +36,16 @@ export default {
       padding: $bigger-size 0;
       transform: translateY(100%);
       transition: $custom-fast-transition 0ms;
+
+      &:hover{
+        color: $color-link;
+        filter: brightness(1.2);
+        -webkit-filter: brightness(1.2);
+      }
+
+      &.nuxt-link-exact-active{
+        color: $color-link;
+      }
     }
   }
 }

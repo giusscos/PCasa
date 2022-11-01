@@ -22,7 +22,7 @@ export default {
     right: 0;
     
     padding: 0 $small-size 0;
-    background-color: $color-seco;
+    background-color: $color-seco-darker;
     .container{
         display: flex;
         align-items: center;

@@ -1,6 +1,5 @@
 <template>
     <div>
-        <TheHeader />
         <h1>
             La Storia
         </h1>

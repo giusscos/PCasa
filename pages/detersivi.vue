@@ -1,6 +1,5 @@
 <template>
     <div>
-        <TheHeader />
         <h1>
             Detersivi
         </h1>
