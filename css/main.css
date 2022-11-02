@@ -1,0 +1,83 @@
+@import './vars.css';
+@import './reset.css';
+
+.main_header {
+    padding: 0 var(--standard-size);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    color: var(--color-prim);
+    background-color: var(--color-seco-darker-blur);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.main_header>.container {
+    display: flex;
+    align-items: center;
+}
+
+.logo_wrapper {
+    margin-right: auto;
+}
+
+.logo {
+    font-weight: var(--big-size);
+    font-weight: 300;
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation>.list {
+    display: flex;
+    gap: var(--standard-size);
+
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.lines {
+    cursor: pointer;
+    position: relative;
+    height: 50px;
+    width: 50px;
+
+    aspect-ratio: 1/1;
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    transform: translateY(-50%);
+
+    width: 40px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--color-prim);
+    transition: 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.line.top {
+    top: 40%;
+}
+
+.line.bot {
+    top: 60%;
+}
+
+.open .line {
+    top: 50%;
+}
+
+.open .line.top {
+    transform: rotate(135deg);
+}
+
+.open .line.bot {
+    transform: rotate(45deg);
+}
