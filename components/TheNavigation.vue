@@ -71,12 +71,12 @@ export default {
     }
 }
 
-@media (min-width: $md){
-    .navigation{
-        top: $smaller-size;
-        right: $small-size;
-        left: unset;
-        bottom: unset;
+@media (min-width: $md) {
+    .navigation {
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding-top: $small-size;
+        padding-right: $smaller-size;
     }
 }
 </style>
