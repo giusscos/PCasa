@@ -1,13 +1,13 @@
 <template>
     <div class="container">
       <h1>
-        Home
+        Detersivi
       </h1>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'DetersiviPage'
 }
 </script>
