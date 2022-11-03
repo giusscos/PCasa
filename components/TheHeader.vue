@@ -13,6 +13,7 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/css/main.scss';
 .main_header{
+    pointer-events: none;
     position: fixed;
     top: 0;
     left: 0;

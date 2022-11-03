@@ -23,7 +23,7 @@ export default{
         window.addEventListener('resize', (el) => {
             // console.log(el.target.innerWidth)
             const currentWidth = el.target.innerWidth
-            if(currentWidth > 640 && bodyEl.classList.value === 'open'){
+            if(currentWidth > 750 && bodyEl.classList.value === 'open'){
                 bodyEl.classList.remove('open')    
             }
         })

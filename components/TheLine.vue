@@ -23,13 +23,15 @@ export default {
 @import '~/assets/css/main.scss';
 .lines{
     z-index: 100;
-
     cursor: pointer;
+    pointer-events: auto;
+
     position: fixed;
     top: $smaller-size;
     right: $small-size;
     height: 50px;
     aspect-ratio: 1/1;
+    transition: $standard-transition;
 
     .line{
         position: absolute;
@@ -65,6 +67,12 @@ export default {
                 transform: rotate(45deg);
             }
         }
+    }
+}
+
+@media (min-width: $md){
+    .lines{
+        right: -100px;
     }
 }
 </style>

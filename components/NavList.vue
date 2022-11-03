@@ -28,6 +28,7 @@ export default {
 @import '~/assets/css/main.scss';
 
 .list {
+    pointer-events: none;
     z-index: 99;
     display: flex;
     gap: $bigger-size;
@@ -66,6 +67,24 @@ export default {
                 pointer-events: auto;
                 transform: translateY(0);
                 transition-delay: 400ms;
+            }
+        }
+    }
+}
+
+@media (min-width: $md){
+    .list {
+        flex-direction: row;
+        .list-item {
+            text-align: right;
+            .item-link {
+                padding: $smaller-size 0;
+                color: $color-prim-darker;
+                font-weight: 300;
+                font-size: $standard-size;
+
+                pointer-events: auto;
+                transform: translateY(0);
             }
         }
     }

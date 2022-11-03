@@ -30,6 +30,7 @@ export default {
 @import '~/assets/css/main.scss';
 
 .navigation {
+    pointer-events: none;
     z-index: 99;
     position: absolute;
     top: 0;
@@ -67,6 +68,15 @@ export default {
             border-radius: 0;
             background-color: $color-prim-darker-blur;
         }
+    }
+}
+
+@media (min-width: $md){
+    .navigation{
+        top: $smaller-size;
+        right: $small-size;
+        left: unset;
+        bottom: unset;
     }
 }
 </style>
