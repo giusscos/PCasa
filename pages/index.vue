@@ -73,6 +73,11 @@ export default {
 }
 
 @media (min-width: $md) {
+  .text-hero{
+    left: 100px;
+    max-width: 600px;
+    transform: translate(0%, -50%);
+  }
   .title-hero {
     line-height: 1.1;
     font-size: $max-size;
