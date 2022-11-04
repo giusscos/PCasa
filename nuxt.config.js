@@ -1,14 +1,14 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'pcasa',
+    title: 'Pcasa',
     htmlAttrs: {
       lang: 'it'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Una pagina Pcasa' },
+      { hid: 'description', name: 'description', content: 'Detersivi alla spina Ecologici per una migliore gestione della plastica; Artigianato e Prodotti Tipici Calabresi per farti vivere un esperienza unica.' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
