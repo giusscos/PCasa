@@ -31,7 +31,7 @@ export default {
     pointer-events: none;
     z-index: 99;
     display: flex;
-    gap: $bigger-size;
+    gap: $big-size;
     flex-direction: column;
 
     .list-item {
@@ -44,9 +44,9 @@ export default {
             transition: $slow-transition 0ms;
 
             font-weight: 500;
-            font-size: $bigger-size;
             pointer-events: none;
-
+            font-size: $bigger-size;
+            padding: $small-size 0;
 
             &.nuxt-link-exact-active {
                 color: $color-link;
@@ -63,6 +63,7 @@ export default {
     .list {
         .list-item {
             .item-link {
+                
                 pointer-events: auto;
                 transform: translateY(0);
                 transition-delay: 400ms;
@@ -78,7 +79,7 @@ export default {
         .list-item {
             text-align: right;
             .item-link {
-                padding: $smaller-size 0;
+                padding: $smallest-size 0 $smaller-size;
                 font-weight: 300;
                 font-size: $standard-size;
 

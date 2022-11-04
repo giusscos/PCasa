@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <h1>
-        Detersivi
+        Artigianato
       </h1>
     </div>
 </template>

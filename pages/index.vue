@@ -1,90 +1,72 @@
 <template>
   <div>
-    <div class="hero_wrapper">
-      <div class="dark-filter"></div>
-      <img class="img-hero" src="https://picsum.photos/2000/1080" alt="hero">
-      <div class="text-hero">
-        <h1 class="title-hero">
-          Diamo una seconda vita
-          alle Bottiglie di plastica
-        </h1>
-        <p class="desc-hero">
-          Riutilizziamo sempre le stesse bottiglie di plastica per ridurre i rifiuti
-        </p>
+    <TheHero />
+    <section class="section main_prod">
+      <div class="container">
+        <div class="header-section">
+          <h2 class="title-section">
+            Prodotti Ecologici e <span class="evidence">senza</span> Sprechi
+          </h2>
+          <p class="desc-section">
+            Acquistando i nostri prodotti darai una mano all'ambiente riducendo gli sprechi
+          </p>
+        </div>
+        <div class="content-cards">
+          <CardProd :info="cardInfo" v-for="(cardInfo, i) in cardsInfo" :key="i" />
+        </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 <script>
 export default {
   name: 'IndexPage',
+  data() {
+    return {
+      cardsInfo: [
+        {
+          'title': 'Detersivi ecologici',
+          'desc': 'Paga solo il detersivo! Il contenitore lo porti da casa o lo forniamo noi!',
+          'route': '/detersivi',
+          'img': 'https://picsum.photos/1000/1000',
+        },
+        {
+          'title': 'Artigianato locale',
+          'desc': 'Un ritorno al futuro di una serie di utensili e contenitori dei nostri antenati!',
+          'route': '/artigianato',
+          'img': 'https://picsum.photos/1000/1000',
+        },
+        {
+          'title': 'Prodotti tipici',
+          'desc': 'Porta sulla tua tavola i sapori della calabria!',
+          'route': '/prodotti-tipici',
+          'img': 'https://picsum.photos/1000/1000',
+        },
+      ]
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
 @import '~/assets/css/main.scss';
 
-.hero_wrapper {
-  position: relative;
-  height: 100vh;
-
-  .dark-filter {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    opacity: 0.5;
-    background-color: #000;
-  }
-
-  .img-hero {
-    display: block;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-}
-
-.text-hero {
-  max-width: 400px;
-  z-index: 5;
-  position: absolute;
-  top: 60%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-}
-
-.title-hero,
-.desc-hero {
-  color: $color-seco;
-}
-
-.title-hero {
-  line-height: 0.95;
-  font-size: $big-size;
-  margin-bottom: $small-size;
-}
-
-.desc-hero {
-  line-height: 1.2;
-  font-size: $standard-size;
+.content-cards {
+  display: grid;
+  row-gap: $max-size;
+  column-gap: $standard-size;
+  grid-template-columns: repeat(1, 1fr);
 }
 
 @media (min-width: $md) {
-  .text-hero{
-    left: 100px;
-    max-width: 600px;
-    transform: translate(0%, -50%);
+  .content-cards {
+    padding: 0 $big-size;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .title-hero {
-    line-height: 1.1;
-    font-size: $max-size;
-  }
+}
 
-  .desc-hero {
-    font-size: $big-size;
+@media (min-width: $lg) {
+  .content-cards {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 </style>
