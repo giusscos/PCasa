@@ -21,7 +21,6 @@ export default{
         const bodyEl = document.querySelector('body')
 
         window.addEventListener('resize', (el) => {
-            // console.log(el.target.innerWidth)
             const currentWidth = el.target.innerWidth
             if(currentWidth > 750 && bodyEl.classList.value === 'open'){
                 bodyEl.classList.remove('open')    
@@ -37,8 +36,6 @@ export default{
 
     main{
         flex-grow: 1;
-        display: flex;
-        align-items: center;
     }
 }
 </style>

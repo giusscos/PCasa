@@ -39,7 +39,7 @@ export default {
         width: 40px;
         height: 3px;
         border-radius: 3px;
-        background-color: $color-prim-darker;
+        background-color: $color-seco;
         transition: $standard-transition;
         
         &.top{
@@ -57,7 +57,6 @@ export default {
     .lines{
         .line{
             top: 50%;
-            background-color: $color-seco;
             &.top{
                 transform: rotate(135deg);
                 left: 10%;

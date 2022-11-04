@@ -18,9 +18,17 @@ export default {
                     'route': '/detersivi',
                 },
                 {
-                    'name': 'Contatti',
-                    'route': '/contatti',
+                    'name': 'Artigianato',
+                    'route': '/artigianato',
                 },
+                {
+                    'name': 'Prodotti Tipici',
+                    'route': '/prodotti-tipici',
+                },
+                // {
+                //     'name': 'Contatti',
+                //     'route': '/contatti',
+                // },
             ]
         }
     }

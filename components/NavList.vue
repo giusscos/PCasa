@@ -35,7 +35,7 @@ export default {
     flex-direction: column;
 
     .list-item {
-        overflow-y: hidden;
+        overflow: hidden;
         text-align: center;
 
         .item-link {
@@ -43,7 +43,6 @@ export default {
             transform: translateY(100%);
             transition: $slow-transition 0ms;
 
-            color: $color-seco;
             font-weight: 500;
             font-size: $bigger-size;
             pointer-events: none;
@@ -54,7 +53,7 @@ export default {
             }
 
             &:hover {
-                color: $color-link-darker;
+                color: $color-link;
             }
         }
     }
@@ -75,11 +74,11 @@ export default {
 @media (min-width: $md){
     .list {
         flex-direction: row;
+        gap: $big-size;
         .list-item {
             text-align: right;
             .item-link {
                 padding: $smaller-size 0;
-                color: $color-prim-darker;
                 font-weight: 300;
                 font-size: $standard-size;
 

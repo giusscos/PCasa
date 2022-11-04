@@ -27,16 +27,8 @@ export default {
     }
 
     .logo{
-        color: $color-prim-darker;
         font-weight: 300;
         transition: $slow-transition;
-    }
-}
-.open{
-    .logo_wrapper{
-        .logo{
-            color: $color-seco;
-        }
     }
 }
 </style>
