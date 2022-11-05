@@ -3,6 +3,7 @@
     <TheHero />
     <TheProducts />
     <TheAbout />
+    <ThePartner />
   </div>
 </template>
 <script>
