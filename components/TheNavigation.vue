@@ -14,7 +14,7 @@ export default {
                     'route': '/la-storia',
                 },
                 {
-                    'name': 'Detersivi Ecologici',
+                    'name': 'Detersivi',
                     'route': '/detersivi',
                 },
                 {
