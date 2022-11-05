@@ -1,5 +1,5 @@
 <template>
-    <div class="logo_wrapper">
+    <div class="logo_wrapper" @click="setClose">
         <NuxtLink to="/" class="logo-link"></NuxtLink>
         <h1 class="logo">
             Pcasa
@@ -9,6 +9,15 @@
 <script>
 export default {
     name: 'TheLogo',
+    methods: {
+        setClose(){
+            const bodyEl = document.querySelector('body')
+
+            if(bodyEl.classList.value === 'open'){
+                bodyEl.classList.remove('open')
+            }
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>

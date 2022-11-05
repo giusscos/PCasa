@@ -71,6 +71,7 @@ export default {
 
 .open {
     .navigation {
+        pointer-events: auto;
         &::after {
             height: 100vh;
             border-radius: 0;
