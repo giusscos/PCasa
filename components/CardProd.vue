@@ -18,7 +18,7 @@
 export default {
     name: 'CardProd',
     props: {
-        info: Array
+        info: Object,
     }
 }
 </script>

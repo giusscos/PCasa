@@ -8,7 +8,7 @@
 export default {
     name: 'GalleryPartner',
     props: {
-        info: Array,
+        info: Object,
     },
 }
 </script>
