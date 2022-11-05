@@ -4,19 +4,12 @@
         <main>
             <Nuxt />
         </main>
-        <!-- <footer>
-            Footer
-        </footer> -->
+        <TheFooter />
     </div>
 </template>
 <script>
-import TheHeader from '~/components/TheHeader.vue'
-
 export default{
     name: "defaultLayouts",
-    components: {
-        TheHeader,
-    },
     mounted() {
         const bodyEl = document.querySelector('body')
 

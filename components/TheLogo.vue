@@ -10,10 +10,10 @@
 export default {
     name: 'TheLogo',
     methods: {
-        setClose(){
+        setClose() {
             const bodyEl = document.querySelector('body')
 
-            if(bodyEl.classList.value === 'open'){
+            if (bodyEl.classList.value === 'open') {
                 bodyEl.classList.remove('open')
             }
         }
@@ -22,10 +22,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '~/assets/css/main.scss';
+
 .logo_wrapper {
     z-index: 100;
     position: relative;
     width: fit-content;
+
     .logo-link {
         position: absolute;
         top: 0;
@@ -35,9 +37,17 @@ export default {
         pointer-events: auto;
     }
 
-    .logo{
+    .logo {
         font-weight: 300;
         transition: $slow-transition;
+    }
+}
+
+.main_footer {
+    .logo_wrapper {
+        .logo {
+            font-size: $ultra-size;
+        }
     }
 }
 </style>

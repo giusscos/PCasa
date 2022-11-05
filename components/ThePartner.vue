@@ -9,9 +9,9 @@
                     Ci affidiamo ad aziende e professionisti per portare qualit&aacute; e valore ai nostri prodotti
                 </p>
             </div>
-            <div class="content-gallery">
-                <GalleryPartner :info="partnerInfo" v-for="(partnerInfo, i) in partnersInfo" :key="i" />
-            </div>
+        </div>
+        <div class="content-gallery">
+            <GalleryPartner :info="partnerInfo" v-for="(partnerInfo, i) in partnersInfo" :key="i" />
         </div>
     </section>
 </template>
@@ -60,7 +60,7 @@ export default {
 }
 
 .content-gallery {
-    padding-top: $bigger-size;
+    padding: $bigger-size $big-size;
     display: flex;
     flex-wrap: wrap;
     row-gap: $bigger-size;
