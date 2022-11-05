@@ -47,7 +47,6 @@ export default {
         object-fit: cover;
         object-position: center;
 
-        border-radius: $smallest-size;
         pointer-events: none;
     }
 
@@ -78,6 +77,10 @@ export default {
 @media (min-width: $md) {
     .content-about {
         grid-template-columns: repeat(2, 1fr);
+
+        .img-about {
+            border-radius: $smallest-size;
+        }
 
         .text-about {
             align-items: center;
