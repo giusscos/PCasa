@@ -4,6 +4,7 @@
     <TheProducts />
     <TheAbout />
     <ThePartner />
+    <Call2Action />
   </div>
 </template>
 <script>

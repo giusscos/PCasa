@@ -25,10 +25,6 @@ export default {
                     'name': 'Prodotti Tipici',
                     'route': '/prodotti-tipici',
                 },
-                // {
-                //     'name': 'Contatti',
-                //     'route': '/contatti',
-                // },
             ]
         }
     }
@@ -49,6 +45,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: backdrop-filter $slow-transition 0ms;
 
     &::after {
         display: block;
@@ -63,8 +60,8 @@ export default {
         border-bottom-left-radius: 200%;
         border-bottom-right-radius: 200%;
         background-color: $color-prim-blur;
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(20px);
+        
         transition: $slow-transition 200ms;
     }
 }
@@ -72,6 +69,8 @@ export default {
 .open {
     .navigation {
         pointer-events: auto;
+        -webkit-backdrop-filter: blur(20px);
+        transition: backdrop-filter $slow-transition 400ms;
         &::after {
             height: 100vh;
             border-radius: 0;

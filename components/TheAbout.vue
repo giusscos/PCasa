@@ -32,7 +32,6 @@ export default {
 .section {
     &.about {
         color: $color-seco;
-        // background-color: $color-seco-darker;
         box-shadow: 0px 0px 50px #999;
     }
 }

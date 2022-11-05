@@ -27,6 +27,7 @@ export default{
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   background-color: $color-prim-darker;
+  overflow: hidden;
 
   .img-hero_wrapper{
     position: relative;
@@ -54,7 +55,7 @@ export default{
 
 .text-hero {
   padding: $ultra-size $small-size;
-  align-self: flex-end;
+  align-self: center;
   max-width: 400px;
   z-index: 5;
 }
