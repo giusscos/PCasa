@@ -48,22 +48,17 @@ export default {
 @import '~/assets/css/main.scss';
 
 .content-cards {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     row-gap: $max-size;
     column-gap: $standard-size;
-    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    padding-bottom: $ultra-size;
 }
 
 @media (min-width: $md) {
     .content-cards {
-        padding: 0 $big-size;
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: $lg) {
-    .content-cards {
-        grid-template-columns: repeat(3, 1fr);
+        padding: 0 $big-size $ultra-size;
     }
 }
 </style>

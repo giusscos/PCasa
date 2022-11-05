@@ -26,6 +26,7 @@ export default {
 @import '~/assets/css/main.scss';
 
 .card_wrapper {
+    flex-basis: calc((100% * 12) / 12);
     position: relative;
     overflow: hidden;
     border-radius: $smaller-size;
@@ -63,6 +64,16 @@ export default {
     }
     .img-card {
         display: block;
+    }
+}
+@media (min-width: $md){
+    .card_wrapper{
+        flex-basis: calc(((100% * 6) / 12) - $standard-size); 
+    }
+}
+@media (min-width: $lg){
+    .card_wrapper{
+        flex-basis: calc(((100% * 4) / 12) - $standard-size);
     }
 }
 </style>
