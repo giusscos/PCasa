@@ -62,6 +62,7 @@ export default {
   padding: $ultra-size $small-size;
   align-self: flex-end;
   max-width: 400px;
+  height: 400px;
   z-index: 5;
   overflow-x: hidden;
 }
