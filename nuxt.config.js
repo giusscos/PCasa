@@ -21,17 +21,17 @@ export default {
   css: [
     '~/assets/css/main.scss',
   ],
-  svg: {
-    vueSvgLoader: {
-      // vue-svg-loader options
-    },
-    svgSpriteLoader: {
-      // svg-sprite-loader options
-    },
-    fileLoader: {
-      // file-loader options
-    }
-  },
+  // svg: {
+  //   vueSvgLoader: {
+  //     // vue-svg-loader options
+  //   },
+  //   svgSpriteLoader: {
+  //     // svg-sprite-loader options
+  //   },
+  //   fileLoader: {
+  //     // file-loader options
+  //   }
+  // },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -51,5 +51,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: ['gsap'],
   }
 }

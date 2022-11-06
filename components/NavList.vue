@@ -39,6 +39,7 @@ export default {
         text-align: center;
 
         .item-link {
+            opacity: 0;
             display: block;
             transform: translateY(100%);
             transition: $slow-transition 0ms;
@@ -63,7 +64,6 @@ export default {
     .list {
         .list-item {
             .item-link {
-                
                 pointer-events: auto;
                 transform: translateY(0);
                 transition-delay: 400ms;

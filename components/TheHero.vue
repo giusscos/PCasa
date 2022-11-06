@@ -53,19 +53,23 @@ export default {
     object-position: center;
 
     pointer-events: none;
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
   }
 }
 
 .text-hero {
   padding: $ultra-size $small-size;
-  align-self: center;
+  align-self: flex-end;
   max-width: 400px;
   z-index: 5;
+  overflow-x: hidden;
 }
 
 .title-hero,
 .desc-hero {
   color: $color-seco;
+  transform: translateX(-200%);
 }
 
 .title-hero {
@@ -82,12 +86,18 @@ export default {
 @media (min-width: $md) {
   .hero_wrapper {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .text-hero {
-    margin-left: auto;
-    text-align: right;
-    max-width: 600px;
+    
+    .text-hero {
+      align-self: center;
+      margin-left: auto;
+      text-align: right;
+      max-width: 600px;
+      
+      .title-hero,
+      .desc-hero {
+        transform: translateX(100%);
+      }
+    }
   }
 }
 </style>

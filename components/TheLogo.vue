@@ -27,7 +27,6 @@ export default {
     z-index: 100;
     position: relative;
     width: fit-content;
-
     .logo-link {
         position: absolute;
         top: 0;
@@ -38,8 +37,8 @@ export default {
     }
 
     .logo {
+        opacity: 0;
         font-weight: 300;
-        transition: $slow-transition;
     }
 }
 
