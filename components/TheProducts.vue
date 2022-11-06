@@ -9,7 +9,7 @@
                     Acquistando i nostri prodotti darai una mano all'ambiente riducendo gli sprechi
                 </p>
             </div>
-            <div class="content-cards">
+            <div class="content-cards scrub-y">
                 <CardProd :info="cardInfo" v-for="(cardInfo, i) in cardsInfo" :key="i" />
             </div>
         </div>

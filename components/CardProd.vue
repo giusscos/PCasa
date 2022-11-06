@@ -1,5 +1,5 @@
 <template>
-    <div class="card_wrapper scrub-y">
+    <div class="card_wrapper">
         <NuxtLink :to="info.route" class="link-card"></NuxtLink>
         <header class="header-card">
             <h3 class="title-card">
