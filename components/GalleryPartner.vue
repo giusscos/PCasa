@@ -1,5 +1,5 @@
 <template>
-    <div class="partner_wrapper">
+    <div class="partner_wrapper scale">
         <a :href="info.link" target="_blank" class="link-partner" :title="`Visita il sito di ${info.name}`"></a>
         <div class="svg-partner" v-html="require(`~/assets/svg/${info.svg}?raw`)"></div>
     </div>

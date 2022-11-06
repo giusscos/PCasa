@@ -1,7 +1,7 @@
 <template>
     <section class="section partner">
         <div class="container">
-            <div class="header-section">
+            <div class="header-section scrub-x-rev">
                 <h2 class="title-section">
                     I nostri <span class="evidence">Fornitori</span>
                 </h2>
@@ -51,6 +51,7 @@ export default {
 
 .section {
     &.partner {
+        overflow: hidden;
         .header-section {
             margin-left: auto;
             align-items: flex-end;

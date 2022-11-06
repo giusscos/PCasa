@@ -32,7 +32,15 @@ export default {
         let tl = gsap.timeline({ defaults: { ease: 'expo.inOut', duration: 1 } })
 
         tl.to('.logo, .item-link', { opacity: 1, stagger: 0.2 })
-        
+            .from('.main_footer > .container', {
+                scrollTrigger: {
+                    trigger: '.main_footer > .container ',
+                    start: 'start bottom',
+                    end: 'bottom start',
+                    scrub: 1,
+                },
+                y: -400,
+            })
     }
 }
 </script>

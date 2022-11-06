@@ -2,9 +2,9 @@
     <section class="section about">
         <div class="container">
             <div class="content-about">
-                <img class="img-about" src="https://picsum.photos/700/1200" alt="">
+                <img class="img-about path-y" src="https://picsum.photos/700/1200" alt="">
                 <div class="text-about">
-                    <div class="text_wrapper">
+                    <div class="text_wrapper scrub-y-rev">
                         <h2 class="title-about">
                             In breve, siamo...
                         </h2>
@@ -45,6 +45,9 @@ export default {
         display: block;
         object-fit: cover;
         object-position: center;
+
+        -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
 
         pointer-events: none;
     }

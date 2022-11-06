@@ -2,10 +2,10 @@
     <section class="section main_prod">
         <div class="container">
             <div class="header-section">
-                <h2 class="title-section">
+                <h2 class="title-section scrub-x">
                     Prodotti Ecologici e <span class="evidence">senza</span> Sprechi
                 </h2>
-                <p class="desc-section">
+                <p class="desc-section scrub-x">
                     Acquistando i nostri prodotti darai una mano all'ambiente riducendo gli sprechi
                 </p>
             </div>
@@ -47,6 +47,9 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/css/main.scss';
 
+.main_prod{
+    overflow: hidden;
+}
 .content-cards {
     display: flex;
     flex-wrap: wrap;

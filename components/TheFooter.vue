@@ -102,6 +102,7 @@ export default {
 @import '~/assets/css/main.scss';
 
 .main_footer {
+    overflow: hidden;
     padding: $ultra-size 0;
     color: $color-seco;
     background-color: $color-prim-darker;

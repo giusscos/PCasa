@@ -1,7 +1,7 @@
 <template>
     <section class="section cta">
         <div class="container">
-            <div class="header-section">
+            <div class="header-section scrub-y-rev2">
                 <h2 class="title-section">
                     Acquista i nostri prodotti <span class="evidence">online</span>
                 </h2>
@@ -25,6 +25,7 @@ export default{
         color: $color-seco;
         background-color: $color-prim;
         box-shadow: 0px 0px 50px #999;
+        overflow: hidden;
 
         .header-section{
             margin: 0 auto;

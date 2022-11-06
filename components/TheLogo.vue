@@ -44,7 +44,9 @@ export default {
 
 .main_footer {
     .logo_wrapper {
+        z-index: 0;
         .logo {
+            
             font-size: $ultra-size;
         }
     }
