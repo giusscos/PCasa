@@ -2,18 +2,19 @@
     <section class="section about">
         <div class="container">
             <div class="content-about">
-                <nuxt-img class="img-about path-y" src="/images/noctua-nh-d15s-4.jpeg" alt="In breve ecco chi è Pcasa" preset="fullOptimize" />
-                <div class="text-about"> 
+                <nuxt-img class="img-about path-y" src="/images/noctua-nh-d15s-4.jpeg" alt="In breve ecco chi è Pcasa"
+                    preset="fullOptimize" />
+                <div class="text-about">
                     <div class="text_wrapper scrub-y-rev">
                         <h2 class="title-about">
                             In breve, siamo...
                         </h2>
                         <p class="desc-about">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis vel dignissimos, error
-                            maxime
-                            blanditiis
-                            non! Quidem, praesentium fugiat ipsa error perferendis necessitatibus dicta maiores repellat
-                            exercitationem. Consequatur ipsa culpa qui?
+                            Un azienda che ha a cuore l'ambiente e la propria Terra. Il nostro obiettivo è dare il
+                            giusto valore alla Calabria, facendo riscoprire le tradizioni e i sapori che la
+                            caratterizzano.
+                            Aiutare il mondo nella lotta contro l'inquinamento, <NuxtLink to="/detersivi"
+                                class="evidence-darker">riutilizzando le bottiglie di plastica</NuxtLink> per i detersivi e tanto altro.
                         </p>
                     </div>
                 </div>
@@ -33,6 +34,7 @@ export default {
     &.about {
         color: $color-seco;
         box-shadow: 0px 0px 50px #999;
+        overflow: hidden;
     }
 }
 

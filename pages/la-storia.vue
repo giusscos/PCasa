@@ -9,9 +9,21 @@ export default {
   name: 'StoriaPage',
   data(){
     return{
-      indexTitle: 'Titolo La storia Hook pagina la storia',
-      indexDesc: 'Sottotitolo La storia Hook pagina la storia',
-      indexImg: '/images/noctua-nh-d15s-2.jpeg',
+      indexTitle: 'La storia di Pcasa',
+      indexDesc: 'Come siamo arrivati fin qui',
+      indexImg: '/images/noctua-nh-d15s-3.jpeg',
+    }
+  },
+  head() {
+    return {
+      title: 'La nostra Storia - Pcasa',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Pcasa è un negozio Calabrese con obiettivi ambiziosi e con a cuore l\'ambiente. Scopri la sua Storia!'
+        }
+      ]
     }
   }
 }

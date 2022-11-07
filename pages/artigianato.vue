@@ -9,9 +9,21 @@ export default {
   name: 'ArtigianatoPage',
   data(){
     return{
-      indexTitle: 'Titolo Artigianato Hook pagina Artigianato',
-      indexDesc: 'Sottotitolo Artigianato Hook pagina Artigianato',
+      indexTitle: 'Ri-vivi l\'artigianato dei nostri antenati',
+      indexDesc: 'Untensili del passato, realizzati da mastri artigiani locali, con le più moderne tecnologie',
       indexImg: '/images/noctua-nh-d15s-2.jpeg',
+    }
+  },
+  head() {
+    return {
+      title: 'Artigianato Calabrese - Pcasa',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Opere di artigianato realizzate da mastri artigiani locali calabresi con le più moderne tecniche di realizzazione!'
+        }
+      ]
     }
   }
 }

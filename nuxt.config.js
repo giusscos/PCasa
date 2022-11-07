@@ -44,11 +44,10 @@ export default {
   googleFonts: {
     families: {
       Lexend: {
-        wght: [300, 500, 700],
+        wght: [100, 300, 500, 700],
       },
     },
     display: 'swap',
-    text: 'Pcasa',
   },
 
   image: {

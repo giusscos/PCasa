@@ -14,8 +14,8 @@ export default {
   name: 'IndexPage',
   data(){
     return{
-      indexTitle: 'Titolo Hook home page',
-      indexDesc: 'Sottotitolo Hook home page',
+      indexTitle: 'Prodotti per la cura della casa e dell\'ambiente',
+      indexDesc: 'Pcasa si impegna nel proporre alternative di qualità sia per la vostra casa che per l\'ambiente che ci circonda',
       indexImg: '/images/noctua-nh-d15s-2.jpeg',
     }
   },  
