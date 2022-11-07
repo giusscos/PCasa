@@ -11,7 +11,7 @@ export default {
     return{
       indexTitle: 'Titolo Detersivi Hook pagina detersivi',
       indexDesc: 'Sottotitolo Detersivi Hook pagina detersivi',
-      indexImg: 'https://picsum.photos/2000/1080',
+      indexImg: '/images/noctua-nh-d15s-2.jpeg',
     }
   }
 }

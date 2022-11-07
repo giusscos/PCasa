@@ -4,42 +4,12 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'Lexand';
-    font-weight: 100;
-    font-display: swap;
-    src: url('~/assets/fonts/Lexend-VariableFont_wght.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lexand';
-    font-weight: 300;
-    font-display: swap;
-    src: url('~/assets/fonts/Lexend-VariableFont_wght.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lexand';
-    font-weight: 500;
-    font-display: swap;
-    src: url('~/assets/fonts/Lexend-VariableFont_wght.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lexand';
-    font-weight: 700;
-    font-display: swap;
-    src: url('~/assets/fonts/Lexend-VariableFont_wght.ttf') format('truetype');
-}
-
 body{
     min-width: 300px;
     background-color: #f7f7f7;
     &.open{
         overflow: hidden;
     }
-}
-
-html{
-    font-family: 'Lexand';
-    font-weight: 300;
 }
 
 a{

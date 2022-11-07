@@ -10,7 +10,7 @@
     </div>
     <div class="img-hero_wrapper">
       <div class="dark-filter"></div>
-      <img class="img-hero" :src="img" alt="hero">
+      <nuxt-img class="img-hero" alt="hero" :src="img" preset="fullOptimize" />
     </div>
   </div>
 </template>

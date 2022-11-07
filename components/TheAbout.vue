@@ -2,8 +2,8 @@
     <section class="section about">
         <div class="container">
             <div class="content-about">
-                <img class="img-about path-y" src="https://picsum.photos/700/1200" alt="">
-                <div class="text-about">
+                <nuxt-img class="img-about path-y" src="/images/noctua-nh-d15s-4.jpeg" alt="In breve ecco chi è Pcasa" preset="fullOptimize" />
+                <div class="text-about"> 
                     <div class="text_wrapper scrub-y-rev">
                         <h2 class="title-about">
                             In breve, siamo...

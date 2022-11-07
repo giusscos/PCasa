@@ -10,7 +10,7 @@
             </p>
         </header>
         <div class="img-card_wrapper">
-            <img class="img-card" :src="info.img" :alt="`Copertina ${info.title}`">
+            <nuxt-img class="img-card" :src="info.img" :alt="`Copertina ${info.title}`" preset="fullOptimize" />
         </div>
     </div>
 </template>

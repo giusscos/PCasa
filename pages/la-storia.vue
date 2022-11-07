@@ -11,7 +11,7 @@ export default {
     return{
       indexTitle: 'Titolo La storia Hook pagina la storia',
       indexDesc: 'Sottotitolo La storia Hook pagina la storia',
-      indexImg: 'https://picsum.photos/2000/1080',
+      indexImg: '/images/noctua-nh-d15s-2.jpeg',
     }
   }
 }

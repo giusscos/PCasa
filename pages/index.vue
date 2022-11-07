@@ -16,7 +16,7 @@ export default {
     return{
       indexTitle: 'Titolo Hook home page',
       indexDesc: 'Sottotitolo Hook home page',
-      indexImg: 'https://picsum.photos/2000/1080',
+      indexImg: '/images/noctua-nh-d15s-2.jpeg',
     }
   },  
   mounted() {

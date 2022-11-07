@@ -21,17 +21,6 @@ export default {
   css: [
     '~/assets/css/main.scss',
   ],
-  // svg: {
-  //   vueSvgLoader: {
-  //     // vue-svg-loader options
-  //   },
-  //   svgSpriteLoader: {
-  //     // svg-sprite-loader options
-  //   },
-  //   fileLoader: {
-  //     // file-loader options
-  //   }
-  // },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -43,11 +32,37 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     "@nuxtjs/svg",
+    "@nuxtjs/google-fonts",
+    '@nuxt/image',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxt/image',
   ],
+
+  googleFonts: {
+    families: {
+      Lexend: {
+        wght: [300, 500, 700],
+      },
+    },
+    display: 'swap',
+    text: 'Pcasa',
+  },
+
+  image: {
+    presets: {
+      fullOptimize: {
+        modifiers: {
+          format: "webp",
+          sizes: "xs: 150px sm: 300 md:500px lg:500px xl:600px xxl:100vw",
+          quality: "40",
+          loading: "lazy",
+        }
+      }
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

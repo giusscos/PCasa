@@ -106,9 +106,6 @@ export default {
     padding: $ultra-size 0;
     color: $color-seco;
     background-color: $color-prim-darker;
-    .container{
-        transform: translateY(-100%);
-    }
 
     .footer-nav {
         display: grid;

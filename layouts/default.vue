@@ -4,7 +4,7 @@
         <main>
             <Nuxt />
         </main>
-        <TheFooter />
+        <LazyTheFooter />
     </div>
 </template>
 <script>
@@ -37,15 +37,15 @@ export default {
             ease: 'expo.inOut',
             duration: 1,
         })
-            .to('.main_footer > .container', {
-                scrollTrigger: {
-                    trigger: '.main_footer > .container ',
-                    start: 'start bottom',
-                    end: 'bottom start',
-                    scrub: 0,
-                },
-                y: 0,
-            })
+            // .from('.main_footer > .container', {
+            //     scrollTrigger: {
+            //         trigger: '.main_footer > .container ',
+            //         start: 'start bottom',
+            //         end: 'bottom start',
+            //         scrub: 0,
+            //     },
+            //     y: -400,
+            // })
     }
 }
 </script>
