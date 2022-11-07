@@ -29,17 +29,22 @@ export default {
 
         // Animation GSAP
 
-        let tl = gsap.timeline({ defaults: { ease: 'expo.inOut', duration: 1 } })
+        let tl = gsap.timeline()
 
-        tl.to('.logo, .item-link', { opacity: 1, stagger: 0.2 })
-            .from('.main_footer > .container', {
+        tl.to('.logo, .item-link', {
+            opacity: 1,
+            stagger: 0.2,
+            ease: 'expo.inOut',
+            duration: 1,
+        })
+            .to('.main_footer > .container', {
                 scrollTrigger: {
                     trigger: '.main_footer > .container ',
                     start: 'start bottom',
                     end: 'bottom start',
-                    scrub: 1,
+                    scrub: 0,
                 },
-                y: -400,
+                y: 0,
             })
     }
 }

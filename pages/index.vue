@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TheHero />
+    <TheHero :title="indexTitle" :desc="indexDesc" :img="indexImg" />
     <TheProducts />
     <TheAbout />
     <ThePartner />
@@ -9,14 +9,18 @@
 </template>
 <script>
 import gsap from 'gsap'
+
 export default {
   name: 'IndexPage',
+  data(){
+    return{
+      indexTitle: 'Titolo Hook home page',
+      indexDesc: 'Sottotitolo Hook home page',
+      indexImg: 'https://picsum.photos/2000/1080',
+    }
+  },  
   mounted() {
     // Animation GSAP
-
-    const tl = gsap.timeline({ defaults: { ease: 'power4.inOut', duration: 1 } })
-    tl.to('.img-hero', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', '-webkit-clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', duration: 2 })
-      .to('.title-hero, .desc-hero', { x: 0, stagger: 0.2 }, '-=0.8')
 
     gsap.from('.scrub-x', {
       scrollTrigger: {

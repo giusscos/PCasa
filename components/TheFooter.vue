@@ -34,7 +34,7 @@ export default {
         return {
             footerListLinks: [
                 {
-                    'title': 'Prodotti',
+                    'title': 'I nostri Prodotti',
                     'links': [
                         {
                             'text': 'Detersivi alla Spina Ecologici',
@@ -54,7 +54,7 @@ export default {
                     ],
                 },
                 {
-                    'title': 'La Nostra Storia',
+                    'title': 'La Nostra Azienda',
                     'links': [
                         {
                             'text': 'La Sfida',
@@ -95,7 +95,7 @@ export default {
                 },
             ]
         }
-    }
+    },
 }
 </script>
 <style lang="scss" scoped>
@@ -106,6 +106,9 @@ export default {
     padding: $ultra-size 0;
     color: $color-seco;
     background-color: $color-prim-darker;
+    .container{
+        transform: translateY(-100%);
+    }
 
     .footer-nav {
         display: grid;

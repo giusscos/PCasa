@@ -2,22 +2,41 @@
   <div class="hero_wrapper">
     <div class="text-hero">
       <h1 class="title-hero">
-        Diamo una seconda vita
-        alle Bottiglie di plastica
+        {{ title }}
       </h1>
       <p class="desc-hero">
-        Riutilizziamo sempre le stesse bottiglie di plastica per ridurre i rifiuti
+        {{ desc }}
       </p>
     </div>
     <div class="img-hero_wrapper">
       <div class="dark-filter"></div>
-      <img class="img-hero" src="https://picsum.photos/2000/1080" alt="hero">
+      <img class="img-hero" :src="img" alt="hero">
     </div>
   </div>
 </template>
 <script>
+import gsap from 'gsap'
+
 export default {
   name: 'TheHero',
+  props: {
+    title: String,
+    desc: String,
+    img: String,
+  },
+  mounted() {
+    const tl = gsap.timeline({ defaults: { ease: 'power4.inOut', duration: 1 } })
+    tl.to('.img-hero', {
+      'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+      '-webkit-clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+      duration: 2,
+    })
+      .to('.title-hero, .desc-hero', {
+        x: 0,
+        opacity: 1,
+        stagger: 0.2
+      }, '-=0.8')
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -35,6 +54,7 @@ export default {
     position: relative;
 
     .dark-filter {
+      z-index: 5;
       position: absolute;
       top: 0;
       left: 0;
@@ -47,6 +67,7 @@ export default {
   }
 
   .img-hero {
+    z-index: 1;
     height: 100%;
     display: block;
     object-fit: cover;
@@ -71,6 +92,7 @@ export default {
 .desc-hero {
   color: $color-seco;
   transform: translateX(-200%);
+  opacity: 0;
 }
 
 .title-hero {
@@ -87,13 +109,13 @@ export default {
 @media (min-width: $md) {
   .hero_wrapper {
     grid-template-columns: repeat(2, 1fr);
-    
+
     .text-hero {
       align-self: center;
       margin-left: auto;
       text-align: right;
       max-width: 600px;
-      
+
       .title-hero,
       .desc-hero {
         transform: translateX(100%);
