@@ -46,7 +46,7 @@ export default {
         title: "Prodotti per la casa - Pcasa",
         site_name: "Pcasa",
         description: "Prodotti per la casa di qualità e nel rispetto dell\'ambiente",
-        img: "/images/pcasa-social-meta.svg",
+        img: "/pcasa-social-meta.png",
         img_size: { width: "1200px", height: "675px" },
         locale: "it_IT",
         twitter: "",
