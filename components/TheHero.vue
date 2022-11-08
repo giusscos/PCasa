@@ -44,6 +44,7 @@ export default {
 
 .hero_wrapper {
   height: 100vh;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 
@@ -51,8 +52,9 @@ export default {
   background-color: $color-prim-darker;
 
   .img-hero_wrapper {
-    position: relative;
-
+    position: relative; 
+    height: 100%;
+    width: 100%;
     .dark-filter {
       z-index: 5;
       position: absolute;
@@ -64,18 +66,18 @@ export default {
       opacity: 0.5;
       background-color: #000;
     }
+    .img-hero {
+      z-index: 1;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+
+      pointer-events: none;
+      -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+      clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
   }
 
-  .img-hero {
-    z-index: 1;
-    display: block;
-    object-fit: cover;
-    object-position: center;
-
-    pointer-events: none;
-    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-  }
 }
 
 .text-hero {

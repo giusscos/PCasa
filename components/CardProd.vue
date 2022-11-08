@@ -1,6 +1,6 @@
 <template>
     <div class="card_wrapper">
-        <NuxtLink :to="info.route" class="link-card"></NuxtLink>
+        <NuxtLink :to="info.route" class="link-card" :title="`Visita la pagina ${info.title}`"></NuxtLink>
         <header class="header-card">
             <h3 class="title-card">
                 {{ info.title }}
@@ -27,15 +27,17 @@ export default {
 
 .card_wrapper {
     flex-basis: calc((100% * 12) / 12);
-    position: relative;
+    height: 600px;
     overflow: hidden;
     border-radius: $smaller-size;
-    background-color: #f7f7f7;
-    box-shadow: 3px 5px 50px #ddd;
-
+    
+    position: relative;
+    
     display: flex;
     flex-direction: column;
-
+    
+    background-color: #f7f7f7;
+    box-shadow: 3px 5px 50px #ddd;
     transition: $fast-transition;
 
     &:hover{
@@ -62,8 +64,14 @@ export default {
             font-size: $standard-size;
         }
     }
-    .img-card {
-        display: block;
+    .img-card_wrapper{
+        height: 100%;
+        width: 100%;
+        .img-card {
+            display: block;
+            object-fit: cover;
+            object-position: center;
+        }
     }
 }
 @media (min-width: $md){
