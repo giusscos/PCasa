@@ -1,8 +1,8 @@
 <template>
     <div class="list_wrapper">
-        <h4 class="title-list">
+        <span class="title-list">
             {{  info.title  }}
-        </h4>
+        </span>
         <ul class="list">
             <li v-for="(item, i) in info.links" :key="`${i}item`" class="item-list">
                 <NuxtLink :to="item.route" class="link-item" :title="`Visita ${item.text}`" v-if="item.route !== ''">

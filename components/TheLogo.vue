@@ -1,6 +1,6 @@
 <template>
     <div class="logo_wrapper" @click="setClose">
-        <NuxtLink to="/" class="logo-link"></NuxtLink>
+        <NuxtLink to="/" class="logo-link" title="Torna alla Home"></NuxtLink>
         <h1 class="logo">
             Pcasa
         </h1>

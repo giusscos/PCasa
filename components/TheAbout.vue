@@ -2,7 +2,7 @@
     <section class="section about">
         <div class="container">
             <div class="content-about">
-                <nuxt-img class="img-about path-y" src="/images/about-us.jpg" alt="In breve ecco chi è Pcasa"
+                <nuxt-img class="img-about path-y" src="/images/about-us.jpg" alt="Chi è Pcasa?"
                     preset="fullOptimize" loading="lazy" />
                 <div class="text-about">
                     <div class="text_wrapper scrub-y-rev">
@@ -14,7 +14,7 @@
                             giusto valore alla Calabria, facendo riscoprire le tradizioni e i sapori che la
                             caratterizzano.
                             Aiutare il mondo nella lotta contro l'inquinamento, <NuxtLink to="/detersivi"
-                                class="evidence-darker">riutilizzando le bottiglie di plastica</NuxtLink> per i detersivi e tanto altro.
+                                class="evidence-darker" title="Detersivi ecologici alla spina">riutilizzando le bottiglie di plastica</NuxtLink> per i detersivi e tanto altro.
                         </p>
                     </div>
                 </div>
