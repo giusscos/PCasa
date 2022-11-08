@@ -9,7 +9,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Detersivi alla spina Ecologici per una migliore gestione della plastica; Artigianato e Prodotti Tipici Calabresi per farti vivere un esperienza unica.' },
+      { hid: 'description', name: 'description', content: 'Prodotti per la casa di qualità e nel rispetto dell\'ambiente' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -39,6 +39,22 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxt/image',
+    [
+      "nuxt-social-meta",
+      {
+        url: "https://pcasatest.netlify.app",
+        title: "Prodotti per la casa - Pcasa",
+        site_name: "Pcasa",
+        description: "Prodotti per la casa di qualità e nel rispetto dell\'ambiente",
+        img: "/images/pcasa-social-meta/svg",
+        img_size: { width: "1200px", height: "675px" },
+        locale: "it_IT",
+        twitter: "",
+        twitter_card: "summary_large_image",
+        theme_color: "#ffffff",
+      },
+
+    ]
   ],
 
   googleFonts: {

@@ -15,7 +15,7 @@ export default {
   data(){
     return{
       indexTitle: 'Prodotti per la cura della casa',
-      indexDesc: 'Proponiamo prodotti di qualità per la casa e nel rispetto dell\'ambiente',
+      indexDesc: 'Prodotti per la casa di qualità e nel rispetto dell\'ambiente',
       indexImg: '/images/hero.jpeg',
     }
   },  

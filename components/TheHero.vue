@@ -81,7 +81,7 @@ export default {
 }
 
 .text-hero {
-  padding: $ultra-size $small-size;
+  padding: $ultra-size $small-size $big-size;
   align-self: flex-end;
   max-width: 400px;
   height: 400px;
