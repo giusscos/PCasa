@@ -14,9 +14,9 @@ export default {
   name: 'IndexPage',
   data(){
     return{
-      indexTitle: 'Prodotti per la cura della casa e dell\'ambiente',
-      indexDesc: 'Pcasa si impegna nel proporre alternative di qualità sia per la vostra casa che per l\'ambiente che ci circonda',
-      indexImg: '/images/noctua-nh-d15s-2.jpeg',
+      indexTitle: 'Prodotti per la cura della casa',
+      indexDesc: 'Proponiamo prodotti di qualità per la casa e nel rispetto dell\'ambiente',
+      indexImg: '/images/hero.jpeg',
     }
   },  
   mounted() {
@@ -54,7 +54,6 @@ export default {
         start: 'start bottom',
         end: 'bottom bottom',
         scrub: 1,
-        delay: 0.1,
         ease: 'power4.inOut',
       },
       stagger: 0.2,
@@ -67,7 +66,6 @@ export default {
         start: 'start bottom',
         end: 'bottom start',
         scrub: 2,
-        delay: 0.1,
         ease: 'power4.inOut',
       },
       stagger: 0.2,
@@ -79,8 +77,7 @@ export default {
         trigger: '.scrub-y-rev2',
         start: 'start bottom',
         end: 'bottom center',
-        scrub: 2,
-        delay: 0.1,
+        scrub: 0,
         ease: 'power4.inOut',
       },
       stagger: 0.2,
@@ -107,7 +104,6 @@ export default {
         start: 'start bottom',
         end: 'bottom 70%',
         scrub: 2,
-        delay: 0.1,
         ease: 'power4.inOut',
       },
       stagger: 0.2,

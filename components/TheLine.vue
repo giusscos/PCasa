@@ -1,5 +1,5 @@
 <template>
-    <div class="lines" @click="setOpen">
+    <div class="lines" @click="setOpen" title="Menù">
         <span class="line top"></span>
         <span class="line bot"></span>
     </div>

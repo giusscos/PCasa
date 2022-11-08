@@ -11,7 +11,7 @@ export default {
     return {
       indexTitle: 'Detersivi alla spina Ecologici',
       indexDesc: 'Un sollievo per il tuo portafogli e... per l\'ambiente',
-      indexImg: '/images/noctua-nh-d15s-4.jpeg',
+      indexImg: '/images/soaps.jpg',
     }
   },
   head() {

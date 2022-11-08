@@ -84,7 +84,7 @@ export default {
   max-width: 400px;
   height: 400px;
   z-index: 5;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .title-hero,

@@ -25,19 +25,19 @@ export default {
                     'title': 'Detersivi ecologici',
                     'desc': 'Paga solo il detersivo! Il contenitore lo porti da casa o lo forniamo noi!',
                     'route': '/detersivi',
-                    'img': '/images/noctua-nh-d15s-2.jpeg',
+                    'img': '/images/soaps.jpg',
                 },
                 {
                     'title': 'Artigianato locale',
                     'desc': 'Un ritorno al futuro di una serie di utensili e contenitori dei nostri antenati!',
                     'route': '/artigianato',
-                    'img': '/images/noctua-nh-d15s-3.jpeg',
+                    'img': '/images/ceramics.jpg',
                 },
                 {
                     'title': 'Prodotti tipici',
                     'desc': 'Porta sulla tua tavola i sapori della calabria!',
                     'route': '/prodotti-tipici',
-                    'img': '/images/noctua-nh-d15s-4.jpeg',
+                    'img': '/images/foods.jpg',
                 },
             ]
         }
@@ -49,6 +49,7 @@ export default {
 
 .main_prod{
     overflow: hidden;
+    
 }
 .content-cards {
     display: flex;

@@ -2,8 +2,8 @@
     <section class="section about">
         <div class="container">
             <div class="content-about">
-                <nuxt-img class="img-about path-y" src="/images/noctua-nh-d15s-4.jpeg" alt="In breve ecco chi è Pcasa"
-                    preset="fullOptimize" />
+                <nuxt-img class="img-about path-y" src="/images/about-us.jpg" alt="In breve ecco chi è Pcasa"
+                    preset="fullOptimize" loading="lazy" />
                 <div class="text-about">
                     <div class="text_wrapper scrub-y-rev">
                         <h2 class="title-about">

@@ -2,7 +2,8 @@
     <footer class="main_footer">
         <div class="container">
             <div>
-                <TheLogo />
+                <!-- <TheLogo /> -->
+                <div class="logo-footer" v-html="require(`~/assets/svg/pcasa-logo.svg?raw`)"></div>
                 <div class="brand-info">
                     <div>
                         P.IVA IT03401820786
@@ -106,6 +107,16 @@ export default {
     padding: $ultra-size 0;
     color: $color-seco;
     background-color: $color-prim-darker;
+
+    .logo-footer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .brand-info{
+        padding-left: $smallest-size;
+    }
 
     .footer-nav {
         display: grid;

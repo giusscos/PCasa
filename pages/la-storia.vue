@@ -11,7 +11,7 @@ export default {
     return{
       indexTitle: 'La storia di Pcasa',
       indexDesc: 'Come siamo arrivati fin qui',
-      indexImg: '/images/noctua-nh-d15s-3.jpeg',
+      indexImg: '/images/hero.jpeg',
     }
   },
   head() {
