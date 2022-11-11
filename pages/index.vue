@@ -2,9 +2,9 @@
   <div>
     <TheHero :title="indexTitle" :desc="indexDesc" :img="indexImg" />
     <TheProducts />
-    <LazyTheAbout />
-    <LazyThePartner />
-    <LazyCall2Action />
+    <TheAbout />
+    <ThePartner />
+    <Call2Action />
   </div>
 </template>
 <script>
@@ -13,7 +13,7 @@ export default {
   data() {
     return {
       indexTitle: 'Prodotti per la cura della casa',
-      indexDesc: 'Prodotti per la casa di qualità e nel rispetto dell\'ambiente',
+      indexDesc: 'Prodotti di qualità e nel rispetto dell\'ambiente',
       indexImg: require('~/assets/images/hero_min.webp'),
     }
   },
@@ -30,6 +30,3 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-@import '~/assets/css/main.scss';
-</style>
