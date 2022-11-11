@@ -14,7 +14,7 @@ export default {
     return{
       indexTitle: 'Prodotti per la cura della casa',
       indexDesc: 'Prodotti per la casa di qualità e nel rispetto dell\'ambiente',
-      indexImg: '/images/hero.jpeg',
+      indexImg: require('~/assets/images/hero.webp'),
     }
   },  
 }

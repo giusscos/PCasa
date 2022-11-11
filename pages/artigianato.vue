@@ -11,7 +11,7 @@ export default {
     return{
       indexTitle: 'Ri-vivi l\'artigianato dei nostri antenati',
       indexDesc: 'Untensili del passato, realizzati da mastri artigiani locali, con le più moderne tecnologie',
-      indexImg: '/images/ceramics.jpg',
+      indexImg: require('~/assets/images/ceramics.webp'),
     }
   },
   head() {

@@ -11,7 +11,7 @@ export default {
     return {
       indexTitle: 'Detersivi alla spina Ecologici',
       indexDesc: 'Un sollievo per il tuo portafogli e... per l\'ambiente',
-      indexImg: '/images/soaps.jpg',
+      indexImg: require('~/assets/images/soaps.webp'),
     }
   },
   head() {

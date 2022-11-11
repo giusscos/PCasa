@@ -11,7 +11,7 @@ export default {
     return{
       indexTitle: 'Porta sempre con te i sapori della nostra Terra',
       indexDesc: 'Un viaggio di sapori unico e che solo la Calabria può farti assaporare',
-      indexImg: '/images/foods.jpg',
+      indexImg: require('~/assets/images/foods.webp'),
     }
   },
   head() {

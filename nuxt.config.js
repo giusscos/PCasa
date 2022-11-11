@@ -36,12 +36,10 @@ export default {
   buildModules: [
     "@nuxtjs/svg",
     "@nuxtjs/google-fonts",
-    '@nuxt/image',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxt/image',
     [
       "nuxt-social-meta",
       {
@@ -67,18 +65,6 @@ export default {
       },
     },
     display: 'swap',
-  },
-
-  image: {
-    presets: {
-      fullOptimize: {
-        modifiers: {
-          format: "webp",
-          sizes: "xs:150px sm:300px md:500px lg:500px xl:600px xxl:100vw",
-          quality: "1",
-        }
-      }
-    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

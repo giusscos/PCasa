@@ -11,7 +11,7 @@ export default {
     return{
       indexTitle: 'La storia di Pcasa',
       indexDesc: 'Come siamo arrivati fin qui',
-      indexImg: '/images/hero.jpeg',
+      indexImg: require('~/assets/images/hero.webp'),
     }
   },
   head() {

@@ -10,7 +10,7 @@
     </div>
     <div class="img-hero_wrapper">
       <div class="dark-filter"></div>
-      <nuxt-img class="img-hero" alt="hero" :src="img" preset="fullOptimize" />
+      <img class="img-hero" alt="hero" :src="img" />
     </div>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
     desc: String,
     img: String,
   },
-  beforeMount() {
+  mounted() {
     const tl = gsap.timeline({ defaults: { ease: 'power4.inOut', duration: 1 } })
     tl.to('.img-hero', {
       'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
@@ -70,7 +70,6 @@ export default {
       z-index: 1;
       display: block;
       object-fit: cover;
-      object-position: center;
 
       pointer-events: none;
       -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
