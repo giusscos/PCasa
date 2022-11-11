@@ -10,13 +10,24 @@
 <script>
 export default {
   name: 'IndexPage',
-  data(){
-    return{
+  data() {
+    return {
       indexTitle: 'Prodotti per la cura della casa',
       indexDesc: 'Prodotti per la casa di qualità e nel rispetto dell\'ambiente',
-      indexImg: require('~/assets/images/hero.webp'),
+      indexImg: require('~/assets/images/hero_min.webp'),
     }
-  },  
+  },
+  beforeMount() {
+    const initialWidth = window.innerWidth
+    
+    window.addEventListener('load', () => {
+      if (initialWidth > 750) {
+        this.indexImg = require('~/assets/images/hero.webp')
+      } else {
+        this.indexImg = require('~/assets/images/hero_min.webp')
+      }
+    })
+  }
 }
 </script>
 <style lang="scss" scoped>

@@ -72,7 +72,6 @@ export default {
     grid-template-columns: repeat(1, 1fr);
 
     .img-about {
-        max-width: 600px;
         display: block;
         object-fit: cover;
         object-position: center;
