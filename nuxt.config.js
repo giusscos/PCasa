@@ -15,7 +15,7 @@ export default {
     link: [
       {
         rel: 'icon', type: 'image/x-icon', href: '/favicon.ico',
-        rel:'apple-touch-icon', sizes: '180x180', href: 'https://yourdomain.com/apple-touch-icon-180x180.png',
+        rel:'apple-touch-icon', sizes: '180x180', href: 'https://pcasatest.netlify.app/favicon.ico',
       }
     ]
   },
@@ -47,7 +47,7 @@ export default {
         title: "Prodotti per la casa - Pcasa",
         site_name: "Pcasa",
         description: "Prodotti per la casa di qualità e nel rispetto dell\'ambiente",
-        img: "https://pcasatest.netlify.app/images/pcasa-social-meta.png",
+        img: "https://pcasatest.netlify.app/images/pcasa-social-meta.webp",
         img_size: { width: "1200px", height: "675px" },
         locale: "it_IT",
         twitter: "",
@@ -61,7 +61,7 @@ export default {
   googleFonts: {
     families: {
       Lexend: {
-        wght: [100, 300, 500, 700],
+        wght: [300, 500, 700],
       },
     },
     display: 'swap',

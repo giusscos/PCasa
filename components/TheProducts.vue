@@ -27,19 +27,19 @@ export default {
                     'title': 'Detersivi ecologici',
                     'desc': 'Paga solo il detersivo! Il contenitore lo porti da casa o lo forniamo noi!',
                     'route': '/detersivi',
-                    'img': require('~/assets/images/soaps.webp'),
+                    'img': require('~/assets/images/soaps_min.webp'),
                 },
                 {
                     'title': 'Artigianato locale',
                     'desc': 'Un ritorno al futuro di una serie di utensili e contenitori dei nostri antenati!',
                     'route': '/artigianato',
-                    'img': require('~/assets/images/ceramics.webp'),
+                    'img': require('~/assets/images/ceramics_min.webp'),
                 },
                 {
                     'title': 'Prodotti tipici',
                     'desc': 'Porta sulla tua tavola i sapori della calabria!',
                     'route': '/prodotti-tipici',
-                    'img': require('~/assets/images/foods.webp'),
+                    'img': require('~/assets/images/foods_min.webp'),
                 },
             ]
         }
