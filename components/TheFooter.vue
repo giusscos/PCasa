@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="footer-nav">
-                <FooterList :info="link" v-for="(link, i) in footerListLinks" :key="i" />
+                <LazyFooterList :info="link" v-for="(link, i) in footerListLinks" :key="i" />
             </div>
         </div>
         <div class="last">
@@ -54,26 +54,26 @@ export default {
                         },
                     ],
                 },
-                {
-                    'title': 'La Nostra Azienda',
-                    'links': [
-                        {
-                            'text': 'La Sfida',
-                            'route': '',
-                            'link': '#',
-                        },
-                        {
-                            'text': 'Innovazioni',
-                            'route': '',
-                            'link': '#',
-                        },
-                        {
-                            'text': 'Investimenti',
-                            'route': '',
-                            'link': '#',
-                        },
-                    ],
-                },
+                // {
+                //     'title': 'La Nostra Azienda',
+                //     'links': [
+                //         {
+                //             'text': 'La Sfida',
+                //             'route': '',
+                //             'link': '#',
+                //         },
+                //         {
+                //             'text': 'Innovazioni',
+                //             'route': '',
+                //             'link': '#',
+                //         },
+                //         {
+                //             'text': 'Investimenti',
+                //             'route': '',
+                //             'link': '#',
+                //         },
+                //     ],
+                // },
                 {
                     'title': 'Contatti e Social',
                     'links': [

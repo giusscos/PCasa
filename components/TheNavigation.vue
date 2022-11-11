@@ -1,6 +1,6 @@
 <template>
     <nav class="navigation">
-        <NavList :links="listLinks" />
+        <LazyNavList :links="listLinks" />
     </nav>
 </template>
 <script>

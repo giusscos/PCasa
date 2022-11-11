@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="content-gallery">
-            <GalleryPartner :info="partnerInfo" v-for="(partnerInfo, i) in partnersInfo" :key="i" />
+            <LazyGalleryPartner :info="partnerInfo" v-for="(partnerInfo, i) in partnersInfo" :key="i" />
         </div>
     </section>
 </template>

@@ -10,7 +10,7 @@
                 </p>
             </div>
             <div class="content-cards scrub-y">
-                <CardProd :info="cardInfo" v-for="(cardInfo, i) in cardsInfo" :key="i" />
+                <LazyCardProd :info="cardInfo" v-for="(cardInfo, i) in cardsInfo" :key="i" />
             </div>
         </div>
     </section>
