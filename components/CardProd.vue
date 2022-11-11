@@ -28,6 +28,7 @@ export default {
 .card_wrapper {
     flex-basis: calc((100% * 12) / 12);
     height: 600px;
+    max-width: 400px;
     overflow: hidden;
     border-radius: $smaller-size;
     

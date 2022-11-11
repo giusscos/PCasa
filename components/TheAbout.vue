@@ -72,14 +72,15 @@ export default {
     grid-template-columns: repeat(1, 1fr);
 
     .img-about {
+        max-width: 600px;
         display: block;
         object-fit: cover;
         object-position: center;
 
-        -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-
         pointer-events: none;
+
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+        -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     }
 
     .text-about {
@@ -89,8 +90,8 @@ export default {
         .text_wrapper {
             padding: $ultra-size $small-size;
             background-color: $color-prim-darker-blur;
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
 
             .title-about {
                 font-size: $max-size;
