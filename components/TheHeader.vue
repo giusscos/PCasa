@@ -1,8 +1,8 @@
 <template>
     <header class="main_header">
         <TheLogo />
-        <TheNavigation />
-        <TheLine />
+        <LazyTheNavigation />
+        <LazyTheLine />
     </header>
 </template>
 <script>
