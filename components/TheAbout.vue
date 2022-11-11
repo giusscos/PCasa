@@ -2,10 +2,10 @@
     <section class="section about">
         <div class="container">
             <div class="content-about">
-                <nuxt-img class="img-about path-y" src="/images/about-us.jpg" alt="Chi è Pcasa?"
-                    preset="fullOptimize" loading="lazy" />
+                <nuxt-img class="img-about path-y" src="/images/about-us.jpg" alt="Chi è Pcasa?" preset="fullOptimize"
+                    loading="lazy" />
                 <div class="text-about">
-                    <div class="text_wrapper scrub-y-rev">
+                    <div class="text_wrapper scrub-y-about">
                         <h2 class="title-about">
                             In breve, siamo...
                         </h2>
@@ -14,7 +14,8 @@
                             giusto valore alla Calabria, facendo riscoprire le tradizioni e i sapori che la
                             caratterizzano.
                             Aiutare il mondo nella lotta contro l'inquinamento, <NuxtLink to="/detersivi"
-                                class="evidence-darker" title="Detersivi ecologici alla spina">riutilizzando le bottiglie di plastica</NuxtLink> per i detersivi e tanto altro.
+                                class="evidence-darker" title="Detersivi ecologici alla spina">riutilizzando le
+                                bottiglie di plastica</NuxtLink> per i detersivi e tanto altro.
                         </p>
                     </div>
                 </div>
@@ -23,8 +24,37 @@
     </section>
 </template>
 <script>
+import gsap from 'gsap'
+
 export default {
     name: 'TheAbout',
+    mounted() {
+        gsap.from('.scrub-y-about', {
+            scrollTrigger: {
+                trigger: '.scrub-y-about',
+                start: 'start bottom',
+                end: 'bottom start',
+                scrub: 2,
+                ease: 'power4.inOut',
+            },
+            stagger: 0.2,
+            y: -300,
+        })
+
+        gsap.to('.path-y', {
+            scrollTrigger: {
+                trigger: '.path-y',
+                start: 'start bottom',
+                end: 'bottom center',
+                scrub: 1,
+                delay: 0.1,
+                ease: 'power4.inOut',
+            },
+            stagger: 0.2,
+            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+            '-webkit-clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)'
+        })
+    }
 }
 </script>
 <style lang="scss" scoped>

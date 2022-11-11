@@ -16,6 +16,8 @@
     </section>
 </template>
 <script>
+import gsap from 'gsap'
+
 export default {
     name: 'ThePartner',
     data() {
@@ -43,6 +45,33 @@ export default {
                 },
             ],
         }
+    },
+    mounted() {
+        gsap.from('.scrub-x-rev', {
+            scrollTrigger: {
+                trigger: '.scrub-x-rev',
+                start: 'start bottom',
+                end: 'bottom start',
+                scrub: 1,
+                delay: 0.01,
+                ease: 'power4.inOut'
+            },
+            stagger: 0.1,
+            x: 300,
+        })
+
+        gsap.from('.scale', {
+            scrollTrigger: {
+                trigger: '.scale',
+                start: 'start bottom',
+                end: 'bottom 70%',
+                scrub: 2,
+                ease: 'power4.inOut',
+            },
+            stagger: 0.2,
+            scale: 0.3,
+            opacity: 0
+        })
     }
 }
 </script>
@@ -52,6 +81,7 @@ export default {
 .section {
     &.partner {
         overflow: hidden;
+
         .header-section {
             margin-left: auto;
             align-items: flex-end;

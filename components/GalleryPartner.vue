@@ -18,6 +18,7 @@ export default {
 .partner_wrapper {
     position: relative;
     flex-basis: calc(((100% * 12) / 12) - $standard-size);
+
     .link-partner {
         position: absolute;
         top: 0;
@@ -26,20 +27,21 @@ export default {
         bottom: 0;
     }
 
-    .svg-partner{
+    .svg-partner {
         display: flex;
         align-items: center;
         justify-content: center;
     }
 }
 
-@media (min-width: $sm){
-    .partner_wrapper{
+@media (min-width: $sm) {
+    .partner_wrapper {
         flex-basis: calc(((100% * 6) / 12) - $standard-size);
     }
 }
-@media (min-width: $md){
-    .partner_wrapper{
+
+@media (min-width: $md) {
+    .partner_wrapper {
         flex-basis: calc(((100% * 3) / 12) - $standard-size);
     }
 }

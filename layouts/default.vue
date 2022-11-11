@@ -17,7 +17,7 @@ if (process.client) {
 
 export default {
     name: "defaultLayouts",
-    mounted() {
+    beforeMount() {
         const bodyEl = document.querySelector('body')
 
         window.addEventListener('resize', (el) => {
@@ -37,15 +37,6 @@ export default {
             ease: 'expo.inOut',
             duration: 1,
         })
-            // .from('.main_footer > .container', {
-            //     scrollTrigger: {
-            //         trigger: '.main_footer > .container ',
-            //         start: 'start bottom',
-            //         end: 'bottom start',
-            //         scrub: 0,
-            //     },
-            //     y: -400,
-            // })
     }
 }
 </script>

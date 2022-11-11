@@ -1,11 +1,11 @@
 <template>
     <section class="section main_prod">
         <div class="container">
-            <div class="header-section">
-                <h2 class="title-section scrub-x">
+            <div class="header-section scrub-x">
+                <h2 class="title-section">
                     Prodotti Ecologici e <span class="evidence">senza</span> Sprechi
                 </h2>
-                <p class="desc-section scrub-x">
+                <p class="desc-section">
                     Acquistando i nostri prodotti darai una mano all'ambiente riducendo gli sprechi
                 </p>
             </div>
@@ -16,6 +16,8 @@
     </section>
 </template>
 <script>
+import gsap from 'gsap'
+
 export default {
     name: 'TheProducts',
     data() {
@@ -41,16 +43,43 @@ export default {
                 },
             ]
         }
+    },
+    mounted() {
+        gsap.from('.scrub-x', {
+            scrollTrigger: {
+                trigger: '.scrub-x',
+                start: 'start bottom',
+                end: 'bottom 70%',
+                scrub: 2,
+                delay: 0.01,
+                ease: 'power4.inOut'
+            },
+            stagger: 0.1,
+            x: -300,
+        })
+
+        gsap.from('.scrub-y', {
+            scrollTrigger: {
+                trigger: '.scrub-y',
+                start: 'start bottom',
+                end: 'bottom 80%',
+                scrub: 1,
+                ease: 'power4.inOut',
+            },
+            stagger: 0.2,
+            y: 300,
+        })
     }
 }
 </script>
 <style lang="scss" scoped>
 @import '~/assets/css/main.scss';
 
-.main_prod{
+.main_prod {
     overflow: hidden;
-    
+
 }
+
 .content-cards {
     display: flex;
     flex-wrap: wrap;

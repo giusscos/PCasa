@@ -24,7 +24,7 @@ export default {
     desc: String,
     img: String,
   },
-  mounted() {
+  beforeMount() {
     const tl = gsap.timeline({ defaults: { ease: 'power4.inOut', duration: 1 } })
     tl.to('.img-hero', {
       'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',

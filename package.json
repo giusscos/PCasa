@@ -9,6 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxt/image-edge": "^1.0.0-27769790.4b27db3",
     "core-js": "^3.25.3",
     "gsap": "^3.11.3",
     "nuxt": "^2.15.8",

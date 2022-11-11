@@ -1,50 +1,68 @@
 <template>
     <section class="section cta">
         <div class="container">
-            <div class="header-section scrub-y-rev2">
+            <div class="header-section scrub-y-cta">
                 <h2 class="title-section">
                     Acquista i nostri prodotti <span class="evidence">online</span>
                 </h2>
                 <p class="desc-section">
                     Tanti prodotti acquistabili in pochi click e spediti in pochissimo tempo a casa tua!
                 </p>
-                <a class="link-section" href="https://pcasa.sumupstore.com/" target="_blank" title="Visita il nostro Negozio Online">Visita il Negozio Online</a>
+                <a class="link-section" href="https://pcasa.sumupstore.com/" target="_blank"
+                    title="Visita il nostro Negozio Online">Visita il Negozio Online</a>
             </div>
         </div>
     </section>
 </template>
 <script>
-export default{
+import gsap from 'gsap'
+
+export default {
     name: 'Call2Action',
+    mounted() {
+        gsap.from('.scrub-y-cta', {
+            scrollTrigger: {
+                trigger: '.scrub-y-cta',
+                start: 'start 60%',
+                end: 'bottom center',
+                scrub: 0,
+                ease: 'power4.inOut',
+            },
+            stagger: 0.2,
+            y: -300,
+        })
+    }
 }
 </script>
 <style lang='scss' scoped>
 @import '~/assets/css/main.scss';
-.section{
-    &.cta{
+
+.section {
+    &.cta {
         color: $color-seco;
         background-color: $color-prim;
         box-shadow: 0px 0px 50px #999;
         overflow: hidden;
 
-        .header-section{
+        .header-section {
             margin: 0 auto;
             align-items: center;
             text-align: center;
 
-            .desc-section{
+            .desc-section {
                 padding-bottom: $big-size;
             }
-            .link-section{
+
+            .link-section {
                 position: relative;
                 overflow: hidden;
-                
+
                 font-size: $big-size;
                 border-radius: $smallest-size;
                 border: 3px solid $color-link;
                 padding: $small-size $bigger-size;
 
-                &::before{
+                &::before {
                     display: block;
                     content: '';
 
@@ -64,8 +82,8 @@ export default{
                     transition: $standard-transition;
                 }
 
-                &:hover{
-                    &::before{
+                &:hover {
+                    &::before {
                         height: 100%;
                         border-radius: 0;
                     }
