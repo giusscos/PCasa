@@ -4,6 +4,8 @@
     </nav>
 </template>
 <script>
+import gsap from 'gsap'
+
 export default {
     name: 'TheNavigation',
     data() {
@@ -27,6 +29,14 @@ export default {
                 },
             ]
         }
+    },
+    mounted(){
+        gsap.to('.item-link', {
+            opacity: 1,
+            duration: 1,
+            stagger: 0.2,
+            ease: 'expo.inOut',
+        })
     }
 }
 </script>

@@ -7,6 +7,8 @@
     </div>
 </template>
 <script>
+import gsap from 'gsap'
+
 export default {
     name: 'TheLogo',
     methods: {
@@ -17,6 +19,13 @@ export default {
                 bodyEl.classList.remove('open')
             }
         }
+    },
+    mounted(){
+        gsap.to('.logo', {
+            opacity: 1,
+            duration: 1,
+            ease: 'expo.inOut',
+        })
     }
 }
 </script>

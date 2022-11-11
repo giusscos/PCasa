@@ -4,7 +4,7 @@
         <main>
             <Nuxt />
         </main>
-        <LazyTheFooter />
+        <TheFooter />
     </div>
 </template>
 <script>
@@ -17,7 +17,7 @@ if (process.client) {
 
 export default {
     name: "defaultLayouts",
-    beforeMount() {
+    mounted() {
         const bodyEl = document.querySelector('body')
 
         window.addEventListener('resize', (el) => {
@@ -26,17 +26,6 @@ export default {
                 bodyEl.classList.remove('open')
             }
         })
-
-        // Animation GSAP
-
-        let tl = gsap.timeline()
-
-        tl.to('.logo, .item-link', {
-            opacity: 1,
-            stagger: 0.2,
-            ease: 'expo.inOut',
-            duration: 1,
-        })
     }
 }
 </script>
@@ -44,9 +33,5 @@ export default {
 .default_layouts {
     display: flex;
     flex-direction: column;
-
-    main {
-        flex-grow: 1;
-    }
 }
 </style>

@@ -71,6 +71,8 @@ export default {
       display: block;
       object-fit: cover;
 
+      max-width: $sm;
+
       pointer-events: none;
       -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
       clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
@@ -105,10 +107,25 @@ export default {
   line-height: 1.2;
   font-size: $big-size;
 }
+@media (min-width: $sm){
+  .hero_wrapper{
+    .img-hero_wrapper {
+      .img-hero {
+        max-width: $md;
+      }
+    }
+  }
+}
 
 @media (min-width: $md) {
   .hero_wrapper {
     grid-template-columns: repeat(2, 1fr);
+
+    .img-hero_wrapper {
+      .img-hero {
+        max-width: $sm;
+      }
+    }
 
     .text-hero {
       align-self: center;
@@ -119,6 +136,25 @@ export default {
       .title-hero,
       .desc-hero {
         transform: translateX(100%);
+      }
+    }
+  }
+}
+
+@media (min-width: $lg){
+  .hero_wrapper{
+    .img-hero_wrapper {
+      .img-hero {
+        max-width: $lg;
+      }
+    }
+  }
+}
+@media (min-width: $xl){
+  .hero_wrapper{
+    .img-hero_wrapper {
+      .img-hero {
+        max-width: 100%;
       }
     }
   }

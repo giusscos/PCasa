@@ -2,7 +2,6 @@
     <footer class="main_footer">
         <div class="container">
             <div>
-                <!-- <TheLogo /> -->
                 <div class="logo-footer" v-html="require(`~/assets/svg/pcasa-logo.svg?raw`)"></div>
                 <div class="brand-info">
                     <div>
@@ -14,7 +13,7 @@
                 </div>
             </div>
             <div class="footer-nav">
-                <LazyFooterList :info="link" v-for="(link, i) in footerListLinks" :key="i" />
+                <FooterList :info="link" v-for="(link, i) in footerListLinks" :key="i" />
             </div>
         </div>
         <div class="last">
@@ -115,6 +114,7 @@ export default {
     }
 
     .brand-info{
+        padding-top: $smallest-size;
         padding-left: $smallest-size;
     }
 
@@ -152,11 +152,11 @@ export default {
     }
 }
 
-@media(min-width: $lg) {
-    .main_footer {
-        .footer-nav {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-}
+// @media(min-width: $lg) {
+//     .main_footer {
+//         .footer-nav {
+//             grid-template-columns: repeat(3, 1fr);
+//         }
+//     }
+// }
 </style>
