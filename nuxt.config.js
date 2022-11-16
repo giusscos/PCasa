@@ -51,7 +51,7 @@ export default {
         locale: "it_IT",
         twitter: "",
         twitter_card: "summary_large_image",
-        theme_color: "#ffffff",
+        theme_color: "#143348",
       },
 
     ]
