@@ -1,88 +1,108 @@
 <template>
-    <div class="card_wrapper">
+    <div class="product_wrapper" :class="index === 1 ? 'right' : ''">
         <NuxtLink :to="info.route" class="link-card" :title="`Visita la pagina ${info.title}`"></NuxtLink>
-        <header class="header-card">
-            <h3 class="title-card">
+        <div class="img-product_wrapper rotate">
+            <nuxt-img class="img-product" :src="info.img" :alt="`Copertina ${info.title}`" preset="cover"
+                sizes="sm:300px md:400px" />
+        </div>
+        <div class="text-product">
+            <h3 class="title">
                 {{ info.title }}
             </h3>
-            <p class="desc-card">
-                {{  info.desc  }}
+            <p class="desc">
+                {{ info.desc }}
             </p>
-        </header>
-        <div class="img-card_wrapper">
-            <img class="img-card" :src="info.img" :alt="`Copertina ${info.title}`" />
         </div>
     </div>
 </template>
 <script>
+import gsap from 'gsap'
+
 export default {
     name: 'CardProd',
     props: {
         info: Object,
+        index: Number,
+    },
+    mounted() {
+        gsap.to('.rotate', {
+            scrollTrigger: {
+                trigger: '.prods',
+                start: 'start bottom',
+                end: 'bottom start',
+                scrub: 2,
+                ease: 'power4.inOut',
+            },
+            rotate: 90,
+        })
+
+        gsap.to('.text-product', {
+            scrollTrigger: {
+                trigger: '.prods',
+                start: 'start bottom',
+                end: 'bottom start',
+                scrub: 1,
+                ease: 'power4.inOut',
+                x: 0,
+            },
+            stagger: 0.1,
+            x: 0,
+        })
     }
 }
 </script>
 <style lang="scss" scoped>
 @import '~/assets/css/main.scss';
 
-.card_wrapper {
-    flex-basis: calc((100% * 12) / 12);
-    height: 600px;
-    max-width: 400px;
-    overflow: hidden;
-    border-radius: $smaller-size;
-    
-    position: relative;
-    
+.product_wrapper {
     display: flex;
     flex-direction: column;
-    
-    background-color: #f7f7f7;
-    box-shadow: 3px 5px 50px #ddd;
-    transition: $fast-transition;
+    &.right {
+        .img-product_wrapper {
+            order: 0;
+            transform: rotate(20deg);
+            max-width: 300px;
+            aspect-ratio: 9/16;
+        }
 
-    &:hover{
-        box-shadow: 10px 20px 50px #999;
-    }
-    .link-card {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        .text-product {
+            align-items: flex-end;
+            transform: translateX(-150px);
+
+            .desc {
+                text-align: right;
+            }
+        }
     }
 
-    .header-card {
-        padding: $big-size $smallest-size $smallest-size;
-        text-align: center;
-        flex-grow: 1;
-        .title-card {
-            text-transform: capitalize;
+    .img-product_wrapper {
+        transform: rotate(-20deg);
+    }
+
+    .text-product {
+        transform: translateX(150px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .title{
+            font-size: $max-size;
+        }
+        .desc{
             font-size: $big-size;
-        }
-        .desc-card{
-            padding: $smaller-size $smallest-size 0;
-            font-size: $standard-size;
-        }
-    }
-    .img-card_wrapper{
-        height: 100%;
-        width: 100%;
-        .img-card {
-            display: block;
-            object-fit: cover;
-            object-position: center;
         }
     }
 }
 @media (min-width: $md){
-    .card_wrapper{
-        flex-basis: calc(((100% * 6) / 12) - $standard-size); 
-    }
-}
-@media (min-width: $lg){
-    .card_wrapper{
-        flex-basis: calc(((100% * 4) / 12) - $standard-size);
+    .product_wrapper{
+        flex-direction: row;
+
+        &.right{
+            .img-product_wrapper{
+                order: 1;
+            }
+        }
     }
 }
 </style>

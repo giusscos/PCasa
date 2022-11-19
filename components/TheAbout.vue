@@ -2,7 +2,7 @@
     <section class="section about">
         <div class="container">
             <div class="content-about">
-                <img class="img-about path-y" src="~/assets/images/about-us.webp" alt="Chi è Pcasa?" />
+                <!-- <img class="img-about path-y" src="~/assets/images/about-us.webp" alt="Chi è Pcasa?" /> -->
                 <div class="text-about">
                     <div class="text_wrapper scrub-y-about">
                         <h2 class="title-about">

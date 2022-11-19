@@ -9,8 +9,8 @@
                     Acquistando i nostri prodotti darai una mano all'ambiente riducendo gli sprechi
                 </p>
             </div>
-            <div class="content-cards scrub-y">
-                <CardProd :info="cardInfo" v-for="(cardInfo, i) in cardsInfo" :key="i" />
+            <div class="content-cards prods">
+                <CardProd :info="cardInfo" :index="i" v-for="(cardInfo, i) in cardsInfo" :key="i" />
             </div>
         </div>
     </section>
@@ -27,19 +27,19 @@ export default {
                     'title': 'Detersivi ecologici',
                     'desc': 'Paga solo il detersivo! Il contenitore lo porti da casa o lo forniamo noi!',
                     'route': '/detersivi',
-                    'img': require('~/assets/images/soaps_min.webp'),
+                    'img': '/soap.webp',
                 },
                 {
                     'title': 'Artigianato locale',
                     'desc': 'Un ritorno al futuro di una serie di utensili e contenitori dei nostri antenati!',
                     'route': '/artigianato',
-                    'img': require('~/assets/images/ceramics_min.webp'),
+                    'img': '/ceramic.webp',
                 },
                 {
                     'title': 'Prodotti tipici',
                     'desc': 'Porta sulla tua tavola i sapori della calabria!',
                     'route': '/prodotti-tipici',
-                    'img': require('~/assets/images/foods_min.webp'),
+                    'img': '/food.webp',
                 },
             ]
         }
@@ -58,16 +58,16 @@ export default {
             x: -300,
         })
 
-        gsap.from('.scrub-y', {
+        gsap.to('.prods', {
             scrollTrigger: {
-                trigger: '.scrub-y',
+                trigger: '.prods',
                 start: 'start bottom',
                 end: 'bottom 80%',
                 scrub: 1,
                 ease: 'power4.inOut',
             },
-            stagger: 0.2,
-            y: 300,
+            stagger: 1,
+            y: -200,
         })
     }
 }
@@ -87,6 +87,7 @@ export default {
     column-gap: $standard-size;
     justify-content: center;
     padding-bottom: $ultra-size;
+    transform: translateY(500px);
 }
 
 @media (min-width: $md) {

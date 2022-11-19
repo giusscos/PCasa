@@ -14,19 +14,9 @@ export default {
     return {
       indexTitle: 'Prodotti per la cura della casa',
       indexDesc: 'Prodotti di qualità e nel rispetto dell\'ambiente',
-      indexImg: require('~/assets/images/hero_min.webp'),
+      // indexImg: require('~/assets/images/ceramics.png'),
+      indexImg: '/index.webp',
     }
-  },
-  beforeMount() {
-    const initialWidth = window.innerWidth
-    
-    window.addEventListener('load', () => {
-      if (initialWidth > 750) {
-        this.indexImg = require('~/assets/images/hero.webp')
-      } else {
-        this.indexImg = require('~/assets/images/hero_min.webp')
-      }
-    })
   }
 }
 </script>

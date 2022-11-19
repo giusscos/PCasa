@@ -15,7 +15,10 @@ export default {
     link: [
       {
         rel: 'icon', type: 'image/x-icon', href: '/pcasa-logo.png',
-      }
+      },
+      {
+        rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-pcasa-logo.png',
+      },
     ]
   },
 
@@ -33,6 +36,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxt/image',
     "@nuxtjs/svg",
     "@nuxtjs/google-fonts",
   ],
@@ -64,6 +68,18 @@ export default {
       },
     },
     display: 'swap',
+  },
+
+  image: {
+    dir: 'assets/images',
+    presets: {
+      cover: {
+        modifiers: {
+          fit: "cover",
+          format: "webp",
+        },
+      },
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

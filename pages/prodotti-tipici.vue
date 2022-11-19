@@ -11,7 +11,7 @@ export default {
     return {
       indexTitle: 'Porta sempre con te i sapori della nostra Terra',
       indexDesc: 'Un viaggio di sapori unico e che solo la Calabria può farti assaporare',
-      indexImg: require('~/assets/images/foods_min.webp'),
+      // indexImg: require('~/assets/images/.webp'),
     }
   },
   head() {
@@ -26,16 +26,5 @@ export default {
       ]
     }
   },
-  beforeMount() {
-    const initialWidth = window.innerWidth
-    
-    window.addEventListener('load', () => {
-      if (initialWidth > 750) {
-        this.indexImg = require('~/assets/images/foods.webp')
-      } else {
-        this.indexImg = require('~/assets/images/foods_min.webp')
-      }
-    })
-  }
 }
 </script>

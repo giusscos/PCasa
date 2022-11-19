@@ -10,7 +10,7 @@
     </div>
     <div class="img-hero_wrapper">
       <div class="dark-filter"></div>
-      <img class="img-hero" alt="hero" :src="img" />
+      <nuxt-img preset="cover" class="img-hero" alt="hero" :src="img" sizes="sm:200px md:400px lg:100vw" />
     </div>
   </div>
 </template>

@@ -11,7 +11,7 @@ export default {
     return {
       indexTitle: 'La storia di Pcasa',
       indexDesc: 'Come siamo arrivati fin qui',
-      indexImg: require('~/assets/images/hero.webp'),
+      // indexImg: require('~/assets/images/.webp'),
     }
   },
   head() {
@@ -26,16 +26,5 @@ export default {
       ]
     }
   },
-  beforeMount() {
-    const initialWidth = window.innerWidth
-    
-    window.addEventListener('load', () => {
-      if (initialWidth > 750) {
-        this.indexImg = require('~/assets/images/hero.webp')
-      } else {
-        this.indexImg = require('~/assets/images/hero_min.webp')
-      }
-    })
-  }
 }
 </script>
