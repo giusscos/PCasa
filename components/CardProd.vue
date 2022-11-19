@@ -1,8 +1,8 @@
 <template>
     <div class="product_wrapper" :class="index === 1 ? 'right' : ''">
         <NuxtLink :to="info.route" class="link-card" :title="`Visita la pagina ${info.title}`"></NuxtLink>
-        <div class="img-product_wrapper rotate">
-            <nuxt-img class="img-product" :src="info.img" :alt="`Copertina ${info.title}`" preset="cover"
+        <div class="img-product_wrapper">
+            <nuxt-img class="img-product rotate" :src="info.img" :alt="`Copertina ${info.title}`" preset="cover"
                 sizes="sm:300px md:400px" />
         </div>
         <div class="text-product">
@@ -40,7 +40,7 @@ export default {
             scrollTrigger: {
                 trigger: '.prods',
                 start: 'start bottom',
-                end: 'bottom start',
+                end: 'bottom 80%',
                 scrub: 1,
                 ease: 'power4.inOut',
                 x: 0,
@@ -56,13 +56,16 @@ export default {
 
 .product_wrapper {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+
     &.right {
         .img-product_wrapper {
             order: 0;
-            transform: rotate(20deg);
-            max-width: 300px;
-            aspect-ratio: 9/16;
+            .img-product {
+                transform: rotate(20deg);
+            }
         }
 
         .text-product {
@@ -76,32 +79,49 @@ export default {
     }
 
     .img-product_wrapper {
-        transform: rotate(-20deg);
+        position: relative;
+        width: 300px;
+        height: 400px;
+        
+        .img-product {
+            position: absolute;
+            object-fit: contain;
+            transform: rotate(-20deg);
+        }
     }
-
+    
     .text-product {
+        mix-blend-mode: difference; 
         transform: translateX(150px);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
+        flex-basis: 300px;
 
-        .title{
+        .title {
             font-size: $max-size;
         }
-        .desc{
+
+        .desc {
             font-size: $big-size;
         }
     }
 }
-@media (min-width: $md){
-    .product_wrapper{
+
+@media (min-width: $md) {
+    .product_wrapper {
         flex-direction: row;
 
-        &.right{
-            .img-product_wrapper{
+        &.right {
+            .img-product_wrapper {
                 order: 1;
             }
+        }
+
+        .text-product{
+            justify-content: center;
+            flex-basis: 600px;
         }
     }
 }
