@@ -2,7 +2,7 @@
     <section class="section about">
         <div class="container">
             <div class="content-about">
-                <!-- <img class="img-about path-y" src="~/assets/images/about-us.webp" alt="Chi è Pcasa?" /> -->
+                <nuxt-img class="img-about path-y" src="/about-us.webp" alt="Chi è Pcasa?" preset="cover" sizes="sm:400px md:600px" />
                 <div class="text-about">
                     <div class="text_wrapper scrub-y-about">
                         <h2 class="title-about">
