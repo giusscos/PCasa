@@ -28,6 +28,7 @@ export default {
     padding: 3rem 0;
 }
 .title_prod{
+    flex-basis: 100%;
     line-height: .95;
 }
 @media (min-width: 1024px){
