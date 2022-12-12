@@ -8,7 +8,7 @@ export default {
                     'desc': `Porta un contenitore nel nostro negozio, al resto penseremo noi.<br>In questo
                                 modo avrai dato
                                 un seconda vita alla plastica!`,
-                    'src': '/img/detersivi.webp',
+                    'src': 'detersivi.webp',
                     'altSrc': 'Detersivi alla spina',
                     'linkText': 'Scopri i nostri detersivi',
                     'linkUrl': '#',
@@ -16,7 +16,7 @@ export default {
                 {
                     'title': 'Artigianato locale🏺',
                     'desc': `Oggetti che utilizzavano i nostri antenati sviluppati con le pi&ugrave; moderne tecnologie.`,
-                    'src': '/img/ceramica.webp',
+                    'src': 'ceramica.webp',
                     'altSrc': 'Artigianato locale',
                     'linkText': 'Scopri il nostro artigianato',
                     'linkUrl': '#',
@@ -24,7 +24,7 @@ export default {
                 {
                     'title': 'Prodotti tipici Calabresi😋',
                     'desc': `Porta sulla tua tavola i sapori unici della calabria e condividili con le persone che ami.`,
-                    'src': '/img/olio-oliva.webp',
+                    'src': 'olio-oliva.webp',
                     'altSrc': 'Prodotti tipici calabresi',
                     'linkText': 'Scopri i nostri prodotti tipici',
                     'linkUrl': '#',

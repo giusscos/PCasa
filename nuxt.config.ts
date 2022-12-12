@@ -19,6 +19,7 @@ export default defineNuxtConfig({
         '@nuxt/image-edge',
     ],
     image: {
+        dir: 'assets/img',
         screens: {
             xs: 320,
             sm: 640,
@@ -31,7 +32,9 @@ export default defineNuxtConfig({
         presets: {
             bodyImg: {
                 modifiers: {
-                    format: 'webp'
+                    format: 'webp',
+                    quality: '80',
+                    sizes: 'xs: 100vw, sm:320px, lg:512px, xl:640, xxl:768px'
                 }
             }
         }
