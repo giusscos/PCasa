@@ -12,8 +12,8 @@ export default {
             {{ prod.title }}
         </h3>
         <div class="img_wrapper">
-            <!-- <img height="800" :src="prod.src" :alt="prod.altSrc"> -->
-            <nuxt-img preset="bodyImg" height="800" :src="prod.src" :alt="prod.altSrc" loading="lazy" />
+            <img height="800" :src="`img/${prod.src}`" :alt="prod.altSrc">
+            <!-- <nuxt-img preset="bodyImg" height="800" :src="prod.src" :alt="prod.altSrc" loading="lazy" /> -->
         </div>
         <div class="text_wrapper">
             <p class="desc_text" v-html="prod.desc"></p>
@@ -30,6 +30,7 @@ export default {
 }
 .title_prod{
     flex-basis: 100%;
+    font-weight: 500;
     line-height: .95;
 }
 @media (min-width: 1024px){

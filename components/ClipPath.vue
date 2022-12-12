@@ -19,7 +19,7 @@ export default{
                 trigger: '.circle_animation-in',
                 scrub: 1,
                 markers: false,
-                start: 'top 55%',
+                start: 'top 70%',
                 end: 'bottom 0',
             },
             transform: `scale(50)`

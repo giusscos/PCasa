@@ -15,28 +15,28 @@ export default defineNuxtConfig({
             ]
         }
     },
-    modules: [
-        '@nuxt/image-edge',
-    ],
-    image: {
-        dir: 'public/img',
-        screens: {
-            xs: 320,
-            sm: 640,
-            md: 768,
-            lg: 1024,
-            xl: 1280,
-            xxl: 1536,
-            '2xl': 1536
-        },
-        presets: {
-            bodyImg: {
-                modifiers: {
-                    format: 'webp',
-                    quality: '80',
-                    sizes: 'xs: 100vw, sm:320px, lg:512px, xl:640, xxl:768px'
-                }
-            }
-        }
-    },
+    // modules: [
+    //     '@nuxt/image-edge',
+    // ],
+    // image: {
+    //     dir: 'public/img',
+    //     screens: {
+    //         xs: 320,
+    //         sm: 640,
+    //         md: 768,
+    //         lg: 1024,
+    //         xl: 1280,
+    //         xxl: 1536,
+    //         '2xl': 1536
+    //     },
+    //     presets: {
+    //         bodyImg: {
+    //             modifiers: {
+    //                 format: 'webp',
+    //                 quality: '80',
+    //                 sizes: 'xs: 100vw, sm:320px, lg:512px, xl:640, xxl:768px'
+    //             }
+    //         }
+    //     }
+    // },
 })

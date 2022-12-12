@@ -10,17 +10,17 @@ export default{
         const pathTlReverse = gsap.timeline({
             defaults: {
                 ease: 'expo.inOut',
-                duration: 2,
+                duration: 1,
             }
         })
 
         pathTlReverse.from('.animation_wrapper-out', {
             scrollTrigger: {
                 trigger: '.circle_animation-out',
-                scrub: 1,
-                markers: false,
+                scrub: 2,
+                markers: true,
                 start: 'top 100%',
-                end: 'bottom 55%',
+                end: 'bottom 90%',
             },
             transform: `scale(50)`
         })
