@@ -12,7 +12,7 @@
             <div class="credits">
                 <p>
                     Progettato e Sviluppato da <a target="_blank" href="https://giusscostest.software"
-                        title="Visita la pagina di Giusscos" class="mark-red">Giusscos</a> in Italia
+                        title="Visita la pagina di Giusscos" class="mark-seco-darker">Giusscos</a> in Italia
                 </p>
                 <span>
                     Copyright © 2023. Tutti i diritti riservati.
