@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         '@nuxt/image-edge',
     ],
     image: {
-        dir: '~/assets/img',
+        dir: 'assets/img',
         screens: {
             xs: 320,
             sm: 640,
