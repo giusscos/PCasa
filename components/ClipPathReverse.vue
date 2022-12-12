@@ -18,7 +18,7 @@ export default{
             scrollTrigger: {
                 trigger: '.circle_animation-out',
                 scrub: 2,
-                markers: true,
+                markers: false,
                 start: 'top 100%',
                 end: 'bottom 90%',
             },
