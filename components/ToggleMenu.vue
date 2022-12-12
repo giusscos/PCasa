@@ -11,6 +11,8 @@ export default {
     mounted() {
         const openMenu = document.querySelector('.open_menu')
         const closeMenu = document.querySelector('.close_menu')
+        const listItemEl = document.querySelectorAll('.item_close')
+        let open = false
 
         const tl = gsap.timeline({
             defaults: {
@@ -52,10 +54,21 @@ export default {
             }, '<')
 
         openMenu.addEventListener('click', () => {
+            open = !open
             tl.play()
         })
         closeMenu.addEventListener('click', () => {
+            open = !open
             tl.reverse()
+        })
+
+        listItemEl.forEach((el) => {
+            el.addEventListener('click', () => {
+                if(window.innerWidth < 1024 && open){
+                    open = !open 
+                    tl.reverse()
+                }
+            })
         })
     }
 }

@@ -64,11 +64,11 @@
 }
 
 .title {
-    margin-bottom: 1rem;
-    line-height: .75;
-    font-size: 15vw;
+    margin-bottom: 1.5rem;
+    line-height: .8;
+    font-size: 6rem;
     font-weight: 600;
-    letter-spacing: -0.15rem;
+    letter-spacing: -0.3rem;
 }
 
 .subtitle {
@@ -76,28 +76,28 @@
     position: relative;
     left: 0.2rem;
     line-height: 1;
-    font-size: 5vw;
+    font-size: 1.75rem;
     font-weight: 500;
     letter-spacing: -0.05rem;
 }
 
 @media (min-width: 640px) {
     .title {
-        font-size: 10vw;
+        font-size: 7.5rem;
     }
 
     .subtitle {
-        font-size: 3vw;
+        font-size: 2rem;
     }
 }
 
 @media (min-width: 1024px) {
     .title {
-        font-size: 7vw;
+        font-size: 8rem;
     }
 
     .subtitle {
-        font-size: 2vw;
+        font-size: 2.5rem;
     }
 }
 </style>

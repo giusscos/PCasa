@@ -63,6 +63,11 @@ img{
   object-position: center;
 }
 
+.img_wrapper{
+  overflow: hidden;
+  border-radius: 0.85rem;
+}
+
 .section.no_overflow{
   overflow: hidden;
 }

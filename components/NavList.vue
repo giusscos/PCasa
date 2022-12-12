@@ -31,7 +31,7 @@ export default {
 </script>
 <template>
     <ul class="list">
-        <li v-for="(link, i) in navLinks" :key="i" class="list_item">
+        <li v-for="(link, i) in navLinks" :key="i" class="list_item item_close">
             <NuxtLink :to="link.nameRoute" :title="link.title" class="item_link">
                 {{ link.name }}
             </NuxtLink>
