@@ -37,7 +37,8 @@ export default {
                 </h2>
                 <div class="description_wrapper ">
                     <div class="img_wrapper hook">
-                        <img width="400" src="/img/hook.webp" alt="Fare ecologia">
+                        <nuxt-img preset="bodyImg" width="400" src="/img/hook.webp" alt="Fare ecologia" />
+                        <!-- <img width="400" src="/img/hook.webp" alt="Fare ecologia"> -->
                     </div>
                     <div class="text_wrapper">
                         <p class="desc_text">

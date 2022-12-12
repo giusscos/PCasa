@@ -12,7 +12,8 @@ export default {
             {{ prod.title }}
         </h3>
         <div class="img_wrapper">
-            <img height="800" :src="prod.src" :alt="prod.altSrc">
+            <!-- <img height="800" :src="prod.src" :alt="prod.altSrc"> -->
+            <nuxt-img preset="bodyImg" height="800" :src="prod.src" :alt="prod.altSrc" />
         </div>
         <div class="text_wrapper">
             <p class="desc_text" v-html="prod.desc"></p>

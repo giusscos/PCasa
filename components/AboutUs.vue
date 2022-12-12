@@ -38,7 +38,8 @@ export default {
             </div>
             <div class="description_wrapper">
                 <div class="img_wrapper about">
-                    <img width="400" src="/img/about-us.webp" alt="Il team pcasa">
+                    <nuxt-img preset="bodyImg" width="400" src="/img/about-us.webp" alt="Il team pcasa" />
+                    <!-- <img width="400" src="/img/about-us.webp" alt="Il team pcasa"> -->
                 </div>
                 <div class="text_wrapper">
                     <p class="desc_text">

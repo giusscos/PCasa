@@ -1,6 +1,7 @@
 <template>
     <section class="section jumbo">
-        <img src="/img/jumbo.webp" alt="Foto jumbo" draggable="false" />
+        <nuxt-img preset="bodyImg" src="/img/jumbo.webp" alt="Foto jumbo" draggable="false" />
+        <!-- <img src="/img/jumbo.webp" alt="Foto jumbo" draggable="false" /> -->
         <div class="black_filter"></div>
         <div class="container">
             <div class="jumbo_text">
