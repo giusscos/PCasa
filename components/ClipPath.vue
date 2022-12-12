@@ -22,7 +22,7 @@ export default{
                 start: 'top 70%',
                 end: 'bottom 0',
             },
-            transform: `scale(50)`
+            transform: `scale(25)`
         })
     }
 }

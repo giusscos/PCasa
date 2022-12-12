@@ -2,7 +2,7 @@
     <footer class="main_footer">
         <div class="container">
             <div class="info_wrapper">
-                <Logo class="svg_logo-footer" />
+                <LogoXmas class="svg_logo-footer" />
                 <div class="info">
                     <p>P.IVA IT03401820786</p>
                     <p>Via Trinitá N. 9, Cariati (CS), Italia</p>

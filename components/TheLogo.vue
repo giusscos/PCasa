@@ -4,8 +4,8 @@
         <h1 class="logo">
             Pcasa
         </h1>
-        <Logo class="svg_logo-long" />
-        <LogoMini class="svg_logo-short" />
+        <LogoXmas class="svg_logo-long" />
+        <LogoMiniXmas class="svg_logo-short" />
     </div>
 </template>
 

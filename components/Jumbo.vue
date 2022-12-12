@@ -10,7 +10,7 @@
                         Ecologia <span class="mark-red">smart</span> 
                     </h2>
                     <h3 class="subtitle">
-                        Riutilizziamo la plastica in modo intelligente<br>evitando gli sprechi
+                        Riutiliziamo la plastica in modo intelligente<br>evitando gli sprechi
                     </h3>
                     <NuxtLink to="/ecology" title="Scopri come facciamo ecologia" class="btn_cta">
                         Scopri come <RightArrow class="svg_icon" />

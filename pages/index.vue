@@ -13,7 +13,7 @@
   </main>
 </template>
 <style scoped>
-.section.no_overflow{
+.section.no_overflow {
   padding: 20rem 0;
   min-height: 120vh;
 }

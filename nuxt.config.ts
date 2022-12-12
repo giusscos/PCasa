@@ -8,10 +8,25 @@ export default defineNuxtConfig({
             },
             title: 'Pcasa',
             meta: [
-                { name: 'description', content: 'Una bellissima descrizione' }
+                { name: 'description', content: 'Riutiliziamo la plastica in modo intelligente evitando gli sprechi' },
+                { name: 'author', content: 'Giuseppe Pio Cosenza - giusscos' },
+
+                // Facebook
+                { property: 'og:type', content: 'website' },
+                { property: 'og:url', content: 'https://pcasatest.netlify.app' },
+                { property: 'og:title', content: 'Pcasa' },
+                { property: 'og:description', content: 'Riutiliziamo la plastica in modo intelligente evitando gli sprechi' },
+                { property: 'og:image', content: 'https://pcasatest.netlify.app/pcasa-social-meta.png' },
+                
+                // Twitter 
+                { property: 'twitter:card', content: 'summary_large_image' },
+                { property: 'twitter:url', content: 'https://pcasatest.netlify.app' },
+                { property: 'twitter:title', content: 'Pcasa' },
+                { property: 'twitter:description', content: 'Riutiliziamo la plastica in modo intelligente evitando gli sprechi' },
+                { property: 'twitter:image', content: 'https://pcasatest.netlify.app/pcasa-social-meta.png' },
             ],
             link: [
-                { rel: 'icon', href: '/pcasa-icon.png' }
+                { rel: 'icon', href: '/pcasa-icon-xmas.png' }
             ]
         }
     },
