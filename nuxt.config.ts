@@ -20,6 +20,9 @@ export default defineNuxtConfig({
     ],
     image: {
         dir: 'assets/img',
+        ipx: {
+            baseUrl: '_ipx/',
+        },
         screens: {
             xs: 320,
             sm: 640,
