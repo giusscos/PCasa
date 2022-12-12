@@ -29,6 +29,7 @@ export default {
     padding: 3rem 0;
 }
 .title_prod{
+    font-size: 4rem;
     flex-basis: 100%;
     font-weight: 500;
     line-height: .95;

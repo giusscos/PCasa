@@ -76,7 +76,7 @@ export default {
 <template>
     <button class="toggle_menu">
         <div class="menu open_menu">
-            Menu
+            Men&uacute;
         </div>
         <div class="menu close_menu">
             Chiudi

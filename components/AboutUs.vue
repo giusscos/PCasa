@@ -55,6 +55,3 @@ export default {
         </div>
     </section>
 </template>
-<style>
-
-</style>

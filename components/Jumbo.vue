@@ -66,7 +66,7 @@
 .title {
     margin-bottom: 1.5rem;
     line-height: .8;
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 600;
     letter-spacing: -0.3rem;
 }
