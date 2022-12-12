@@ -57,7 +57,7 @@ export default {
 </template>
 <style>
 .title_section {
-    font-size: 7rem;
+    font-size: 6rem;
     font-weight: 600;
     line-height: .75;
     width: 60%;
@@ -85,7 +85,7 @@ export default {
 }
 
 .desc_text {
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: 400;
     line-height: .9;
 }
