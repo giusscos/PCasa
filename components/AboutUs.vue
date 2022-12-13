@@ -33,7 +33,7 @@ export default {
         <div class="container">
             <div class="header_section">
                 <h2 class="title_section">
-                    Siamo un azienda che pensa in <span class="mark-green">verde</span>
+                    Siamo un azienda che pensa in <span class="mark-seco-darker">verde</span>
                 </h2>
             </div>
             <div class="description_wrapper">
@@ -43,7 +43,7 @@ export default {
                 </div>
                 <div class="text_wrapper">
                     <p class="desc_text">
-                        Proponiamo soluzioni <span class="mark-green">verdi</span> per rispettare
+                        Proponiamo soluzioni <span class="mark-seco-darker">verdi</span> per rispettare
                         l'ambiente che ci circonda.<br>Ti va di unirti a noi?🌱
                     </p>
                     <a class="btn_cta btn_cta-text" href="#" title="Scopri come entrare nel nostro team">

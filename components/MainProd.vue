@@ -5,9 +5,7 @@ export default {
             mainProdsList: [
                 {
                     'title': 'Detersivi alla spina🧴',
-                    'desc': `Porta un contenitore nel nostro negozio, al resto penseremo noi.<br>In questo
-                                modo avrai dato
-                                un seconda vita alla plastica!`,
+                    'desc': `Porta un contenitore nel nostro negozio, al resto penseremo noi.`,
                     'src': 'detersivi.webp',
                     'altSrc': 'Detersivi alla spina',
                     'linkText': 'Scopri i nostri detersivi',
@@ -25,7 +23,7 @@ export default {
                     'title': 'Prodotti tipici Calabresi😋',
                     'desc': `Porta sulla tua tavola i sapori unici della calabria e condividili con le persone che ami.`,
                     'src': 'prodotti-tipici.webp',
-                    'altSrc': 'Prodotti tipici calabresi',
+                    'altSrc': 'Prodotti tipici Calabresi',
                     'linkText': 'Scopri i nostri prodotti tipici',
                     'linkUrl': '#',
                 },

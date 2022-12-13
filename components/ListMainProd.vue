@@ -29,7 +29,7 @@ export default {
     padding: 3rem 0;
 }
 .title_prod{
-    font-size: 4rem;
+    font-size: 3.85rem;
     flex-basis: 100%;
     font-weight: 500;
     line-height: .95;
@@ -37,6 +37,9 @@ export default {
 @media (min-width: 1024px){
     .description_wrapper:nth-child(odd)>.img_wrapper{
         order: 1;
+    }
+    .title_prod{
+        font-size: 5.85rem;
     }
 }
 </style>

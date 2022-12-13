@@ -1,10 +1,9 @@
 /* Element */
 
-.mark-red {
+.mark-link {
   color: var(--pc-color-link);
   font-weight: 600;
 }
-.mark-green, 
 .mark-seco-darker {
   color: var(--pc-color-seco-darker);
   font-weight: 600;

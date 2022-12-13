@@ -12,7 +12,7 @@ export default {
                 {
                     'name': 'ecologia',
                     'nameRoute': '/ecology',
-                    'title': 'Scopri come facciamo ecologia',
+                    'title': 'Scopri come fare ecologia',
                 },
                 {
                     'name': 'chi siamo',
@@ -39,17 +39,17 @@ export default {
     </ul>
 </template>
 <style scoped>
-.list{
+.list {
     position: relative;
     top: 2rem;
     padding: 1rem;
 }
 
-.list_item{
+.list_item {
     overflow: hidden;
 }
 
-.item_link{
+.item_link {
     display: block;
     padding: 0 1rem;
     pointer-events: none;
@@ -60,24 +60,26 @@ export default {
     letter-spacing: -0.1rem;
     text-transform: capitalize;
     color: var(--pc-color-white);
-    
+
     transform: translateY(200%);
 }
 
-.item_link:hover{
+.item_link:hover {
     color: var(--pc-color-link);
     text-decoration: underline;
 }
 
-@media(min-width: 1024px){
-    .list{
+@media(min-width: 1024px) {
+    .list {
         display: flex;
         top: 0;
     }
-    .list_item{
+
+    .list_item {
         overflow: unset;
     }
-    .item_link{
+
+    .item_link {
         line-height: 0.9;
         pointer-events: auto;
         transform: translateY(0%);

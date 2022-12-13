@@ -33,12 +33,12 @@ export default {
         <div class="container">
             <div class="header_section">
                 <h2 class="title_section">
-                    Inizia a fare <span class="mark-green">ecologia</span> anche tu
+                    Fai <span class="mark-seco-darker">ecologia</span> anche tu
                 </h2>
                 <div class="description_wrapper ">
                     <div class="img_wrapper hook">
                         <!-- <nuxt-img preset="bodyImg" width="400" src="hook.webp" alt="Fare ecologia" /> -->
-                        <img width="400" src="/img/ecologia-semplice.webp" alt="Fare ecologia">
+                        <img width="400" src="/img/ecologia-semplice.webp" alt="Inizia a fare ecologia portando dei contenitori nel nostro negozio">
                     </div>
                     <div class="text_wrapper">
                         <p class="desc_text">
@@ -46,7 +46,7 @@ export default {
                             tuo portafogli e al tuo Pianeta 🌍
                         </p>
                         <a class="btn_cta btn_cta-text" href="#" title="Scopri come fare ecologia">
-                            Scopri come 
+                            Scopri come
                             <RightArrow class="svg_icon" />
                         </a>
                     </div>
@@ -57,7 +57,7 @@ export default {
 </template>
 <style>
 .title_section {
-    font-size: 5.25rem;
+    font-size: 5rem;
     font-weight: 600;
     line-height: .75;
     width: 60%;
@@ -97,6 +97,13 @@ export default {
 
     .text_wrapper {
         flex-basis: calc((100% * 5) / 12);
+    }
+    .title_section{
+        font-size: 7rem;
+        line-height: .8;
+    }
+    .desc_text{
+        font-size: 5rem;
     }
 }
 </style>
