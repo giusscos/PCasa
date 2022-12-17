@@ -9,7 +9,7 @@ export default {
     mounted() {
         const hookTl = gsap.timeline({
             defaults: {
-                ease: 'power4.inOut',
+                ease: 'expo.inOut',
                 duration: 1.5,
             }
         })
@@ -20,10 +20,9 @@ export default {
                 markers: false,
                 scrub: 1,
                 start: 'top 100%',
-                end: 'bottom 90%',
+                end: 'bottom 100%',
             },
-            'clip-path': 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)',
-            '-webkit-clip-path': 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)',
+            y: -150
         })
     }
 }
