@@ -30,6 +30,9 @@ export default defineNuxtConfig({
             ]
         }
     },
+    build: {
+        transpile : ['gsap'],
+    }
     // modules: [
     //     '@nuxt/image-edge',
     // ],
