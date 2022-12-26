@@ -19,11 +19,6 @@ export default {
                     'url': '#',
                     'title': 'Visita la pagina Instagram',
                 },
-                {
-                    'name': 'Pinterest',
-                    'url': '#',
-                    'title': 'Visita la pagina Pinterest',
-                },
             ]
         }
     }

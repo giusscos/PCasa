@@ -1,7 +1,7 @@
 <template>
     <div class="list_wrapper">
         <NavListFooter />
-        <SocialListFooter />
+        <!-- <SocialListFooter /> -->
     </div>
 </template>
 <style scoped>
