@@ -6,22 +6,22 @@ export default {
             navLinks: [
                 {
                     'name': 'prodotti',
-                    'nameRoute': '/products',
+                    'nameRoute': '/prodotti',
                     'title': 'Visita la pagina dei prodotti',
                 },
                 {
                     'name': 'ecologia',
-                    'nameRoute': '/ecology',
+                    'nameRoute': '/ecologia',
                     'title': 'Scopri come fare ecologia',
                 },
                 {
                     'name': 'chi siamo',
-                    'nameRoute': '/about',
+                    'nameRoute': '/chi-siamo',
                     'title': 'Scopri la nostra azienda',
                 },
                 {
                     'name': 'contatti',
-                    'nameRoute': '/contacts',
+                    'nameRoute': '/contatti',
                     'title': 'Visita la pagina dei contatti',
                 },
             ]
