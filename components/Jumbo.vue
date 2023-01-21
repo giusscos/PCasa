@@ -1,18 +1,18 @@
 <template>
     <section class="section jumbo">
         <!-- <nuxt-img preset="bodyImg" src="jumbo.webp" alt="Foto jumbo" draggable="false" /> -->
-        <img src="/img/jumbo.webp" alt="Un angolo verde del nostro pianeta Terra" draggable="false" />
+        <img src="/img/jumbo-earth.webp" alt="Un angolo verde del nostro pianeta Terra" draggable="false" />
         <div class="black_filter"></div>
         <div class="container">
             <div class="jumbo_text">
                 <div class="title_wrapper">
                     <h2 class="title">
-                        Ecologia <span class="mark-link">smart</span>
+                        Salviamo il <span class="mark-link">pianeta</span>
                     </h2>
                     <h3 class="subtitle">
-                        Riutiliziamo la plastica in modo intelligente<br>evitando gli sprechi
+                        Riutiliziamo la plastica in modo intelligente<br>evitando gli sprechi.
                     </h3>
-                    <NuxtLink to="/ecology" title="Scopri come facciamo ecologia" class="btn_cta">
+                    <NuxtLink to="/ecologia" title="Scopri come facciamo ecologia" class="btn_cta">
                         Scopri come
                         <RightArrow class="svg_icon" />
                     </NuxtLink>
@@ -64,6 +64,7 @@
 
 .title_wrapper {
     color: var(--pc-color-white);
+    text-shadow: 3px 3px 15px #000;
 }
 
 .title {

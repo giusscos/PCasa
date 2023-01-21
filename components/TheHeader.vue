@@ -2,7 +2,6 @@
     <header class="main_header">
         <TheLogo />
         <TheNav />
-        <ToggleMenu />
     </header>
 </template>
 
@@ -21,7 +20,6 @@
     .main_header{
         width: 100%;
         display: flex;
-        align-items: flex-start;
     }
 }
 </style>

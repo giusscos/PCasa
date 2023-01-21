@@ -30,59 +30,133 @@ export default {
 }
 </script>
 <template>
-    <ul class="list">
-        <li v-for="(link, i) in navLinks" :key="i" class="list_item item_close">
-            <NuxtLink :to="link.nameRoute" :title="link.title" class="item_link">
+    <ul class="list" id="prim-nav" data-state="closed">
+        <li v-for="(link, i) in navLinks" :key="i" class="item-list">
+            <NuxtLink :to="link.nameRoute" :title="link.title" class="item-link">
+                <RightArrowLong class="arrow-hover" />
                 {{ link.name }}
             </NuxtLink>
         </li>
     </ul>
 </template>
-<style scoped>
-.list {
-    position: relative;
+<style>
+.arrow-hover {
+    width: 40px;
+    height: 40px;
+}
+
+.arrow-hover path {
+    stroke: var(--pc-color-white);
+}
+
+.navigation>.list {
+    position: fixed;
     top: 2rem;
-    padding: 1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 350px;
+    height: 400px;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--pc-color-prim-translucent);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
-.list_item {
+.list[data-state="closed"] {
+    display: none;
+}
+
+.list[data-state="closing"] {
+    animation: listNavClose 700ms cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.list[data-state="opened"] {
+    display: flex;
+    animation: listNavOpen 700ms cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes listNavOpen {
+    0% {
+        -webkit-clip-path: circle(0% at 50% 0);
+        clip-path: circle(0% at 50% 0);
+    }
+
+    100% {
+        top: 1.25rem;
+        -webkit-clip-path: circle(70.7% at 50% 50%);
+        clip-path: circle(70.7% at 50% 50%);
+    }
+}
+
+@keyframes listNavClose {
+    0% {
+        -webkit-clip-path: circle(70.7% at 50% 50%);
+        clip-path: circle(70.7% at 50% 50%);
+    }
+
+    100% {
+        -webkit-clip-path: circle(0% at 50% 0);
+        clip-path: circle(0% at 50% 0);
+    }
+}
+
+.item-list {
+    white-space: nowrap;
     overflow: hidden;
+    position: relative;
 }
 
-.item_link {
+.item-link {
     display: block;
-    padding: 0 1rem;
-    pointer-events: none;
-
-    font-weight: 600;
-    line-height: 1.75;
-    font-size: 2.25rem;
-    letter-spacing: -0.1rem;
-    text-transform: capitalize;
+    font-size: 3rem;
     color: var(--pc-color-white);
-
-    transform: translateY(200%);
+    padding: 0.1rem 0.75rem;
+    text-transform: capitalize;
+    transform: translateX(-3.25rem);
+    transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.item_link:hover {
-    color: var(--pc-color-link);
+.item-link:hover {
     text-decoration: underline;
+    transform: translateX(0);
 }
 
-@media(min-width: 1024px) {
-    .list {
+@media (min-width: 1024px) {
+    .menu-wrapper {
+        display: none;
+    }
+
+    .navigation>.list {
         display: flex;
-        top: 0;
+        flex-direction: row;
+        position: unset;
+        top: unset;
+        left: unset;
+        transform: translate(0);
+
+        width: unset;
+        height: unset;
     }
 
-    .list_item {
-        overflow: unset;
+    .arrow-hover {
+        display: none;
     }
 
-    .item_link {
-        line-height: 0.9;
-        pointer-events: auto;
-        transform: translateY(0%);
+    .item-link {
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+        transform: translate(0);
+    }
+
+    .item-link:hover {
+        color: var(--pc-color-link);
+        text-decoration: underline;
     }
 }
 </style>

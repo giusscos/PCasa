@@ -16,10 +16,10 @@
                             Fare ecologia &eacute; semplice!<br>Con poche abitudini puoi dare una mano a te stesso, al
                             tuo portafogli e al tuo Pianeta 🌍
                         </p>
-                        <a class="btn_cta btn_cta-text" href="#" title="Scopri come fare ecologia">
+                        <NuxtLink class="btn_cta btn_cta-text" to="/ecologia" title="Scopri come fare ecologia">
                             Scopri come
                             <RightArrow class="svg_icon" />
-                        </a>
+                        </NuxtLink>
                     </div>
                 </div>
             </div>

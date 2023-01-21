@@ -10,7 +10,7 @@ const description = "Scrivici subito o raggiungici in negozio"
   </Head>
   
   <main class="contacts">
-    <section class="section contacts">
+    <!-- <section class="section contacts">
       <div class="container">
         <div class="header_section">
           <h2 class="title_section">
@@ -23,7 +23,7 @@ const description = "Scrivici subito o raggiungici in negozio"
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="section contacts">
       <div class="container">
         <div class="header_section">
