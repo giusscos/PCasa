@@ -1,11 +1,11 @@
 /* color palette */
 :root {
-  --pc-color-white: #f7f7f7;
-  --pc-color-white-translucent: #f7f7f7a0;
-  --pc-color-black: #070707;
-  --pc-color-black-translucent: #070707a0;
+  --pc-color-white: #f0f0f0;
+  --pc-color-white-translucent: #f0f0f0a0;
+  --pc-color-black: #030303;
+  --pc-color-black-translucent: #030303a0;
   --pc-color-prim: #143348;
-  --pc-color-prim-translucent: #143348ca;
+  --pc-color-prim-translucent: rgba(13, 34, 49, 0.9);
   --pc-color-seco: #d3ebcc;
   --pc-color-seco-translucent: #d3ebcca0;
   --pc-color-seco-darker: #6b8962;
@@ -27,7 +27,7 @@ body {
   min-width: 320px;
   color: var(--pc-color-black);
   background-color: var(--pc-color-white);
-  font-family: Inter, -apple-system, Roboto, 'Helvetica Neue', sans-serif;
+  font-family: Inter, -apple-system, Roboto, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,8 +37,6 @@ body {
 
 main {
   position: relative;
-  /* top: 5rem; */
-  /* padding: 0 0.5rem; */
 }
 
 a {

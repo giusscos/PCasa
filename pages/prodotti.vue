@@ -3,7 +3,3 @@
     <ComingSoon />
   </main>
 </template>
-
-<style>
-
-</style>

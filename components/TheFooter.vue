@@ -11,11 +11,11 @@
             <TheNavFooter />
             <div class="credits">
                 <p>
-                    Progettato e Sviluppato da <a target="_blank" href="https://giuseppecosenza.it"
-                        title="Visita il sito di Giusscos">Giusscos</a> in Italia
+                    Progettato e Sviluppato da <a target="_blank" href="https://giusscos.it"
+                        title="Visita il sito di Giusscos">Giusscos</a> in Italia 🇮🇹
                 </p>
                 <span>
-                    Copyright © 2023. Tutti i diritti riservati.
+                    © Pcasa 2023
                 </span>
             </div>
         </div>

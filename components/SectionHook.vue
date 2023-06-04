@@ -33,7 +33,6 @@
     line-height: .75;
     width: 60%;
     letter-spacing: -0.2rem;
-    margin-bottom: 5rem;
     text-transform: capitalize;
 }
 
@@ -41,12 +40,7 @@
     gap: 2rem;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
-}
-
-.img_wrapper {
-    -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
-    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+    align-items: flex-start;
 }
 
 .text_wrapper {

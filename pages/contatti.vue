@@ -1,12 +1,8 @@
-<script setup>
-const title = "Contatti - Pcasa"
-const description = "Scrivici subito o raggiungici in negozio"
-</script>
 <template>
 
   <Head>
-    <Title>{{ title }}</Title>
-    <Meta name="description" :content="description" />
+    <Title>Contatti - Pcasa</Title>
+    <Meta name="description" content="Scrivici subito o raggiungici in negozio" />
   </Head>
   
   <main class="contacts">
@@ -42,6 +38,10 @@ const description = "Scrivici subito o raggiungici in negozio"
 <style>
 .contacts .description_wrapper {
   justify-content: center;
+}
+
+.contacts .title_section{
+  margin-bottom: 2.5rem;
 }
 
 .contacts iframe {

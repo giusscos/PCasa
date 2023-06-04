@@ -1,9 +1,6 @@
 <template>
   <main class="ecology">
     <section class="section jumbo">
-      <!-- <nuxt-img preset="bodyImg" src="jumbo.webp" alt="Foto jumbo" draggable="false" /> -->
-      <img src="/img/jumbo.webp" alt="Un angolo verde del nostro pianeta Terra" draggable="false" />
-      <div class="black_filter"></div>
       <div class="container">
         <div class="jumbo_text">
           <div class="title_wrapper">
@@ -76,34 +73,13 @@
   margin-left: 0.5rem;
 }
 
-.black_filter {
-  z-index: 5;
-
-  background-color: black;
-  opacity: 0.6;
-
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.section>img {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
 .jumbo_text {
   position: relative;
   z-index: 10;
 }
 
 .title_wrapper {
-  color: var(--pc-color-white);
-  text-shadow: 3px 3px 15px #000;
+  color: var(--pc-color-black);
 }
 
 .title {

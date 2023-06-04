@@ -1,7 +1,9 @@
 <template>
     <header class="main_header">
-        <TheLogo />
-        <TheNav />
+        <div class="container">
+            <TheLogo />
+            <TheNav />
+        </div>
     </header>
 </template>
 
@@ -9,11 +11,17 @@
 .main_header{
     z-index: 100;
     position: fixed;
-    top: 1rem;
+    top: 0;
     left: 0;
     right: 0;
-
-    padding: 0 1rem;
+    
+    background-color: var(--pc-color-prim-translucent);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+}
+.main_header > .container {
+    display: flex;
+    align-items: center;
 }
 
 @media (min-width: 1024px){

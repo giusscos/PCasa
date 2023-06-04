@@ -30,7 +30,7 @@ export default {
 }
 </script>
 <template>
-    <ul class="list" id="prim-nav" data-state="closed">
+    <ul class="list">
         <li v-for="(link, i) in navLinks" :key="i" class="item-list">
             <NuxtLink :to="link.nameRoute" :title="link.title" class="item-link">
                 <RightArrowLong class="arrow-hover" />
@@ -50,60 +50,9 @@ export default {
 }
 
 .navigation>.list {
-    position: fixed;
-    top: 2rem;
-    left: 50%;
-    transform: translate(-50%, 0);
-
-    width: 350px;
-    height: 400px;
-    border-radius: 1rem;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    background-color: var(--pc-color-prim-translucent);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-}
-
-.list[data-state="closed"] {
-    display: none;
-}
-
-.list[data-state="closing"] {
-    animation: listNavClose 700ms cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-
-.list[data-state="opened"] {
-    display: flex;
-    animation: listNavOpen 700ms cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-
-@keyframes listNavOpen {
-    0% {
-        -webkit-clip-path: circle(0% at 50% 0);
-        clip-path: circle(0% at 50% 0);
-    }
-
-    100% {
-        top: 1.25rem;
-        -webkit-clip-path: circle(70.7% at 50% 50%);
-        clip-path: circle(70.7% at 50% 50%);
-    }
-}
-
-@keyframes listNavClose {
-    0% {
-        -webkit-clip-path: circle(70.7% at 50% 50%);
-        clip-path: circle(70.7% at 50% 50%);
-    }
-
-    100% {
-        -webkit-clip-path: circle(0% at 50% 0);
-        clip-path: circle(0% at 50% 0);
-    }
 }
 
 .item-list {
@@ -112,18 +61,28 @@ export default {
     position: relative;
 }
 
+.navigation[data-state="closed"] .item_link {
+    transform: translateY(100%);
+    opacity: 0;
+}
+.navigation[data-state="opened"] .item_link {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 .item-link {
     display: block;
     font-size: 3rem;
     color: var(--pc-color-white);
     padding: 0.1rem 0.75rem;
     text-transform: capitalize;
+    opacity: .75;
     transform: translateX(-3.25rem);
-    transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .item-link:hover {
-    text-decoration: underline;
+    opacity: 1;
     transform: translateX(0);
 }
 
@@ -135,13 +94,10 @@ export default {
     .navigation>.list {
         display: flex;
         flex-direction: row;
-        position: unset;
+        position: relative;
         top: unset;
         left: unset;
         transform: translate(0);
-
-        width: unset;
-        height: unset;
     }
 
     .arrow-hover {
@@ -151,12 +107,12 @@ export default {
     .item-link {
         font-size: 2rem;
         padding: 0.5rem 1rem;
+        opacity: .75;
         transform: translate(0);
     }
 
     .item-link:hover {
-        color: var(--pc-color-link);
-        text-decoration: underline;
+        opacity: 1;
     }
 }
 </style>

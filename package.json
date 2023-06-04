@@ -10,8 +10,5 @@
   "devDependencies": {
     "@nuxt/image-edge": "^1.0.0-27840416.dc1ed65",
     "nuxt": "3.0.0"
-  },
-  "dependencies": {
-    "gsap": "^3.11.3"
   }
 }
