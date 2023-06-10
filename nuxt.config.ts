@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     app: {
-        // pageTransition: { name: 'page', mode: 'out-in' },
         head: {
             htmlAttrs: {
                 lang: "it",
@@ -13,22 +12,29 @@ export default defineNuxtConfig({
 
                 // Facebook
                 { property: 'og:type', content: 'website' },
-                { property: 'og:url', content: 'https://pcasatest.netlify.app' },
+                { property: 'og:url', content: 'https://pcasa.it' },
                 { property: 'og:title', content: 'Pcasa' },
                 { property: 'og:description', content: 'Riutiliziamo la plastica in modo intelligente evitando gli sprechi' },
-                { property: 'og:image', content: 'https://pcasatest.netlify.app/pcasa-xmas-social-meta.png' },
-                
+                { property: 'og:image', content: 'https://pcasa.it/pcasa-social-meta.png' },
+
                 // Twitter 
                 { property: 'twitter:card', content: 'summary_large_image' },
-                { property: 'twitter:url', content: 'https://pcasatest.netlify.app' },
+                { property: 'twitter:url', content: 'https://pcasa.it' },
                 { property: 'twitter:title', content: 'Pcasa' },
                 { property: 'twitter:description', content: 'Riutiliziamo la plastica in modo intelligente evitando gli sprechi' },
-                { property: 'twitter:image', content: 'https://pcasatest.netlify.app/pcasa-xmas-social-meta.png' },
+                { property: 'twitter:image', content: 'https://pcasa.it/pcasa-social-meta.png' },
             ],
             link: [
-                { rel: 'icon', href: '/pcasa-icon-xmas.png' }
+                { rel: 'icon', href: '/pcasa-icon.png' }
             ]
         }
+    },
+    css: ['~/assets/css/main.css'],
+    postcss: {
+        plugins: {
+            tailwindcss: {},
+            autoprefixer: {},
+        },
     },
     // modules: [
     //     '@nuxt/image-edge',

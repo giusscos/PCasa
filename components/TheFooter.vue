@@ -2,7 +2,7 @@
     <footer class="main_footer">
         <div class="container">
             <div class="info_wrapper">
-                <LogoXmas class="svg_logo-footer" />
+                <Logo class="svg_logo-footer" />
                 <div class="info">
                     <p>P.IVA IT03401820786</p>
                     <p>Via Trinitá N. 9, Cariati (CS), Italia</p>
@@ -11,18 +11,18 @@
             <TheNavFooter />
             <div class="credits">
                 <p>
-                    Progettato e Sviluppato da <a target="_blank" href="https://giuseppecosenza.it"
-                        title="Visita la pagina di Giusscos">Giusscos</a> in Italia
+                    Progettato e Sviluppato da <a target="_blank" href="https://giusscos.it"
+                        title="Visita il sito di Giusscos">Giusscos</a> in Italia 🇮🇹
                 </p>
                 <span>
-                    Copyright © 2023. Tutti i diritti riservati.
+                    © Pcasa 2023
                 </span>
             </div>
         </div>
     </footer>
 </template>
 <style>
-@import '../assets/main.css';
+@import '../assets/css/main.css';
 
 .main_footer {
     padding: 3rem 0 2rem;

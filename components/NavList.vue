@@ -6,22 +6,22 @@ export default {
             navLinks: [
                 {
                     'name': 'prodotti',
-                    'nameRoute': '/products',
+                    'nameRoute': '/prodotti',
                     'title': 'Visita la pagina dei prodotti',
                 },
                 {
                     'name': 'ecologia',
-                    'nameRoute': '/ecology',
+                    'nameRoute': '/ecologia',
                     'title': 'Scopri come fare ecologia',
                 },
                 {
                     'name': 'chi siamo',
-                    'nameRoute': '/about',
+                    'nameRoute': '/chi-siamo',
                     'title': 'Scopri la nostra azienda',
                 },
                 {
                     'name': 'contatti',
-                    'nameRoute': '/contacts',
+                    'nameRoute': '/contatti',
                     'title': 'Visita la pagina dei contatti',
                 },
             ]
@@ -30,59 +30,15 @@ export default {
 }
 </script>
 <template>
-    <ul class="list">
-        <li v-for="(link, i) in navLinks" :key="i" class="list_item item_close">
-            <NuxtLink :to="link.nameRoute" :title="link.title" class="item_link">
+    <ul class="flex flex-col md:flex-row md:justify-center md:items-center gap-y-8 md:gap-x-8">
+        <li v-for="(link, i) in navLinks" :key="i + 'item-list'" class="item_list">
+            <NuxtLink :to="link.nameRoute" :title="link.title"
+                class="block text-gray-300 hover:text-white text-left text-5xl md:text-2xl font-semibold transition capitalize leading-none">
                 {{ link.name }}
             </NuxtLink>
         </li>
     </ul>
 </template>
-<style scoped>
-.list {
-    position: relative;
-    top: 2rem;
-    padding: 1rem;
-}
-
-.list_item {
-    overflow: hidden;
-}
-
-.item_link {
-    display: block;
-    padding: 0 1rem;
-    pointer-events: none;
-
-    font-weight: 600;
-    line-height: 1.75;
-    font-size: 2.25rem;
-    letter-spacing: -0.1rem;
-    text-transform: capitalize;
-    color: var(--pc-color-white);
-
-    transform: translateY(200%);
-}
-
-.item_link:hover {
-    color: var(--pc-color-link);
-    text-decoration: underline;
-}
-
-@media(min-width: 1024px) {
-    .list {
-        display: flex;
-        top: 0;
-    }
-
-    .list_item {
-        overflow: unset;
-    }
-
-    .item_link {
-        line-height: 0.9;
-        pointer-events: auto;
-        transform: translateY(0%);
-    }
-}
+<style>
+@import '~/assets/css/main.css';
 </style>

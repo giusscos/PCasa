@@ -8,7 +8,7 @@ export default {
                     'desc': `Porta un contenitore nel nostro negozio, al resto penseremo noi.`,
                     'src': 'detersivi.webp',
                     'altSrc': 'Detersivi alla spina',
-                    'linkText': 'Scopri i nostri detersivi',
+                    'linkText': 'Scopri di più',
                     'linkUrl': '#',
                 },
                 {
@@ -16,7 +16,7 @@ export default {
                     'desc': `Oggetti che utilizzavano i nostri antenati sviluppati con le pi&ugrave; moderne tecnologie.`,
                     'src': 'artigianato.webp',
                     'altSrc': 'Artigianato locale',
-                    'linkText': 'Scopri il nostro artigianato',
+                    'linkText': 'Scopri di più',
                     'linkUrl': '#',
                 },
                 {
@@ -24,7 +24,7 @@ export default {
                     'desc': `Porta sulla tua tavola i sapori unici della calabria e condividili con le persone che ami.`,
                     'src': 'prodotti-tipici.webp',
                     'altSrc': 'Prodotti tipici Calabresi',
-                    'linkText': 'Scopri i nostri prodotti tipici',
+                    'linkText': 'Scopri di più',
                     'linkUrl': '#',
                 },
             ]
