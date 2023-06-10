@@ -3,7 +3,7 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col gap-x-4 gap-y-2">
                 <Logo class="w-32 h-16 md:w-48 md:h-24" />
-                <div class="pl-2 text-white text-xl md:text-xl font-bold">
+                <div class="pl-2 text-white text-xl md:text-xl font-semibold">
                     <p>P.IVA IT03401820786</p>
                     <p>Via Trinitá N. 9, Cariati (CS), Italia</p>
                 </div>

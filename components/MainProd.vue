@@ -34,11 +34,11 @@ export default {
 </script>
 <template>
     <section class="section py-20">
-        <div class="container mx-auto px-4 overflow-x-hidden flex flex-col gap-y-8">
+        <div class="container mx-auto px-4 flex flex-col gap-y-4">
             <h2 class="text-2xl sm:text-5xl md:text-8xl font-bold leading-none">
                 Prodotti scelti per te
             </h2>
-            <div class="w-full flex gap-x-8">
+            <div class="flex flex-row gap-x-4 md:gap-x-8 overflow-y-auto">
                 <ListMainProd :prod="mainProd" v-for="(mainProd, i) in mainProdsList" :key="i + 'main-category'" />
             </div>
         </div>
