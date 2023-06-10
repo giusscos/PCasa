@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "NavListFooter",
+    name: "SocialListFooter",
     data() {
         return {
             socialLinksFooter: [
@@ -25,11 +25,15 @@ export default {
 }
 </script>
 <template>
-    <ul class="list">
-        <li v-for="(link, i) in socialLinksFooter" :key="1000 - i" class="list_item">
-            <a :href="link.url" :title="link.title" target="_blank" class="item_link">
+    <ul class="py-8 pl-2 flex flex-col gap-y-2">
+        <li v-for="(link, i) in socialLinksFooter" :key="i + 'footer-list-item'">
+            <a :href="link.url" :title="link.title" target="_blank"
+                class="block text-gray-300 hover:text-white hover:scale-105 origin-left active:scale-95 transition capitalize text-xl md:text-2xl">
                 {{ link.name }}
             </a>
         </li>
     </ul>
 </template>
+<style>
+@import '~/assets/css/main.css';
+</style>

@@ -1,6 +1,6 @@
 <template>
     <header class="main_header h-[64px] overflow-hidden flex items-start" data-status="closed" id="main_navigation">
-        <div class="container mx-auto px-5 flex flex-wrap items-center justify-between md:justify-center gap-x-8">
+        <div class="container mx-auto px-4 flex flex-wrap items-center justify-between md:justify-center gap-x-8">
             <TheLogo />
             <ToggleMenu />
             <TheNav />

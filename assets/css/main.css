@@ -11,7 +11,7 @@
     --pc-color-black: #030303;
     --pc-color-black-translucent: #030303a0;
     --pc-color-prim: #143348;
-    --pc-color-prim-translucent: #143348f0;
+    --pc-color-prim-translucent: #143348e0;
     --pc-color-prim-dark-translucent: #05141df0;
     --pc-color-seco: #d3ebcc;
     --pc-color-seco-translucent: #d3ebcca0;
@@ -27,7 +27,7 @@
 }
 
 body {
-    min-width: 320px;
+    min-width: 240px;
     font-family: 'Playfair Display', serif;
 
     text-rendering: optimizeLegibility;

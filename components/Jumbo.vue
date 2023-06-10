@@ -1,86 +1,21 @@
 <template>
-    <section class="section jumbo">
-        <div class="container">
-            <div class="jumbo_text">
-                <div class="title_wrapper">
-                    <h2 class="title">
-                        Salviamo il <span class="mark-link">pianeta</span>
-                    </h2>
-                    <h3 class="subtitle">
-                        Riutiliziamo la plastica in modo intelligente<br>evitando gli sprechi.
-                    </h3>
-                    <NuxtLink to="/ecologia" title="Scopri come facciamo ecologia" class="btn_cta">
-                        Scopri come
-                    </NuxtLink>
-                </div>
+    <section class="section h-screen">
+        <div class="container mx-auto px-4 h-full flex items-center">
+            <div class="flex flex-col gap-y-4">
+                <h2 class="text-4xl sm:text-6xl md:text-8xl font-bold leading-1">
+                    Ecologia smart
+                </h2>
+                <p class="text-2xl sm:text-3xl md:text-4xl leading-1">
+                    Riutiliziamo la plastica in modo intelligente<br>evitando gli sprechi.
+                </p>
+                <NuxtLink to="/ecologia" title="Scopri come facciamo ecologia"
+                    class="block w-fit border-2 border-black hover:bg-black hover:text-white transition rounded-full pb-1 px-2 md:pb-2 md:pt-1 md:px-4 font-bold text-lg sm:text-xl md:text-2xl leading-1">
+                    Scopri come
+                </NuxtLink>
             </div>
         </div>
     </section>
 </template>
 <style>
-@import '../assets/css/main.css';
-
-.section.jumbo {
-    height: 100vh;
-    position: relative;
-
-    display: flex;
-    align-items: center;
-}
-
-.jumbo>.container {
-    margin-right: auto;
-    margin-left: 0.5rem;
-}
-
-.jumbo_text {
-    position: relative;
-    z-index: 10;
-}
-
-.title_wrapper {
-    color: var(--pc-color-black);
-}
-
-.title {
-    margin-bottom: 1.5rem;
-    line-height: .8;
-    font-size: 5rem;
-    font-weight: 600;
-    letter-spacing: -0.3rem;
-}
-
-.subtitle {
-    margin-bottom: 0.75rem;
-    position: relative;
-    left: 0.2rem;
-    line-height: 1;
-    font-size: 1.75rem;
-    font-weight: 500;
-    letter-spacing: -0.05rem;
-}
-
-@media (min-width: 640px) {
-    .jumbo>.container {
-        margin-left: 1rem;
-    }
-
-    .title {
-        font-size: 7.5rem;
-    }
-
-    .subtitle {
-        font-size: 2rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .title {
-        font-size: 8rem;
-    }
-
-    .subtitle {
-        font-size: 2.5rem;
-    }
-}
+@import '~/assets/css/main.css';
 </style>
