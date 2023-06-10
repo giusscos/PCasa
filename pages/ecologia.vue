@@ -59,7 +59,7 @@
 </template>
 
 <style scoped>
-@import '../assets/main.css';
+@import '../assets/css/main.css';
 
 .section.jumbo {
   position: relative;

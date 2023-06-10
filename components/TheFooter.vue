@@ -22,7 +22,7 @@
     </footer>
 </template>
 <style>
-@import '../assets/main.css';
+@import '../assets/css/main.css';
 
 .main_footer {
     padding: 3rem 0 2rem;

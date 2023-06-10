@@ -18,7 +18,6 @@
                         </p>
                         <NuxtLink class="btn_cta btn_cta-text" to="/ecologia" title="Scopri come fare ecologia">
                             Scopri come
-                            <RightArrow class="svg_icon" />
                         </NuxtLink>
                     </div>
                 </div>

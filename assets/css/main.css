@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* color palette */
+:root {
+    --pc-color-white: #f0f0f0;
+    --pc-color-white-translucent: #f0f0f0a0;
+    --pc-color-black: #030303;
+    --pc-color-black-translucent: #030303a0;
+    --pc-color-prim: #143348;
+    --pc-color-prim-translucent: #143348f0;
+    --pc-color-prim-dark-translucent: #05141df0;
+    --pc-color-seco: #d3ebcc;
+    --pc-color-seco-translucent: #d3ebcca0;
+    --pc-color-seco-darker: #6b8962;
+    --pc-color-seco-darker-translucent: #6b8962a0;
+    --pc-color-link: #ED2424;
+    --pc-color-link-translucent: #ED2424bb;
+
+    --animation-fast: 300ms cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+    --animation-fast-delay: 300ms cubic-bezier(0.215, 0.610, 0.355, 1) forwards 500ms;
+    --animation-standard: 400ms cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+    --animation-standard-delay: 400ms cubic-bezier(0.215, 0.610, 0.355, 1) forwards 500ms;
+}
+
+body {
+    min-width: 320px;
+    font-family: 'Playfair Display', serif;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main_header[data-status="closed"] {
+    height: 64px;
+}
+
+.main_header[data-status="closed"] .navigation {
+    display: none;
+}
+
+.main_header[data-status="opened"] {
+    animation: heightExpand var(--animation-standard);
+}
+
+.main_header[data-status="opened"] .navigation {
+    display: flex;
+}
+
+.main_header[data-status="closing"] {
+    animation: heightContract var(--animation-standard);
+}
+
+@keyframes heightExpand {
+    0% {
+        height: 64px;
+        background-color: var(--pc-color-prim-translucent);
+    }
+    10%{
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+    }
+    
+    100% {
+        height: 100vh;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        background-color: var(--pc-color-prim-dark-translucent);
+    }
+}
+
+@keyframes heightContract {
+    0% {
+        height: 100vh;
+        background-color: var(--pc-color-prim-dark-translucent);
+    }
+    10%{
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+    }
+    
+    100% {
+        height: 64px;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        background-color: var(--pc-color-prim-translucent);
+    }
+}
+
+@media (min-width: 768px) {
+    .main_header[data-status="closed"] .navigation {
+        display: flex;
+    }
+}

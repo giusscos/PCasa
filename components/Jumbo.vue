@@ -11,7 +11,6 @@
                     </h3>
                     <NuxtLink to="/ecologia" title="Scopri come facciamo ecologia" class="btn_cta">
                         Scopri come
-                        <RightArrow class="svg_icon" />
                     </NuxtLink>
                 </div>
             </div>
@@ -19,7 +18,7 @@
     </section>
 </template>
 <style>
-@import '../assets/main.css';
+@import '../assets/css/main.css';
 
 .section.jumbo {
     height: 100vh;

@@ -18,7 +18,6 @@
                     </p>
                     <a class="btn_cta btn_cta-text" href="#" title="Scopri come entrare nel nostro team">
                         Scopri come
-                        <RightArrow class="svg_icon" />
                     </a>
                 </div>
             </div>

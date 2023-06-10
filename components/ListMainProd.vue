@@ -19,7 +19,6 @@ export default {
             <p class="desc_text" v-html="prod.desc"></p>
             <a class="btn_cta btn_cta-text" :href="prod.linkUrl" :title="prod.linkText">
                 {{ prod.linkText }}
-                <RightArrow class="svg_icon" />
             </a>
         </div>
     </div>
