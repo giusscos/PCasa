@@ -6,22 +6,22 @@ export default {
             navLinksFooter: [
                 {
                     'name': 'prodotti',
-                    'nameRoute': '/products',
+                    'nameRoute': '/prodotti',
                     'title': 'Visita la pagina dei prodotti',
                 },
                 {
                     'name': 'ecologia',
-                    'nameRoute': '/ecology',
+                    'nameRoute': '/ecologia',
                     'title': 'Scopri come facciamo ecologia',
                 },
                 {
                     'name': 'chi siamo',
-                    'nameRoute': '/about',
+                    'nameRoute': '/chi-siamo',
                     'title': 'Scopri la nostra azienda',
                 },
                 {
                     'name': 'contatti',
-                    'nameRoute': '/contacts',
+                    'nameRoute': '/contatti',
                     'title': 'Visita la pagina dei contatti',
                 },
             ]
@@ -30,9 +30,9 @@ export default {
 }
 </script>
 <template>
-    <ul class="list">
-        <li v-for="(link, i) in navLinksFooter" :key="2000 - i" class="list_item">
-            <NuxtLink :to="link.nameRoute" :title="link.title" class="item_link">
+    <ul class="py-8 pl-2 flex flex-col gap-y-2">
+        <li v-for="(link, i) in navLinksFooter" :key="i + 'footer-nav-list-item'">
+            <NuxtLink :to="link.nameRoute" :title="link.title" class="btn_footer text-gray-300 hover:text-white">
                 {{ link.name }}
             </NuxtLink>
         </li>
