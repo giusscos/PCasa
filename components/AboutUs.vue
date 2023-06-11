@@ -21,7 +21,7 @@
                         Abbiamo obiettivi ambiziosi ma... qualcuno deve pur farlo.
                         E tu, vorresti unirti a noi?🌱
                     </p>
-                    <NuxtLink to="/" title="Scopri come entrare nel nostro team"
+                    <NuxtLink to="/contatti" title="Scopri come entrare nel nostro team"
                         class="btn_base border-pcasa-green hover:bg-pcasa-green text-pcasa-green hover:text-pcasa-white">
                         Scopri come
                     </NuxtLink>
