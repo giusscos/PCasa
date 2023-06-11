@@ -7,53 +7,15 @@ export default {
 }
 </script>
 <template>
-    <div class="description_wrapper">
-        <h3 class="title_prod">
+    <div class="relative min-w-[300px] md:min-w-[450px] lg:min-w-[550px] rounded-lg overflow-hidden md:hover:scale-95 transition shadow-lg md:shadow-xl">
+        <h3 class="absolute bottom-3 left-4 z-10 text-white text-3xl sm:text-4xl md:text-5xl font-semibold leading-none">
             {{ prod.title }}
         </h3>
-        <div class="img_wrapper">
-            <img height="800" :src="`img/${prod.src}`" :alt="prod.altSrc">
-            <!-- <nuxt-img preset="bodyImg" height="800" :src="prod.src" :alt="prod.altSrc" loading="lazy" /> -->
-        </div>
-        <div class="text_wrapper">
-            <p class="desc_text" v-html="prod.desc"></p>
-            <a class="btn_cta btn_cta-text" :href="prod.linkUrl" :title="prod.linkText">
-                {{ prod.linkText }}
-            </a>
-        </div>
+        <div class="opacity-25 bg-black absolute inset-0 z-1"></div>
+        <img class="block w-full h-full object-cover object-center" :src="`img/${prod.src}`" :alt="prod.altSrc">
+        <!-- <nuxt-img preset="bodyImg" height="800" :src="prod.src" :alt="prod.altSrc" loading="lazy" /> -->
     </div>
 </template>
-<style scoped>
-.description_wrapper {
-    padding: 3rem 0;
-}
-
-.text_wrapper>.btn_cta-text,
-.text_wrapper>.btn_cta-text>.svg_icon {
-    color: var(--pc-color-white);
-    fill: var(--pc-color-white);
-}
-
-.text_wrapper>.btn_cta-text:hover,
-.text_wrapper>.btn_cta-text:hover>.svg_icon {
-    color: var(--pc-color-link);
-    fill: var(--pc-color-link);
-}
-
-.title_prod {
-    font-size: 3.85rem;
-    flex-basis: 100%;
-    font-weight: 500;
-    line-height: .95;
-}
-
-@media (min-width: 1024px) {
-    .description_wrapper:nth-child(odd)>.img_wrapper {
-        order: 1;
-    }
-
-    .title_prod {
-        font-size: 5.85rem;
-    }
-}
+<style>
+@import '~/assets/css/main.css';
 </style>

@@ -1,5 +1,24 @@
+<script>
+export default {
+    name: 'TheLogo',
+    data() {
+        return {
+            headerState: menuState(),
+            isExpanded: menuToggleState(),
+        }
+    },
+    methods: {
+        closeMenu() {
+            if (this.headerState !== 'opened') return
+            this.isExpanded = !this.isExpanded
+            this.headerState = 'closing'
+            document.querySelector('body').classList.remove('overflow-y-hidden')
+        },
+    }
+}
+</script>
 <template>
-    <NuxtLink to="/" title="Torna alla home" class="w-16 h-16">
+    <NuxtLink to="/" title="Torna alla home" @click="this.closeMenu" class="w-20 h-10">
         <h1 class="sr-only">
             Pcasa
         </h1>

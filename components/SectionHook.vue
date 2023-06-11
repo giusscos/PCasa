@@ -1,75 +1,33 @@
 <template>
-    <section class="section hook">
-        <div class="container">
-            <div class="header_section">
-                <h2 class="title_section">
-                    Fai <span class="mark-seco-darker">ecologia</span> anche tu
-                </h2>
-                <div class="description_wrapper ">
-                    <div class="img_wrapper hook">
-                        <!-- <nuxt-img preset="bodyImg" width="400" src="hook.webp" alt="Fare ecologia" /> -->
-                        <img width="400" src="/img/ecologia-semplice.webp"
-                            alt="Inizia a fare ecologia portando dei contenitori nel nostro negozio">
-                    </div>
-                    <div class="text_wrapper">
-                        <p class="desc_text">
-                            Fare ecologia &eacute; semplice!<br>Con poche abitudini puoi dare una mano a te stesso, al
-                            tuo portafogli e al tuo Pianeta 🌍
-                        </p>
-                        <NuxtLink class="btn_cta btn_cta-text" to="/ecologia" title="Scopri come fare ecologia">
-                            Scopri come
-                        </NuxtLink>
-                    </div>
+    <section class="section py-20 bg-pcasa-white rounded-t-2xl mt-[-1rem]">
+        <div class="container mx-auto px-4">
+            <h2 class="minus_title pb-4 leading-none">
+                Fai ecologia smart anche <span
+                    class="inline-block bg-pcasa-red aspect-square p-2 pt-1 md:p-4 md:pt-2 rounded-full text-pcasa-white leading-none">tu</span>
+            </h2>
+            <div class="flex flex-wrap gap-x-4 gap-y-8">
+                <div class="w-full md:w-6/12 rounded-lg overflow-hidden">
+                    <!-- <nuxt-img preset="bodyImg" width="400" src="hook.webp" alt="Fare ecologia" /> -->
+                    <img src="/img/ecologia-semplice.webp"
+                        alt="Inizia a fare ecologia portando dei contenitori nel nostro negozio"
+                        class="block w-full h-full object-cover object-center">
+                </div>
+                <div class="w-full md:w-5/12 flex flex-col gap-y-4">
+                    <p class="standard_paragraph leading-none">
+                        Fare ecologia smart &eacute; semplice!<br>Con poche abitudini puoi dare una mano a te stesso, al
+                        tuo portafogli e al tuo Pianeta 🌍
+                        <br><br>
+                        Il riutilizzo della plastica richiede un cambio di mentalità e l'adozione di nuove
+                        abitudini, ma ogni piccolo passo conta nel ridurre l'impatto ambientale della plastica.
+                    </p>
+                    <NuxtLink to="/ecologia" title="Scopri come fare ecologia"
+                        class="btn_base border-pcasa-red hover:bg-pcasa-red text-pcasa-red hover:text-pcasa-white">
+                        Inizia ora
+                    </NuxtLink>
                 </div>
             </div>
         </div>
     </section>
 </template>
 <style>
-.title_section {
-    font-size: 5rem;
-    font-weight: 600;
-    line-height: .75;
-    width: 60%;
-    letter-spacing: -0.2rem;
-    text-transform: capitalize;
-}
-
-.description_wrapper {
-    gap: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
-
-.text_wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-
-.desc_text {
-    font-size: 3.5rem;
-    font-weight: 400;
-    line-height: 1;
-}
-
-@media (min-width: 1024px) {
-    .img_wrapper {
-        flex-basis: calc((100% * 6) / 12);
-    }
-
-    .text_wrapper {
-        flex-basis: calc((100% * 5) / 12);
-    }
-
-    .title_section {
-        font-size: 7rem;
-        line-height: .8;
-    }
-
-    .desc_text {
-        font-size: 5rem;
-    }
-}
-</style>
+@import '~/assets/css/main.css';</style>

@@ -1,63 +1,39 @@
 <script>
 export default {
     name: 'ToggleMenu',
+    data() {
+        return {
+            headerState: menuState(),
+            isExpanded: menuToggleState(),
+        }
+    },
     methods: {
         openMenu() {
-            const menuToggle = document.querySelector('.menu')
-            const headerComponent = document.querySelector('.main_header')
-            const bodyComponent = document.querySelector('body')
-
-            menuToggle.setAttribute('aria-expanded', "true")
-            headerComponent.setAttribute('data-status', "opened")
-            bodyComponent.classList.add('overflow-y-hidden')
+            this.headerState = 'opened'
+            document.querySelector('body').classList.add('overflow-y-hidden')
         },
         closeMenu() {
-            const bodyComponent = document.querySelector('body')
-            const menuToggle = document.querySelector('.menu')
-            const headerComponent = document.querySelector('.main_header')
-
-            menuToggle.setAttribute('aria-expanded', "false")
-            headerComponent.setAttribute('data-status', "closing")
-            bodyComponent.classList.remove('overflow-y-hidden')
-
-            headerComponent.addEventListener('animationend', () => {
-                headerComponent.setAttribute('data-status', "closed")
-            }, { once: true })
+            this.headerState = 'closing'
+            document.querySelector('body').classList.remove('overflow-y-hidden')
         },
+        menuToggle() {
+            this.isExpanded ? this.closeMenu() : this.openMenu()
+            this.isExpanded = !this.isExpanded
+        }
     },
     mounted() {
-        const menuToggle = document.querySelector('.menu')
-        const itemList = document.querySelectorAll('.item_list')
-
-        menuToggle.addEventListener('click', () => {
-            const menuStatus = menuToggle.getAttribute('aria-expanded') === "true"
-
-            if (menuStatus ? this.closeMenu() : this.openMenu());
-        })
-
-        if (window.innerWidth >= 768) {
-            this.closeMenu()
-        }
-
-        itemList.forEach(el => {
-            if (window.innerWidth < 768) {
-                el.addEventListener('click', () => {
-                    this.closeMenu()
-                })
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768 && this.isExpanded) {
+                this.closeMenu()
             }
         });
-    },
-    watch() {
-        if (window.innerWidth >= 768) {
-            this.closeMenu()
-        }
     }
 }
 </script>
 <template>
-    <button class="menu col-span-6 md:hidden font-bold text-2xl text-white ml-auto" aria-controls="main_navigation"
-        aria-expanded="false" title="Menu">
-        Men&uacute;
+    <button class="menu md:hidden font-bold text-2xl text-white ml-auto" aria-controls="main_navigation"
+        :aria-expanded="isExpanded" @click="this.menuToggle" title="Apri menù">
+        Menù
     </button>
 </template>
 <style>

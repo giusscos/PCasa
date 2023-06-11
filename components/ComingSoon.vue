@@ -1,21 +1,12 @@
 <template>
-    <section class="section no_overflow">
-        <div class="container">
-            <h2 class="title_soon">
-                Sezione in arrivo👨‍💻
+    <section class="section h-screen">
+        <div class="container mx-auto px-4 h-full flex justify-center items-center">
+            <h2 class="standard_title leading-none">
+                Sezione in arrivo 👨‍💻
             </h2>
         </div>
     </section>
 </template>
 <style>
-.section.no_overflow{
-    min-height: 100vh;
-}
-.title_soon{
-    pointer-events: none;
-    text-align: center;
-    font-weight: 600;
-    font-size: 15vw;
-    line-height: .95;
-}
+@import '~/assets/css/main.css';
 </style>
