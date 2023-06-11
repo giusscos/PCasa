@@ -12,17 +12,17 @@
                         alt="Il team pcasa">
                 </div>
                 <div class="w-full lg:w-5/12 flex flex-col gap-y-4">
-                    <p class="standard_paragraph leading-1">
+                    <p class="standard_paragraph leading-tight">
                         Proponiamo soluzioni verdi e smart per rispettare
                         l'ambiente che ci circonda. Contiamo nell'aiuto di
                         ogni singolo individuo per poter cambiare in meglio il modo in cui
                         interagiamo con l'ambiente.
                         <br><br>
                         Abbiamo obiettivi ambiziosi ma... qualcuno deve pur farlo.
-                        E a tu, vorresti unirti a noi?🌱
+                        E tu, vorresti unirti a noi?🌱
                     </p>
                     <NuxtLink to="/" title="Scopri come entrare nel nostro team"
-                        class="btn_base border-pcasa-green hover:bg-pcasa-green text-pcasa-green hover:text-pcasa-white leading-1">
+                        class="btn_base border-pcasa-green hover:bg-pcasa-green text-pcasa-green hover:text-pcasa-white">
                         Scopri come
                     </NuxtLink>
                 </div>

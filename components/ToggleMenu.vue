@@ -10,13 +10,11 @@ export default {
     methods: {
         openMenu() {
             this.headerState = 'opened'
-            const bodyComponent = document.querySelector('body')
-            bodyComponent.classList.add('overflow-y-hidden')
+            document.querySelector('body').classList.add('overflow-y-hidden')
         },
         closeMenu() {
             this.headerState = 'closing'
-            const bodyComponent = document.querySelector('body')
-            bodyComponent.classList.remove('overflow-y-hidden')
+            document.querySelector('body').classList.remove('overflow-y-hidden')
         },
         menuToggle() {
             this.isExpanded ? this.closeMenu() : this.openMenu()

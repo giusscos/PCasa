@@ -1,9 +1,30 @@
-<template>
-  <Head>
-    <Title>Contatti - Pcasa</Title>
-    <Meta name="description" content="Scrivici subito o raggiungici in negozio" />
-  </Head>
+<script>
+export default {
+  setup() {
+    useHead({
+      title: "Contatti - Pcasa",
+      meta: [
+        { name: 'description', content: "Contattaci per qualsiasi informazione o raggiungici direttamente in negozio, ti aspettiamo" },
 
+        // Facebook
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://pcasa.it/contatti' },
+        { property: 'og:title', content: 'Contatti - Pcasa' },
+        { property: 'og:description', content: "Contattaci per qualsiasi informazione o raggiungici direttamente in negozio, ti aspettiamo" },
+        { property: 'og:image', content: 'https://pcasa.it/pcasa-social-meta.png' },
+
+        // Twitter 
+        { property: 'twitter:card', content: 'summary_large_image' },
+        { property: 'twitter:url', content: 'https://pcasa.it/contatti' },
+        { property: 'twitter:title', content: 'Contatti - Pcasa' },
+        { property: 'twitter:description', content: "Contattaci per qualsiasi informazione o raggiungici direttamente in negozio, ti aspettiamo" },
+        { property: 'twitter:image', content: 'https://pcasa.it/pcasa-social-meta.png' }
+      ]
+    })
+  }
+}
+</script>
+<template>
   <main>
     <!-- <section class="section contacts">
       <div class="container">
@@ -21,7 +42,7 @@
     </section> -->
     <section class="section pt-20">
       <div class="container mx-auto h-full px-4 flex items-center py-10">
-        <h2 class="standard_title leading-1">
+        <h2 class="standard_title leading-tight">
           Ci trovi anche in negozio
         </h2>
       </div>

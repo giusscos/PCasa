@@ -17,12 +17,11 @@
                         Fare ecologia smart &eacute; semplice!<br>Con poche abitudini puoi dare una mano a te stesso, al
                         tuo portafogli e al tuo Pianeta 🌍
                         <br><br>
-                        Inizia con il visitare i nostri prodotti scelti con cura
-                        per te e per l'ambiente e scopri i nouvi detersivi alla spina 
-                        ecologici.
+                        Il riutilizzo della plastica richiede un cambio di mentalità e l'adozione di nuove
+                        abitudini, ma ogni piccolo passo conta nel ridurre l'impatto ambientale della plastica.
                     </p>
                     <NuxtLink to="/ecologia" title="Scopri come fare ecologia"
-                        class="btn_base border-pcasa-red hover:bg-pcasa-red text-pcasa-red hover:text-pcasa-white leading-1">
+                        class="btn_base border-pcasa-red hover:bg-pcasa-red text-pcasa-red hover:text-pcasa-white">
                         Inizia ora
                     </NuxtLink>
                 </div>
@@ -31,5 +30,4 @@
     </section>
 </template>
 <style>
-@import '~/assets/css/main.css';
-</style>
+@import '~/assets/css/main.css';</style>

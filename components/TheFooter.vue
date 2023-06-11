@@ -9,8 +9,8 @@
                 </div>
             </div>
             <div class="flex flex-wrap gap-x-8 gap-y-4 pb-4">
-                <SocialListFooter class="w-5/12" />
-                <!-- <SocialListFooter class="w-5/12"/> -->
+                <NavListFooter class="w-5/12" />
+                <!-- <SocialListFooter class="w-5/12" /> -->
             </div>
             <div class="w-full text-center text-white">
                 <p class="font-semibold text-lg md:text-xl leading-none">
@@ -19,7 +19,7 @@
                     🇮🇹
                 </p>
                 <span class="text-lg md:text-xl">
-                    © Pcasa {{new Date().getFullYear()}}
+                    © Pcasa {{ new Date().getFullYear() }}
                 </span>
             </div>
         </div>

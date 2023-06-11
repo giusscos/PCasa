@@ -12,8 +12,7 @@ export default {
             if (this.headerState !== 'opened') return
             this.isExpanded = !this.isExpanded
             this.headerState = 'closing'
-            const bodyComponent = document.querySelector('body')
-            bodyComponent.classList.remove('overflow-y-hidden')
+            document.querySelector('body').classList.remove('overflow-y-hidden')
         },
     }
 }
