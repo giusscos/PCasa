@@ -17,11 +17,6 @@ export default {
             this.headerState = 'closing'
             const bodyComponent = document.querySelector('body')
             bodyComponent.classList.remove('overflow-y-hidden')
-
-            const headerComponent = document.querySelector('.main_header')
-            headerComponent.addEventListener('animationend', () => {
-                headerComponent.setAttribute('data-status', "closed")
-            }, { once: true })
         },
         menuToggle() {
             this.isExpanded ? this.closeMenu() : this.openMenu()
