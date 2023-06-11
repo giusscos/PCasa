@@ -9,7 +9,7 @@ export default defineNuxtConfig({
             meta: [
                 { name: 'description', content: 'Riutiliziamo la plastica in modo intelligente evitando gli sprechi' },
                 { name: 'author', content: 'Giuseppe Pio Cosenza - giusscos' },
-
+                { name: 'theme-color', content: '#f0f0f0' },
                 // Facebook
                 { property: 'og:type', content: 'website' },
                 { property: 'og:url', content: 'https://pcasa.it' },
@@ -50,14 +50,5 @@ export default defineNuxtConfig({
     //         xxl: 1536,
     //         '2xl': 1536
     //     },
-    //     presets: {
-    //         bodyImg: {
-    //             modifiers: {
-    //                 format: 'webp',
-    //                 quality: '80',
-    //                 sizes: 'xs: 100vw, sm:320px, lg:512px, xl:640, xxl:768px'
-    //             }
-    //         }
-    //     }
     // },
 })

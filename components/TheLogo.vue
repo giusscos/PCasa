@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink to="/" title="Torna alla home" class="w-16 h-16">
+    <NuxtLink to="/" title="Torna alla home" class="w-20 h-10">
         <h1 class="sr-only">
             Pcasa
         </h1>

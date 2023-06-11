@@ -35,22 +35,21 @@ export default {
             if (menuStatus ? this.closeMenu() : this.openMenu());
         })
 
-        if (window.innerWidth >= 768) {
-            this.closeMenu()
-        }
+        window.addEventListener('resize', () => {
+            const menuStatus = menuToggle.getAttribute('aria-expanded') === "true"
+            if (window.innerWidth >= 768 && menuStatus) {
+                this.closeMenu()
+            }
+        });
 
         itemList.forEach(el => {
-            if (window.innerWidth < 768) {
+            const menuStatus = menuToggle.getAttribute('aria-expanded') === "true"
+            if (window.innerWidth < 768 && menuStatus) {
                 el.addEventListener('click', () => {
                     this.closeMenu()
                 })
             }
         });
-    },
-    watch() {
-        if (window.innerWidth >= 768) {
-            this.closeMenu()
-        }
     }
 }
 </script>
