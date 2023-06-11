@@ -42,7 +42,7 @@ export default {
 <template>
     <ul class="flex flex-col md:flex-row md:justify-center md:items-center gap-y-8 md:gap-x-8 pt-8 md:pt-0">
         <li v-for="(link, i) in navLinks" :key="i + 'item-list'" class="item_list">
-            <NuxtLink :to="link.nameRoute" :title="link.title" @click="this.closeMenu"
+            <NuxtLink :to="link.nameRoute" :title="link.title" @click="closeMenu"
                 class="block text-gray-300 hover:text-white text-left text-5xl md:text-2xl font-semibold transition capitalize leading-none">
                 {{ link.name }}
             </NuxtLink>

@@ -18,7 +18,7 @@ export default {
 }
 </script>
 <template>
-    <NuxtLink to="/" title="Torna alla home" @click="this.closeMenu" class="w-20 h-10">
+    <NuxtLink to="/" title="Torna alla home" @click="closeMenu" class="w-20 h-10">
         <h1 class="sr-only">
             Pcasa
         </h1>
