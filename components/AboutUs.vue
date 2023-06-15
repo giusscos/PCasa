@@ -8,7 +8,7 @@
             <div class="flex flex-wrap gap-x-4 gap-y-8">
                 <div class="w-full lg:w-6/12 rounded-lg overflow-hidden">
                     <!-- <nuxt-img preset="bodyImg" width="400" src="about-us.webp" alt="Il team pcasa" loading="lazy" /> -->
-                    <img class="block w-full h-full object-cover object-center" src="/img/team-pcasa.webp"
+                    <img width="400" class="block w-full h-full object-cover object-center" src="/img/team-pcasa.webp"
                         alt="Il team pcasa">
                 </div>
                 <div class="w-full lg:w-5/12 flex flex-col gap-y-4">

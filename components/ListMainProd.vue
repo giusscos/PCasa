@@ -12,7 +12,7 @@ export default {
             {{ prod.title }}
         </h3>
         <div class="opacity-25 bg-black absolute inset-0 z-1"></div>
-        <img class="block w-full h-full object-cover object-center" :src="`img/${prod.src}`" :alt="prod.altSrc">
+        <img width="400" class="block w-full h-full object-cover object-center" :src="`img/${prod.src}`" :alt="prod.altSrc">
         <!-- <nuxt-img preset="bodyImg" height="800" :src="prod.src" :alt="prod.altSrc" loading="lazy" /> -->
     </div>
 </template>

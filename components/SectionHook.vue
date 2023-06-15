@@ -8,7 +8,7 @@
             <div class="flex flex-wrap gap-x-4 gap-y-8">
                 <div class="w-full md:w-6/12 rounded-lg overflow-hidden">
                     <!-- <nuxt-img preset="bodyImg" width="400" src="hook.webp" alt="Fare ecologia" /> -->
-                    <img src="/img/ecologia-semplice.webp"
+                    <img width="400" src="/img/ecologia-semplice.webp"
                         alt="Inizia a fare ecologia portando dei contenitori nel nostro negozio"
                         class="block w-full h-full object-cover object-center">
                 </div>

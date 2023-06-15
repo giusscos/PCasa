@@ -4,20 +4,20 @@ export default {
     useHead({
       title: "Chi siamo - Pcasa",
       meta: [
-        { name: 'description', content: "Vogliamo cambiare il mondo con piccoli e semplici gesti, semplici come portare una bottiglia di plastica nel nostro negozio e riutilizzarla come contenitore per i nostri detersivi alla spina ecologici." },
+        { name: 'description', content: "Vogliamo cambiare il mondo con piccoli e semplici gesti, semplici come portare una bottiglia in plastica nel nostro negozio e riutilizzarla come contenitore per i nostri detersivi alla spina ecologici." },
 
         // Facebook
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://pcasa.it/chi-siamo' },
         { property: 'og:title', content: 'Chi siamo - Pcasa' },
-        { property: 'og:description', content: "Vogliamo cambiare il mondo con piccoli e semplici gesti, semplici come portare una bottiglia di plastica nel nostro negozio e riutilizzarla come contenitore per i nostri detersivi alla spina ecologici." },
+        { property: 'og:description', content: "Vogliamo cambiare il mondo con piccoli e semplici gesti, semplici come portare una bottiglia in plastica nel nostro negozio e riutilizzarla come contenitore per i nostri detersivi alla spina ecologici." },
         { property: 'og:image', content: 'https://pcasa.it/pcasa-social-meta.png' },
 
         // Twitter 
         { property: 'twitter:card', content: 'summary_large_image' },
         { property: 'twitter:url', content: 'https://pcasa.it/chi-siamo' },
         { property: 'twitter:title', content: 'Chi siamo - Pcasa' },
-        { property: 'twitter:description', content: "Vogliamo cambiare il mondo con piccoli e semplici gesti, semplici come portare una bottiglia di plastica nel nostro negozio e riutilizzarla come contenitore per i nostri detersivi alla spina ecologici." },
+        { property: 'twitter:description', content: "Vogliamo cambiare il mondo con piccoli e semplici gesti, semplici come portare una bottiglia in plastica nel nostro negozio e riutilizzarla come contenitore per i nostri detersivi alla spina ecologici." },
         { property: 'twitter:image', content: 'https://pcasa.it/pcasa-social-meta.png' }
       ]
     })
@@ -33,15 +33,15 @@ export default {
             class="inline-block bg-pcasa-blue px-2 md:px-4 pb-2 md:pb-4 rounded-full text-pcasa-white leading-none">mondo</span>
         </h2>
         <p class="standard_paragraph leading-tight">
-          Vogliamo cambiare il mondo con piccoli e semplici gesti, semplici come portare una bottiglia di plastica
+          Vogliamo cambiare il mondo con piccoli e semplici gesti, semplici come portare una bottiglia in plastica
           nel nostro negozio e riutilizzarla come contenitore per i nostri detersivi alla spina ecologici. Abbiamo
-          iniziato proprio da loro per la semplicità con cui infinite bottiglie di plastica possono essere riutilizzate
+          iniziato proprio da loro per la semplicità con cui infinite bottiglie in plastica possono essere riutilizzate
           in modo intelligente. Nel nostro piccolo paese abbiamo subito riscontrato successo e sostegno. Oggi in
           tantissimi riutilizzano i loro contenitori più volte, migliorando la gestione della plastica.
           Abbiamo quindi deciso di provare anche online, portando i nostri prodotti, le nostre idee e le nostre conoscenze
           in tutto il mondo.<br><br>
 
-          Abbiamo introdotto l'artigianato locale come alternativa a prodotti di plastica o non ecosostenibili.
+          Abbiamo introdotto l'artigianato locale come alternativa a prodotti in plastica o non ecosostenibili.
           In questo modo sosteniamo anche i nostri artigiani locali che utilizzano ancora le tecniche utilizzate dai
           nostri
           antenati con l'aggiunta di nuove tecnologie e nuovi materiali ecosostenibili.<br><br>

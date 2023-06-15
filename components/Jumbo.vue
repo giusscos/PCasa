@@ -9,7 +9,7 @@
                     Riutiliziamo la plastica in modo intelligente<br>evitando gli sprechi.
                 </p>
                 <NuxtLink to="/ecologia" title="Scopri come facciamo ecologia"
-                    class="btn_base border-pcasa-white hover:bg-pcasa-white text-pcasa-white hover:text-pcasa-red">
+                    class="btn_base border-pcasa-white hover:bg-pcasa-white text-pcasa-white hover:text-pcasa-red shadow-xl">
                     Scopri come
                 </NuxtLink>
             </div>
