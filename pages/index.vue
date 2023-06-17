@@ -24,7 +24,7 @@
             </h2>
             <div class="flex flex-wrap gap-x-4 gap-y-8">
                 <div class="w-full md:w-6/12 rounded-lg overflow-hidden">
-                    <nuxt-img preset="landingVertical" src="/ecologia-semplice.webp" sizes="xs:100% sm:100% md:400px lg:500px"
+                    <nuxt-img preset="landingVertical" src="img/ecologia-semplice.webp" sizes="xs:100% sm:100% md:400px lg:500px"
                         alt="Inizia a fare ecologia portando dei contenitori nel nostro negozio" loading="lazy"
                         class="block w-full h-full object-cover object-center" />
                     <!-- <img width="400" src="/img/ecologia-semplice.webp"
@@ -56,7 +56,7 @@
             </h2>
             <div class="flex flex-wrap gap-x-4 gap-y-8">
                 <div class="w-full lg:w-6/12 rounded-lg overflow-hidden">
-                    <nuxt-img preset="landingVertical" src="/team-pcasa.webp" alt="Il team pcasa" loading="lazy" sizes="xs:100% sm:100% md:400px lg:500px"
+                    <nuxt-img preset="landingVertical" src="img/team-pcasa.webp" alt="Il team pcasa" loading="lazy" sizes="xs:100% sm:100% md:400px lg:500px"
                         class="block w-full h-full object-cover object-center" />
                     <!-- <img width="400" class="block w-full h-full object-cover object-center" src="/img/team-pcasa.webp"
                         alt="Il team pcasa"> -->

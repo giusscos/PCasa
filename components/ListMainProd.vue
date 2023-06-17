@@ -13,7 +13,7 @@ export default {
             {{ prod.title }}
         </h3>
         <div class="opacity-25 bg-black absolute inset-0 z-1"></div>
-        <nuxt-img preset="landingVertical" :src="`/${prod.src}`" :alt="prod.altSrc" loading="lazy" sizes="xs:100% sm:100% md:400px lg:500px"
+        <nuxt-img preset="landingVertical" :src="`img/${prod.src}`" :alt="prod.altSrc" loading="lazy" sizes="xs:100% sm:100% md:400px lg:500px"
             class="block w-full h-full object-cover object-center" />
         <!-- <img width="400" class="block w-full h-full object-cover object-center" :src="`img/${prod.src}`" :alt="prod.altSrc"> -->
     </div>
