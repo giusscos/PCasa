@@ -1,9 +1,9 @@
 <template>
     <section class="section h-screen">
         <div class="container mx-auto px-4 h-full flex justify-center items-center">
-            <h2 class="standard_title leading-none">
+            <span class="standard_title leading-none">
                 Sezione in arrivo 👨‍💻
-            </h2>
+            </span>
         </div>
     </section>
 </template>

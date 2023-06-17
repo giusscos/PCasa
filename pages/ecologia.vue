@@ -2,22 +2,22 @@
 export default {
   setup() {
     useHead({
-      title: "Ecologia - Pcasa",
+      title: "Fare ecologia in modo semplice e intelligente, come iniziare e consigli utili - Pcasa",
       meta: [
-        { name: 'description', content: "L'adozione di pratiche ecologiche può avere un impatto positivo sulla qualità della vita delle persone, migliorando l'aria e l'acqua, riducendo i rifiuti e proteggendo la biodiversità." },
+        { name: 'description', content: "L'adozione di pratiche ecologiche può avere un impatto positivo sulla qualità della vita delle persone migliorando l'aria e l'acqua, riducendo i rifiuti e proteggendo la biodiversità. Oltre ad aiutare il vostro portafogli." },
 
         // Facebook
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://pcasa.it/ecologia' },
-        { property: 'og:title', content: 'Ecologia - Pcasa' },
-        { property: 'og:description', content: "L'adozione di pratiche ecologiche può avere un impatto positivo sulla qualità della vita delle persone, migliorando l'aria e l'acqua, riducendo i rifiuti e proteggendo la biodiversità." },
+        { property: 'og:title', content: 'Fare ecologia in modo semplice e intelligente, come iniziare e consigli utili - Pcasa' },
+        { property: 'og:description', content: "L'adozione di pratiche ecologiche può avere un impatto positivo sulla qualità della vita delle persone migliorando l'aria e l'acqua, riducendo i rifiuti e proteggendo la biodiversità. Oltre ad aiutare il vostro portafogli." },
         { property: 'og:image', content: 'https://pcasa.it/pcasa-social-meta.png' },
 
         // Twitter 
         { property: 'twitter:card', content: 'summary_large_image' },
         { property: 'twitter:url', content: 'https://pcasa.it/ecologia' },
-        { property: 'twitter:title', content: 'Ecologia - Pcasa' },
-        { property: 'twitter:description', content: "L'adozione di pratiche ecologiche può avere un impatto positivo sulla qualità della vita delle persone, migliorando l'aria e l'acqua, riducendo i rifiuti e proteggendo la biodiversità." },
+        { property: 'twitter:title', content: 'Fare ecologia in modo semplice e intelligente, come iniziare e consigli utili - Pcasa' },
+        { property: 'twitter:description', content: "L'adozione di pratiche ecologiche può avere un impatto positivo sulla qualità della vita delle persone migliorando l'aria e l'acqua, riducendo i rifiuti e proteggendo la biodiversità. Oltre ad aiutare il vostro portafogli." },
         { property: 'twitter:image', content: 'https://pcasa.it/pcasa-social-meta.png' }
       ]
     })
@@ -29,6 +29,7 @@ export default {
     <section class="section h-screen">
       <div class="container mx-auto px-4 h-full flex items-center">
         <div class="flex flex-col gap-y-4">
+          <h1 class="sr-only">Fare ecologia è semplice e divertente. Primi passi e consigli</h1>
           <h2 class="standard_title leading-tight">
             Ecologia smart... si ma come?
           </h2>

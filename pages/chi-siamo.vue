@@ -2,21 +2,21 @@
 export default {
   setup() {
     useHead({
-      title: "Chi siamo - Pcasa",
+      title: "Chi siamo e come vediamo il futuro - Pcasa",
       meta: [
         { name: 'description', content: "Vogliamo cambiare il mondo con piccoli e semplici gesti, semplici come portare una bottiglia in plastica nel nostro negozio e riutilizzarla come contenitore per i nostri detersivi alla spina ecologici." },
 
         // Facebook
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://pcasa.it/chi-siamo' },
-        { property: 'og:title', content: 'Chi siamo - Pcasa' },
+        { property: 'og:title', content: 'Chi siamo e come vediamo il futuro - Pcasa' },
         { property: 'og:description', content: "Vogliamo cambiare il mondo con piccoli e semplici gesti, semplici come portare una bottiglia in plastica nel nostro negozio e riutilizzarla come contenitore per i nostri detersivi alla spina ecologici." },
         { property: 'og:image', content: 'https://pcasa.it/pcasa-social-meta.png' },
 
         // Twitter 
         { property: 'twitter:card', content: 'summary_large_image' },
         { property: 'twitter:url', content: 'https://pcasa.it/chi-siamo' },
-        { property: 'twitter:title', content: 'Chi siamo - Pcasa' },
+        { property: 'twitter:title', content: 'Chi siamo e come vediamo il futuro - Pcasa' },
         { property: 'twitter:description', content: "Vogliamo cambiare il mondo con piccoli e semplici gesti, semplici come portare una bottiglia in plastica nel nostro negozio e riutilizzarla come contenitore per i nostri detersivi alla spina ecologici." },
         { property: 'twitter:image', content: 'https://pcasa.it/pcasa-social-meta.png' }
       ]
@@ -28,6 +28,7 @@ export default {
   <main>
     <section class="section py-20">
       <div class="container mx-auto px-4">
+        <h1 class="sr-only">Chi siamo?</h1>
         <h2 class="minus_title leading-none py-8">
           Siamo un azienda ambiziosa che vuole cambiare il <span
             class="inline-block bg-pcasa-blue px-2 md:px-4 pb-2 md:pb-4 rounded-full text-pcasa-white leading-none">mondo</span>
