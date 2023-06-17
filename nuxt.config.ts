@@ -51,7 +51,6 @@ export default defineNuxtConfig({
             landingVertical: {
                 modifiers: {
                     format: 'webp',
-                    fit: 'cover',
                 }
             }
         }
