@@ -24,12 +24,12 @@
             </h2>
             <div class="flex flex-wrap gap-x-4 gap-y-8">
                 <div class="w-full md:w-6/12 rounded-lg overflow-hidden">
-                    <nuxt-img preset="landingVertical" src="/img/ecologia-semplice.webp" sizes="xs:100% sm:100% md:400px lg:500px"
-                        alt="Inizia a fare ecologia portando dei contenitori nel nostro negozio" loading="lazy"
-                        class="block w-full h-full object-cover object-center" />
-                    <!-- <img width="400" src="/img/ecologia-semplice.webp"
+                    <!-- <nuxt-img preset="landingVertical" src="/img/ecologia-semplice.webp" sizes="xs:100% sm:100% md:400px lg:500px"
+                        alt="Inizia a fare ecologia portando dei contenitori nel nostro negozio" loading="lazy" 
+                        class="block w-full h-full object-cover object-center" /> -->
+                    <img width="400" src="/img/ecologia-semplice.webp"
                         alt="Inizia a fare ecologia portando dei contenitori nel nostro negozio"
-                        class="block w-full h-full object-cover object-center"> -->
+                        class="block w-full h-full object-cover object-center" loading="lazy">
                 </div>
                 <div class="w-full md:w-5/12 flex flex-col gap-y-4">
                     <p class="standard_paragraph leading-none">
@@ -56,10 +56,10 @@
             </h2>
             <div class="flex flex-wrap gap-x-4 gap-y-8">
                 <div class="w-full lg:w-6/12 rounded-lg overflow-hidden">
-                    <nuxt-img preset="landingVertical" src="/img/team-pcasa.webp" alt="Il team pcasa" loading="lazy" sizes="xs:100% sm:100% md:400px lg:500px"
-                        class="block w-full h-full object-cover object-center" />
-                    <!-- <img width="400" class="block w-full h-full object-cover object-center" src="/img/team-pcasa.webp"
-                        alt="Il team pcasa"> -->
+                    <!-- <nuxt-img preset="landingVertical" src="/img/team-pcasa.webp" alt="Il team pcasa" loading="lazy" sizes="xs:100% sm:100% md:400px lg:500px"
+                        class="block w-full h-full object-cover object-center" /> -->
+                    <img width="400" class="block w-full h-full object-cover object-center" src="/img/team-pcasa.webp"
+                        alt="Il team pcasa" loading="lazy">
                 </div>
                 <div class="w-full lg:w-5/12 flex flex-col gap-y-4">
                     <p class="standard_paragraph leading-tight">
