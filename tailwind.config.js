@@ -20,7 +20,8 @@ module.exports = {
         'pcasa-green': '#00522e',
         'pcasa-gold': '#ce9f69',
         // 'pcasa-red': '#fd6438',
-        'pcasa-red': '#ED2424',
+        // 'pcasa-red': '#ED2424',
+        'pcasa-red': '#B31312',
       }
     },
     fontFamily: {

@@ -37,7 +37,7 @@ export default {
         <div class="container mx-auto px-4 flex flex-col gap-y-4">
             <h2 class="minus_title leading-none">
                 Prodotti scelti per <span
-                    class="inline-block bg-pcasa-red aspect-square p-2 pt-1 md:p-4 md:pt-2 rounded-full text-pcasa-white leading-none">te</span>
+                    class="inline-block bg-pcasa-blue aspect-square p-2 pt-1 md:p-4 md:pt-2 rounded-full text-pcasa-white leading-none">te</span>
             </h2>
             <div class="flex flex-row gap-x-4 md:gap-x-8 overflow-y-auto pb-10 relative">
                 <ListMainProd :prod="mainProd" v-for="(mainProd, i) in mainProdsList" :key="i + 'main-category'" />
