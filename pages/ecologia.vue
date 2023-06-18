@@ -30,7 +30,7 @@ export default {
       <div class="container mx-auto px-4 h-full flex items-center">
         <div class="flex flex-col gap-y-4">
           <h1 class="sr-only">Fare ecologia è semplice e divertente. Primi passi e consigli</h1>
-          <h2 class="standard_title leading-tight">
+          <h2 class="standard_title leading-none">
             Ecologia smart... si ma come?
           </h2>
           <ul>
