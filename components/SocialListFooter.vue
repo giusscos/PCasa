@@ -28,7 +28,7 @@ export default {
     <ul class="py-8 pl-2 flex flex-col gap-y-2">
         <li v-for="(link, i) in socialLinksFooter" :key="i + 'footer-social-list-item'">
             <a :href="link.url" :title="link.title" target="_blank"
-                class="btn_footer text-gray-300 hover:text-white">
+                class="btn-footer text-gray-300 hover:text-white">
                 {{ link.name }}
             </a>
         </li>

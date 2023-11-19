@@ -32,7 +32,7 @@ export default {
 <template>
     <ul class="py-8 pl-2 flex flex-col gap-y-2">
         <li v-for="(link, i) in navLinksFooter" :key="i + 'footer-nav-list-item'">
-            <NuxtLink :to="link.nameRoute" :title="link.title" class="btn_footer text-gray-300 hover:text-white">
+            <NuxtLink :to="link.nameRoute" :title="link.title" class="btn-footer text-gray-300 hover:text-white">
                 {{ link.name }}
             </NuxtLink>
         </li>

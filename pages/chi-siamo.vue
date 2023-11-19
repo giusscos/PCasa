@@ -29,11 +29,11 @@ export default {
     <section class="section py-20">
       <div class="container mx-auto px-4">
         <h1 class="sr-only">Chi siamo?</h1>
-        <h2 class="minus_title leading-none py-8">
+        <h2 class="title-sm leading-none py-8">
           Siamo un azienda ambiziosa che vuole cambiare il <span
             class="inline-block bg-pcasa-blue px-2 md:px-4 pb-2 md:pb-4 rounded-full text-pcasa-white leading-none">mondo</span>
         </h2>
-        <p class="standard_paragraph leading-tight">
+        <p class="paragraph-standard font-sans">
           Vogliamo cambiare il mondo con piccoli e semplici gesti, semplici come portare una bottiglia in plastica
           nel nostro negozio e riutilizzarla come contenitore per i nostri detersivi alla spina ecologici. Abbiamo
           iniziato proprio da loro per la semplicità con cui infinite bottiglie in plastica possono essere riutilizzate

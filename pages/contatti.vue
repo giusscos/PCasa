@@ -42,7 +42,7 @@ export default {
     </section> -->
     <section class="section pt-20">
       <div class="container mx-auto h-full px-4 flex items-center py-10">
-        <h2 class="standard_title leading-none">
+        <h2 class="title-standard leading-none">
           Ci trovi anche in negozio
         </h2>
       </div>

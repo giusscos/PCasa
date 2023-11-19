@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .title-standard {
+        @apply text-4xl sm:text-5xl md:text-7xl font-bold;
+    }
+    
+    .title-sm {
+        @apply text-3xl sm:text-4xl md:text-6xl font-bold;
+    }
+
+    .title-xs {
+        @apply text-xl sm:text-2xl md:text-4xl font-bold;
+    }
+    
+    .paragraph-standard,
+    .li-standard {
+        @apply text-2xl sm:text-3xl md:text-4xl;
+    }
+
+    .paragraph-sm,
+    .li-sm {
+        @apply text-xl sm:text-2xl md:text-3xl;
+    }
+
+    .paragraph-xs,
+    .li-xs {
+        @apply text-lg sm:text-xl md:text-2xl;
+    }
+
+    .img-cover {
+        @apply block w-full h-full object-cover object-center;
+    }
+
+    .pcasa-marker{
+        @apply inline-block p-2 pt-1 md:p-4 md:pt-2 rounded-full text-pcasa-white;
+    }
+
+    .btn-standard {
+        @apply block w-fit border-2 active:scale-95 transition ease-in-out duration-300 rounded-full px-4 py-2 font-sans font-bold text-lg sm:text-xl md:text-2xl;
+    }
+
+    .btn-footer {
+        @apply block w-fit origin-left active:scale-95 transition ease-in-out duration-300 capitalize text-xl md:text-2xl
+    }
+}

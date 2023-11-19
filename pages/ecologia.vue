@@ -30,17 +30,17 @@ export default {
       <div class="container mx-auto px-4 h-full flex items-center">
         <div class="flex flex-col gap-y-4">
           <h1 class="sr-only">Fare ecologia è semplice e divertente. Primi passi e consigli</h1>
-          <h2 class="standard_title leading-none">
+          <h2 class="title-standard">
             Ecologia smart... si ma come?
           </h2>
           <ul>
-            <li class="standard_list-item leading-tight">
+            <li class="li-standard">
               Riutiliziamo la plastica.
             </li>
-            <li class="standard_list-item leading-tight">
+            <li class="li-standard">
               Evitiamo gli sprechi.
             </li>
-            <li class="standard_list-item leading-tight">
+            <li class="li-standard">
               Condividiamo.
             </li>
           </ul>
@@ -49,11 +49,11 @@ export default {
     </section>
     <section class="section py-20">
       <div class="container mx-auto px-4 flex flex-col gap-y-8">
-        <h2 class="minus_title leading-none">
+        <h2 class="title-sm leading-none">
           Fai ecologia smart anche <span
-            class="inline-block bg-pcasa-red aspect-square p-2 pt-1 md:p-4 md:pt-2 rounded-full text-pcasa-white leading-none">tu</span>
+            class="bg-pcasa-red aspect-square pcasa-marker">tu</span>
         </h2>
-        <p class="standard_paragraph leading-tight">
+        <p class="paragraph-standard font-sans">
           L'ecologia è l'insieme delle scienze che studiano gli organismi viventi, le loro relazioni con
           l'ambiente e con gli altri organismi e l'impatto che l'uomo ha sull'ecosistema. Fare ecologia significa
           adottare comportamenti e scelte consapevoli per ridurre l'impatto ambientale e preservare le risorse
@@ -67,7 +67,7 @@ export default {
           loro insieme, contribuiscono a ridurre l'impatto ambientale.
           <br>Ecco alcuni suggerimenti per iniziare:
         </p>
-        <ul class="list-disc minus_list-item pl-8 flex flex-col gap-y-4">
+        <ul class="list-disc font-sans li-sm pl-8 flex flex-col gap-y-4">
           <li>
             Riduci, riutilizza, ricicla: Riduci la quantità di rifiuti prodotti acquistando solo ciò di cui hai
             effettivamente bisogno e preferendo confezioni ecosostenibili e riciclabili. Riutilizza oggetti e materiali
@@ -104,7 +104,7 @@ export default {
             ecosostenibili. Spiega loro l'importanza di proteggere l'ambiente e fornisci suggerimenti pratici per farlo.
           </li>
         </ul>
-        <p class="standard_paragraph leading-tight">
+        <p class="paragraph-standard font-sans">
           Noi proponiamo detersivi ecologici alla spina, offrendo contenitori riutilizzabili, contribuendo
           a ridurre l'impatto ambientale legato all'utilizzo di plastica monouso e aiutiamo a promuovere un consumo
           più sostenibile. In questo modo, ci impegnamo a offrire un'alternativa più ecologica ai

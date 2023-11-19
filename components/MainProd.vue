@@ -35,12 +35,12 @@ export default {
 <template>
     <section class="section py-20">
         <div class="container mx-auto px-4 flex flex-col gap-y-4">
-            <h2 class="minus_title leading-none">
+            <h2 class="title-sm leading-none">
                 Prodotti scelti per <span
-                    class="inline-block bg-pcasa-blue aspect-square p-2 pt-1 md:p-4 md:pt-2 rounded-full text-pcasa-white leading-none">te</span>
+                    class="bg-pcasa-blue aspect-square pcasa-marker">te</span>
             </h2>
-            <div class="flex flex-row gap-x-4 md:gap-x-8 overflow-y-auto pb-10 relative">
-                <ListMainProd :prod="mainProd" v-for="(mainProd, i) in mainProdsList" :key="i + 'main-category'" />
+            <div class="grid grid-cols-1 max-w-[350px] mx-auto sm:mx-0 sm:max-w-none sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
+                <ListMainProd :prod="mainProd" v-for="(mainProd, i) in mainProdsList" :key="i + 'main-product'" />
             </div>
         </div>
     </section>
