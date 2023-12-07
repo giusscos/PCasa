@@ -22,8 +22,10 @@ export default {
         <span class="sr-only">
             Pcasa
         </span>
-        <Logo class="hidden md:block object-cover object-center" />
-        <LogoMini class="block md:hidden object-cover object-center" />
+        <LogoXmas class="hidden md:block object-cover object-center" />
+        <LogoMiniXmas class="block md:hidden object-cover object-center" />
+        <!-- <Logo class="hidden md:block object-cover object-center" />
+        <LogoMini class="block md:hidden object-cover object-center" /> -->
     </NuxtLink>
 </template>
 <style>
