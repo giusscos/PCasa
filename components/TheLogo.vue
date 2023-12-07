@@ -1,21 +1,16 @@
-<script>
-export default {
-    name: 'TheLogo',
-    data() {
-        return {
-            headerState: menuState(),
-            isExpanded: menuToggleState(),
-        }
-    },
-    methods: {
-        closeMenu() {
-            if (this.headerState !== 'opened') return
-            this.isExpanded = !this.isExpanded
-            this.headerState = 'closing'
-            document.querySelector('body').classList.remove('overflow-y-hidden')
-        },
-    }
-}
+<script setup>
+let headerState = menuState();
+let isExpanded = menuToggleState();
+
+const closeMenu = () => {
+    if (this.headerState !== 'opened') return
+
+    isExpanded.value = !isExpanded.value
+
+    headerState.value = 'closing'
+
+    document.querySelector('body').classList.remove('overflow-y-hidden')
+};
 </script>
 <template>
     <NuxtLink to="/" title="Torna alla home" @click="closeMenu" class="w-20 h-10">

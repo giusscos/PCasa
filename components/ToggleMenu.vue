@@ -1,25 +1,24 @@
 <script setup>
-const headerState = menuState();
-const isExpanded = menuToggleState();
-
+let headerState = menuState();
+let isExpanded = menuToggleState();
 
 const openMenu = () => {
-    headerState = 'opened'
+    headerState.value = 'opened'
     document.querySelector('body').classList.add('overflow-y-hidden')
 }
 const closeMenu = () => {
-    headerState = 'closing'
+    headerState.value = 'closing'
     document.querySelector('body').classList.remove('overflow-y-hidden')
 }
 
 const menuToggle = () => {
-    isExpanded ? closeMenu() : openMenu()
-    isExpanded = !isExpanded
+    isExpanded.value ? closeMenu() : openMenu()
+    isExpanded.value = !isExpanded.value
 }
 
 onMounted(() => {
     window.addEventListener('resize', () => {
-        if (window.innerWidth >= 768 && this.isExpanded) {
+        if (window.innerWidth >= 768 && isExpanded.value) {
             this.closeMenu()
         }
     });
