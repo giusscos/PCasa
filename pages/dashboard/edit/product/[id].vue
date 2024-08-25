@@ -45,7 +45,7 @@ async function getData() {
         if (error) throw (error);
 
         product.value = data[0];
-        id_category.value = data[0].categories[0].id
+        id_category.value = data[0].categories[0] ? data[0].categories[0].id : 0;
         imageUrls.value = data[0].image_url;
 
         isLoading.value = false;
@@ -217,7 +217,7 @@ async function update() {
                 </p>
                 <select class="bg-transparent p-2 pr-0 border border-pcasa-text/10 rounded-lg focus:outline-none w-full"
                     id="category" name="category" v-model="id_category" required>
-                    <option selected disabled>Seleziona un opzione</option>
+                    <option selected disabled value="0">Seleziona un opzione</option>
                     <template v-for="(category, i) in categories" :key="'category-option-' + i">
                         <option :selected="id_category == category.id" :value="category.id">
                             {{ category.name }}

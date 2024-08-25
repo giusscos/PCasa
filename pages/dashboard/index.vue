@@ -40,8 +40,9 @@ async function logout() {
                             Aggiungi Categoria
                         </NuxtLink>
                         <NuxtLink to="/dashboard/categories"
-                            class="text-pcasa-text/75 hover:text-pcasa-text transition">
-                            Vedi tutte le categorie
+                            class="text-pcasa-text/75 hover:text-pcasa-text transition flex gap-2 items-center">
+                            Vedi tutti
+                            <IconChevronRight />
                         </NuxtLink>
                     </div>
                 </div>
@@ -65,8 +66,9 @@ async function logout() {
                             Aggiungi Prodotto
                         </NuxtLink>
                         <NuxtLink to="/dashboard/products"
-                            class="text-pcasa-text/75 hover:text-pcasa-text transition">
-                            Vedi tutti i prodotti
+                            class="text-pcasa-text/75 hover:text-pcasa-text transition flex gap-2 items-center">
+                            Vedi tutti
+                            <IconChevronRight />
                         </NuxtLink>
                     </div>
                 </div>
