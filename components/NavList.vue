@@ -2,7 +2,9 @@
 let headerState = menuState();
 let isExpanded = menuToggleState();
 
-const navLinks = [
+const user = useSupabaseUser();
+
+const navLinks = ref([
     {
         'name': 'prodotti',
         'nameRoute': '/prodotti',
@@ -22,8 +24,8 @@ const navLinks = [
         'name': 'contatti',
         'nameRoute': '/contatti',
         'title': 'Visita la pagina dei contatti',
-    },
-];
+    }
+]);
 
 function closeMenu() {
     if (headerState.value !== 'opened') return
@@ -37,11 +39,23 @@ function closeMenu() {
 
 </script>
 <template>
-    <ul class="flex flex-col md:flex-row md:justify-center md:items-center gap-y-8 md:gap-x-8 pt-8 md:pt-0">
-        <li v-for="(link, i) in navLinks" :key="i + 'item-list'" class="item_list">
+    <ul class="flex flex-col md:flex-row md:justify-center md:items-center gap-y-6 md:gap-x-6">
+        <li v-for="(link, i) in navLinks" :key="i + 'item-list'" class="h-full">
             <NuxtLink :to="link.nameRoute" :title="link.title" @click="closeMenu"
-                class="block text-gray-300 hover:text-white text-left text-5xl md:text-2xl font-semibold transition capitalize leading-none">
+                class="pcasa-link-standard">
                 {{ link.name }}
+            </NuxtLink>
+        </li>
+        <li v-if="!user" class="h-full">
+            <NuxtLink to="/login" title="Accedi al tuo profilo" @click="closeMenu"
+                class="pcasa-link-standard">
+                Accedi
+            </NuxtLink>
+        </li>
+        <li v-else-if="user" class="h-full">
+            <NuxtLink to="/dashboard" title="Vai al tuo profilo" @click="closeMenu"
+                class="pcasa-link-standard">
+                Profilo
             </NuxtLink>
         </li>
     </ul>

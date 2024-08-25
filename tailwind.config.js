@@ -12,13 +12,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'pcasa-white': '#eee',
-        'pcasa-black': '#222',
-        'pcasa-blue': '#143348',
-        'pcasa-blue-dark': '#05141d',
-        'pcasa-green': '#00522e',
+        'pcasa-bg': '#101010',
+        'pcasa-text': '#f7f7f7',
+        'pcasa-accent': '#0063a5',
+        'pcasa-accent-dark': '#05141d',
+        'pcasa-accent-alt': '#00522e',
+        'pcasa-error': '#B31312',
         'pcasa-gold': '#ce9f69',
-        'pcasa-red': '#B31312',
       }
     },
     fontFamily: {

@@ -11,16 +11,16 @@ export default {
 }
 </script>
 <template>
-    <section class="section h-screen bg-pcasa-red">
-        <div class="container mx-auto px-4 h-full flex flex-col justify-center items-start gap-y-4">
-            <h1 class="title-standard leading-none text-pcasa-white font-sans">
+    <section class="h-screen bg-pcasa-error text-pcasa-text">
+        <div class="container mx-auto h-full flex flex-col justify-center items-start gap-y-4">
+            <h1 class="title-standard leading-none font-sans">
                 404
             </h1>
-            <h2 class="title-sm leading-none text-pcasa-white">
+            <h2 class="title-sm leading-none">
                 Ti sei perso?
             </h2>
             <NuxtLink to="/"
-                class="btn-standard border-pcasa-white hover:bg-pcasa-white text-pcasa-white hover:text-pcasa-red shadow-xl"
+                class="btn-standard border-pcasa-text hover:bg-pcasa-text hover:text-pcasa-error shadow-xl"
                 title="Vai alla home">
                 Vai alla home
             </NuxtLink>

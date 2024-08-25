@@ -37,7 +37,7 @@ export default {
         <div class="container mx-auto px-4 flex flex-col gap-y-4">
             <h2 class="title-sm leading-none">
                 Prodotti scelti per <span
-                    class="bg-pcasa-blue aspect-square pcasa-marker">te</span>
+                    class="bg-pcasa-accent aspect-square pcasa-marker">te</span>
             </h2>
             <div class="grid grid-cols-1 max-w-[350px] mx-auto sm:mx-0 sm:max-w-none sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
                 <ListMainProd :prod="mainProd" v-for="(mainProd, i) in mainProdsList" :key="i + 'main-product'" />

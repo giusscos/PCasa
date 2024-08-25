@@ -25,41 +25,41 @@ export default {
 }
 </script>
 <template>
-  <main>
-    <section class="section py-20">
-      <div class="container mx-auto px-4">
-        <h1 class="sr-only">Chi siamo?</h1>
-        <h2 class="title-sm leading-none py-8">
-          Siamo un azienda ambiziosa che vuole cambiare il <span
-            class="inline-block bg-pcasa-blue px-2 md:px-4 pb-2 md:pb-4 rounded-full text-pcasa-white leading-none">mondo</span>
-        </h2>
-        <p class="paragraph-standard font-sans">
-          Vogliamo cambiare il mondo con piccoli e semplici gesti, semplici come portare una bottiglia in plastica
-          nel nostro negozio e riutilizzarla come contenitore per i nostri detersivi alla spina ecologici. Abbiamo
-          iniziato proprio da loro per la semplicità con cui infinite bottiglie in plastica possono essere riutilizzate
-          in modo intelligente. Nel nostro piccolo paese abbiamo subito riscontrato successo e sostegno. Oggi in
-          tantissimi riutilizzano i loro contenitori più volte, migliorando la gestione della plastica.
-          Abbiamo quindi deciso di provare anche online, portando i nostri prodotti, le nostre idee e le nostre conoscenze
-          in tutto il mondo.<br><br>
+  <section>
+    <div class="container mx-auto py-10 md:py-20 h-full flex flex-col gap-y-4">
+      <h1 class="sr-only">Chi siamo?</h1>
+      <h2 class="title-standard leading-none py-8">
+        Siamo un azienda ambiziosa che vuole cambiare il <span
+          class="inline-block bg-pcasa-accent px-2 md:px-4 pb-2 md:pb-4 rounded-full leading-none">mondo</span>
+      </h2>
+    </div>
+    <div class="container mx-auto py-10">
+      <p class="paragraph-standard font-sans">
+        Vogliamo cambiare il mondo con piccoli e semplici gesti, semplici come portare una bottiglia in plastica
+        nel nostro negozio e riutilizzarla come contenitore per i nostri detersivi alla spina ecologici. Abbiamo
+        iniziato proprio da loro per la semplicità con cui infinite bottiglie in plastica possono essere riutilizzate
+        in modo intelligente. Nel nostro piccolo paese abbiamo subito riscontrato successo e sostegno. Oggi in
+        tantissimi riutilizzano i loro contenitori più volte, migliorando la gestione della plastica.
+        Abbiamo quindi deciso di provare anche online, portando i nostri prodotti, le nostre idee e le nostre conoscenze
+        in tutto il mondo.<br><br>
 
-          Abbiamo introdotto l'artigianato locale come alternativa a prodotti in plastica o non ecosostenibili.
-          In questo modo sosteniamo anche i nostri artigiani locali che utilizzano ancora le tecniche utilizzate dai
-          nostri
-          antenati con l'aggiunta di nuove tecnologie e nuovi materiali ecosostenibili.<br><br>
+        Abbiamo introdotto l'artigianato locale come alternativa a prodotti in plastica o non ecosostenibili.
+        In questo modo sosteniamo anche i nostri artigiani locali che utilizzano ancora le tecniche utilizzate dai
+        nostri
+        antenati con l'aggiunta di nuove tecnologie e nuovi materiali ecosostenibili.<br><br>
 
-          Anche il palato vuole la sua parte e in collaborazione con produttori locali siamo in grado di offrire diversi
-          prodotti
-          tipici locali, tra i più rinomati in Italia e nel mondo. Il nostro oro verde, o anche detto olio extra vergine
-          d'oliva, è
-          forse il prodotto più utilizzato nelle cucine italiane e mondiali.<br><br>
+        Anche il palato vuole la sua parte e in collaborazione con produttori locali siamo in grado di offrire diversi
+        prodotti
+        tipici locali, tra i più rinomati in Italia e nel mondo. Il nostro oro verde, o anche detto olio extra vergine
+        d'oliva, è
+        forse il prodotto più utilizzato nelle cucine italiane e mondiali.<br><br>
 
-          Come azienda che promuove l'ecosostenibilità, ci impegnamo a offrire un'alternativa più ecologica ai
-          prodotti tradizionali come con i classici detersivi, contribuendo a creare un mondo più pulito e sostenibile per
-          tutti. 🍀
-        </p>
-      </div>
-    </section>
-  </main>
+        Come azienda che promuove l'ecosostenibilità, ci impegnamo a offrire un'alternativa più ecologica ai
+        prodotti tradizionali come con i classici detersivi, contribuendo a creare un mondo più pulito e sostenibile per
+        tutti. 🍀
+      </p>
+    </div>
+  </section>
 </template>
 <style>
 @import '~/assets/css/main.css';

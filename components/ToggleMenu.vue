@@ -25,9 +25,9 @@ onMounted(() => {
 });
 </script>
 <template>
-    <button class="menu md:hidden font-bold text-2xl text-white ml-auto" aria-controls="main_navigation"
+    <button class="menu md:hidden font-semibold text-lg" aria-controls="main_navigation"
         :aria-expanded="isExpanded" @click="menuToggle" title="Apri menù">
-        Menù
+        {{ !isExpanded ? 'Menù' : 'Chiudi' }}
     </button>
 </template>
 <style>

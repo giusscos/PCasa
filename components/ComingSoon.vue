@@ -1,11 +1,9 @@
 <template>
-    <section class="section h-screen">
-        <div class="container mx-auto px-4 h-full flex justify-center items-center">
-            <span class="title-standard leading-none">
-                Sezione in arrivo 👨‍💻
-            </span>
-        </div>
-    </section>
+    <div class="container mx-auto flex justify-center items-center">
+        <span class="title-standard leading-none">
+            Sezione in arrivo 👨‍💻
+        </span>
+    </div>
 </template>
 <style>
 @import '~/assets/css/main.css';

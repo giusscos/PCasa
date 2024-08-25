@@ -35,7 +35,7 @@
     }
 
     .pcasa-marker{
-        @apply inline-block p-2 pt-1 md:p-4 md:pt-2 rounded-full text-pcasa-white;
+        @apply inline-block p-2 pt-1 md:p-4 md:pt-2 rounded-full text-pcasa-text;
     }
 
     .btn-standard {
@@ -43,6 +43,10 @@
     }
 
     .btn-footer {
-        @apply block w-fit origin-left active:scale-95 transition ease-in-out duration-300 capitalize text-xl md:text-2xl
+        @apply block w-fit origin-left active:scale-95 transition ease-in-out duration-300 capitalize text-xl md:text-2xl;
+    }
+
+    .pcasa-link-standard{
+        @apply block h-full text-xl md:text-base text-pcasa-text/75 hover:text-pcasa-text font-semibold transition capitalize leading-none;
     }
 }

@@ -25,7 +25,5 @@ export default {
 }
 </script>
 <template>
-  <main class="products">
-    <ComingSoon />
-  </main>
+  <ComingSoon />
 </template>

@@ -4,12 +4,9 @@
 
 /* color palette */
 :root {
-    --color-white: #eee;
-    --color-black: #222;
-    --color-black-translucent: #222222e0;
-    --color-blue: #143348;
-    --color-blue-translucent: #143348e0;
-    --color-blue-dark-translucent: #05141df0;
+    --color-white: #f7f7f7;
+    --color-black: #101010;
+    --color-blue: #0063a5;
 
     --animation-fast: 400ms cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
     --animation-fast-delay: 400ms cubic-bezier(0.215, 0.610, 0.355, 1) forwards 500ms;
@@ -48,24 +45,22 @@ body {
 @keyframes heightExpand {
     0% {
         height: 64px;
-        /* background-color: var(--color-blue-translucent); */
     }
 
     100% {
         height: 100vh;
-        background-color: var(--color-blue-dark-translucent);
+        background-color: var(--color-black);
     }
 }
 
 @keyframes heightContract {
     0% {
         height: 100vh;
-        background-color: var(--color-blue-dark-translucent);
+        background-color: var(--color-black);
     }
 
     100% {
         height: 64px;
-        /* background-color: var(--color-blue-translucent); */
     }
 }
 
