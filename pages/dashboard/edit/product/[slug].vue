@@ -1,89 +1,57 @@
 <script setup>
 import { v4 } from 'uuid'
-const BASE_STORAGE_URL = ref('https://eaayjammgfuuuqsxetie.supabase.co/storage/v1/object/public/images/');
 
-const client = useSupabaseClient()
+const BASE_STORAGE_URL = "https://eaayjammgfuuuqsxetie.supabase.co/storage/v1/object/public/images";
 
 const route = useRoute()
 
+const prodSlug = route.params.slug;
+
+const { fetchData, fetchDataId, createStorageFile, updateFn, deleteFn, deleteStorage } = useMySupabaseApi();
+
+const categories = await fetchData('categories', 'id, name');
+
+const idCategory = ref(0);
+
+const imageUrls = ref([]);
+
+const product = ref();
+
+const data = await fetchDataId('products', 'slug', prodSlug, '*, categories(id, name)');
+
+product.value = data;
+
+idCategory.value = product.value.categories[0].id;
+
+imageUrls.value = product.value.image_url;
+
 const errorMessage = ref(null);
+
 const isLoading = ref(false);
 
-const product = ref({
-    name: null,
-    description: null,
-    amount: null,
-    hide: false,
-    quantity: null,
-    image_url: null
-});
-
-const id_category = ref(0);
-
-const { data: categories } = await client
-    .from('categories')
-    .select('id, name');
-
 const images = ref([])
-const imageUrls = ref([])
-
-onMounted(async () => {
-    getData();
-})
-
-async function getData() {
-    isLoading.value = true;
-
-    try {
-        errorMessage.value = null;
-
-        const { data, error } = await client
-            .from('products')
-            .select('*, categories(id, name)')
-            .eq('id', route.params.id);
-
-        if (error) throw (error);
-
-        product.value = data[0];
-        id_category.value = data[0].categories[0] ? data[0].categories[0].id : 0;
-        imageUrls.value = data[0].image_url;
-
-        isLoading.value = false;
-
-    } catch (error) {
-        isLoading.value = false;
-        errorMessage.value = error?.message;
-        console.log(error)
-    }
-}
 
 const removeImage = (index) => {
     images.value.splice(index, 1);
 }
 
 const removeExistingImage = async (uuid) => {
-    const { error } = await client
-        .storage
-        .from('images')
-        .remove([`${route.params.id}/${uuid}`])
+    try {
+        await deleteStorage('images', product.value.id, [uuid]);
 
-    const { data: newImageUrls } = await client
-        .from('products')
-        .update({ image_url: product.value.image_url.filter((url) => url != uuid) })
-        .eq('id', route.params.id)
-        .select('image_url');
+        const newImageUrls = await updateFn('products', 'id', product.value.id, { image_url: product.value.image_url.filter((url) => url != uuid) }, 'image_url');
 
-    product.value.image_url = newImageUrls[0].image_url;
-
-    imageUrls.value = newImageUrls[0].image_url;
+        imageUrls.value = newImageUrls.image_url;
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 const handleFileChange = (event) => {
     const files = event.target.files
 
-    // Controlla se il numero di immagini non supera 5
     if (files.length + images.value.length > 5) {
-        alert('You can upload a maximum of 5 images.')
+        alert('You can upload a maximum of 5 images')
         return
     }
 
@@ -100,77 +68,69 @@ const handleFileChange = (event) => {
     }
 }
 
-function createSlug(string) {
-    return string
-        .toLowerCase()                       // Convert to lowercase
-        .trim()                              // Remove leading/trailing spaces
-        .replace(/[^a-z0-9\s-]/g, '')        // Remove special characters
-        .replace(/\s+/g, '-')                // Replace spaces with hyphens
-        .replace(/-+/g, '-')                 // Replace multiple hyphens with a single hyphen
-        .replace(/^-+|-+$/g, '');            // Trim hyphens from the start and end
-}
-
 async function update() {
-    isLoading.value = true;
-
     try {
         errorMessage.value = null;
 
-        for (const image of images.value) {
-            const { data: imageData, error } = await client
-                .storage
-                .from('images')
-                .upload(`${route.params.id}/${image.uuid}`, image.file)
+        isLoading.value = true;
 
-            imageUrls.value.push(imageData.path.split('/')[1]);
-
-            if (error) throw (error);
+        if (idCategory.value !== 0 && idCategory.value !== product.value.categories[0].id) {
+            await updateFn('product_category', 'id_product', product.value.id, { id_category: idCategory.value })
         }
+
+        const imageData = await createStorageFile('images', product.value.id, images.value)
+
+        imageData.forEach(element => {
+            product.value.image_url.push(element);
+        });
 
         images.value = [];
 
         product.value.slug = createSlug(product.value.name);
 
-        const { data: updatedCategory } = await client
-            .from('product_category')
-            .update([
-                { id_category: id_category.value },
-            ])
-            .eq('id_product', route.params.id)
-            .select();
-
         delete product.value.categories;
 
-        const { data: updatedProduct } = await client
-            .from('products')
-            .update(product.value)
-            .eq('id', route.params.id)
-            .select();
+        const updatedProduct = await updateFn('products', 'id', product.value.id, product.value)
 
-        if (error) throw (error);
+        product.value = updatedProduct;
 
-        imageUrls.value = [];
-        product.value = updatedProduct[0];
-
-        id_category.value = updatedCategory[0].id
+        imageUrls.value = updatedProduct.image_url;
 
         isLoading.value = false;
 
+        await navigateTo('/dashboard');
     } catch (error) {
         isLoading.value = false;
         errorMessage.value = error?.message;
     }
 }
 
+async function deleteProduct() {
+    try {
+        await deleteStorage('images', product.value.id, product.value.image_url);
+
+        await deleteFn('products', 'id', product.value.id);
+
+        route.back();
+    } catch (error) {
+        console.log(error);
+    }
+}
 </script>
 
 <template>
     <div class="container mx-auto font-sans">
         <ButtonBack />
 
-        <h1 class="title-sm leading-none mb-4">
-            Modifica Prodotto
-        </h1>
+        <div class="flex items-center gap-6">
+            <h1 class="title-sm leading-none mb-4">
+                Modifica Prodotto
+            </h1>
+            <button type="button" @click="deleteProduct" title="Elimina il prodotto"
+                class="ml-auto px-4 py-1 border-2 border-pcasa-error hover:bg-pcasa-error hover:text-pcasa-text rounded-lg transition font-semibold">
+                Elimina prodotto
+            </button>
+        </div>
         <form @submit.prevent="update" class="flex flex-col gap-4 py-10">
             <div>
                 <p class="text-xs mb-1">
@@ -190,13 +150,13 @@ async function update() {
                         </div>
                     </label>
                     <div class="flex self-end items-center flex-wrap gap-4">
-                        <div class="relative" v-for="(imageUrl, i) in product.image_url" :key="'url-image-' + i">
+                        <div class="relative" v-for="(imageUrl, i) in imageUrls" :key="'url-image-' + i">
                             <button type="button" @click="removeExistingImage(imageUrl)"
                                 class="h-7 w-auto aspect-square p-1 bg-pcasa-error text-pcasa-text rounded-full absolute -top-2 -right-2">
                                 <IconMinus />
                             </button>
-                            <img :src="BASE_STORAGE_URL + product.id + '/' + imageUrl"
-                                :alt="'Anteprima immagine prodotto ' + i"
+                            <img :src="BASE_STORAGE_URL + '/' + product.id + '/' + imageUrl"
+                                :alt="'Anteprima immagine prodotto caricato ' + i"
                                 class="h-24 w-24 aspect-square object-contain object-center rounded-lg" />
                         </div>
                         <div class="relative" v-for="(image, i) in images" :key="'preview-image-' + i">
@@ -216,10 +176,10 @@ async function update() {
                     Categoria
                 </p>
                 <select class="bg-transparent p-2 pr-0 border border-pcasa-text/10 rounded-lg focus:outline-none w-full"
-                    id="category" name="category" v-model="id_category" required>
+                    id="category" name="category" v-model="idCategory" required>
                     <option selected disabled value="0">Seleziona un opzione</option>
                     <template v-for="(category, i) in categories" :key="'category-option-' + i">
-                        <option :selected="id_category == category.id" :value="category.id">
+                        <option :selected="idCategory == category.id" :value="category.id">
                             {{ category.name }}
                         </option>
                     </template>

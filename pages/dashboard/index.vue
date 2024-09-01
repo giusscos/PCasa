@@ -1,44 +1,39 @@
 <script setup lang="ts">
-const client = useSupabaseClient()
+const { fetchDataWithLimit, logoutFn } = useMySupabaseApi()
 
-let { data: categories, error: errorCategories } = await client
-    .from('categories')
-    .select('*')
-    .range(0, 2);
+const runtimeConfig = useRuntimeConfig()
 
-let { data: products, error: errorProducts } = await client
-    .from('products')
-    .select('*')
-    .range(0, 2);
+const BASE_CREATE_URL = runtimeConfig.public.baseUrlCreate;
+
+const categories = await fetchDataWithLimit('categories', 2);
+
+const products = await fetchDataWithLimit('products', 2);
 
 async function logout() {
     try {
-        const { error } = await client.auth.signOut()
+        const data = await logoutFn();
 
-        if (error) throw (error)
-
-        await navigateTo('/login')
-
+        if (data) {
+            navigateTo('/login');
+        }
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
 }
-
 </script>
 
 <template>
     <div class="container mx-auto px-5 font-sans">
         <div class="flex flex-col gap-8">
+
             <div class="flex flex-col gap-6">
                 <div class="flex justify-between items-center gap-4 flex-wrap">
                     <h3 class="text-3xl font-semibold mb-2">
                         Categorie
                     </h3>
                     <div class="flex gap-4 flex-wrap items-center">
-                        <NuxtLink to="/dashboard/create/category"
-                            class="block px-4 py-1 border border-pcasa-accent hover:bg-pcasa-accent rounded-lg text-pcasa-text transition">
-                            Aggiungi Categoria
-                        </NuxtLink>
+                        <ButtonAddToLink
+                            :element="{ link: BASE_CREATE_URL + '/category', title: 'Aggiungi categoria' }" />
                         <NuxtLink to="/dashboard/categories"
                             class="text-pcasa-text/75 hover:text-pcasa-text transition flex gap-2 items-center">
                             Vedi tutti
@@ -48,23 +43,22 @@ async function logout() {
                 </div>
                 <div v-if="categories" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     <template v-for="(category, i) in categories" :key="i + '-category'">
-                        <CardCategories :category="category" />
+                        <CardCategories :element="category" />
                     </template>
                 </div>
-                <div v-if="!categories">
-                    <p>Nessuna categoria</p>
-                </div>
+                <template v-if="!categories || categories.length == 0">
+                    <p class="text-pcasa-text">Nessuna categoria caricata</p>
+                </template>
             </div>
+
             <div class="flex flex-col gap-6">
                 <div class="flex justify-between items-center gap-4 flex-wrap">
                     <h3 class="text-3xl font-semibold mb-2">
                         Prodotti
                     </h3>
                     <div class="flex gap-4 flex-wrap items-center">
-                        <NuxtLink to="/dashboard/create/product"
-                            class="block px-4 py-1 border border-pcasa-accent hover:bg-pcasa-accent rounded-lg text-pcasa-text transition">
-                            Aggiungi Prodotto
-                        </NuxtLink>
+                        <ButtonAddToLink
+                            :element="{ link: BASE_CREATE_URL + '/product', title: 'Aggiungi prodotto' }" />
                         <NuxtLink to="/dashboard/products"
                             class="text-pcasa-text/75 hover:text-pcasa-text transition flex gap-2 items-center">
                             Vedi tutti
@@ -74,12 +68,12 @@ async function logout() {
                 </div>
                 <div v-if="products" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     <template v-for="(product, i) in products" :key="i + '-product'">
-                        <CardProducts :product="product" />
+                        <CardProducts :element="product" />
                     </template>
                 </div>
-                <div v-if="!products">
-                    <p class="text-pcasa-text">Nessuna prodotto</p>
-                </div>
+                <template v-if="!products || products.length == 0">
+                    <p class="text-pcasa-text">Nessuna prodotto caricato</p>
+                </template>
             </div>
         </div>
         <button type="button" @click="logout()"

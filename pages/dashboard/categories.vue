@@ -1,10 +1,11 @@
 <script setup>
-const client = useSupabaseClient();
+const { fetchData } = useMySupabaseApi()
 
-const { data } = await client
-    .from('categories')
-    .select('*');
+const runtimeConfig = useRuntimeConfig()
 
+const BASE_CREATE_URL = runtimeConfig.public.baseUrlCreate;
+
+const categories = await fetchData('categories');
 </script>
 
 <template>
@@ -16,16 +17,16 @@ const { data } = await client
                 <h1 class="title-standard leading-none mb-4 font-serif">
                     Categorie
                 </h1>
-                <NuxtLink to="/dashboard/create/category"
-                    class="block px-4 py-1 border border-pcasa-accent hover:bg-pcasa-accent rounded-lg text-pcasa-text transition">
-                    Aggiungi Categoria
-                </NuxtLink>
+                <ButtonAddToLink :element="{ link: BASE_CREATE_URL + '/category', title: 'Aggiungi categoria' }" />
             </div>
 
-            <div v-if="data" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <template v-for="(element, i) in data" :key="i + '-category'">
-                    <CardCategories :category="element" />
+            <div v-if="categories" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <template v-for="(category, i) in categories" :key="i + '-category'">
+                    <CardCategories :element="category" />
                 </template>
+            </div>
+            <div v-else-if="!categories || categories.length == 0">
+                <p class="text-pcasa-text">Nessuna categoria caricata</p>
             </div>
         </div>
     </section>

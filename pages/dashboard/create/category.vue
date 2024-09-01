@@ -1,7 +1,10 @@
 <script setup>
 const client = useSupabaseClient()
 
+const { createFn } = useMySupabaseApi();
+
 const errorMessage = ref(null);
+
 const isLoading = ref(false);
 
 const category = ref({
@@ -9,16 +12,6 @@ const category = ref({
     description: null,
     slug: null,
 });
-
-function createSlug(string) {
-    return string
-        .toLowerCase()                       // Convert to lowercase
-        .trim()                              // Remove leading/trailing spaces
-        .replace(/[^a-z0-9\s-]/g, '')        // Remove special characters
-        .replace(/\s+/g, '-')                // Replace spaces with hyphens
-        .replace(/-+/g, '-')                 // Replace multiple hyphens with a single hyphen
-        .replace(/^-+|-+$/g, '');            // Trim hyphens from the start and end
-}
 
 async function create() {
     isLoading.value = true;
@@ -28,20 +21,14 @@ async function create() {
 
         category.value.slug = createSlug(category.value.name);
 
-        const { data, error } = await client
-            .from('categories')
-            .insert([
-                category.value,
-            ])
-            .select();
+        await createFn('categories', category.value);
 
-        if (error) throw (error);
         isLoading.value = false;
 
+        navigateTo('/dashboard');
     } catch (error) {
         isLoading.value = false;
         errorMessage.value = error?.message;
-        console.log(error)
     }
 }
 

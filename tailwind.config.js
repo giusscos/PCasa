@@ -16,7 +16,7 @@ module.exports = {
         'pcasa-text': '#f7f7f7',
         'pcasa-accent': '#0063a5',
         'pcasa-accent-dark': '#05141d',
-        'pcasa-accent-alt': '#00522e',
+        'pcasa-accent-alt': '#008048',
         'pcasa-error': '#B31312',
         'pcasa-gold': '#ce9f69',
       }

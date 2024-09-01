@@ -1,9 +1,12 @@
 <script setup>
-import { v4 } from 'uuid'  // Importa la funzione per generare UUID
+import { v4 } from 'uuid'
 
-const client = useSupabaseClient()
+const { fetchData, createFn, updateFn, createStorageFile } = useMySupabaseApi();
+
+const categories = await fetchData('categories', 'id, name');
 
 const errorMessage = ref(null);
+
 const isLoading = ref(false);
 
 const product = ref({
@@ -19,11 +22,8 @@ const product = ref({
 const id_category = ref(0);
 
 const images = ref([])
-const imageUrls = ref([])
 
-const { data: categories } = await client
-    .from('categories')
-    .select('id, name');
+const imageUrls = ref([])
 
 const removeImage = (index) => {
     images.value.splice(index, 1);
@@ -51,16 +51,6 @@ const handleFileChange = (event) => {
     }
 }
 
-function createSlug(string) {
-    return string
-        .toLowerCase()                       // Convert to lowercase
-        .trim()                              // Remove leading/trailing spaces
-        .replace(/[^a-z0-9\s-]/g, '')        // Remove special characters
-        .replace(/\s+/g, '-')                // Replace spaces with hyphens
-        .replace(/-+/g, '-')                 // Replace multiple hyphens with a single hyphen
-        .replace(/^-+|-+$/g, '');            // Trim hyphens from the start and end
-}
-
 async function create() {
     isLoading.value = true;
 
@@ -69,48 +59,24 @@ async function create() {
 
         product.value.slug = createSlug(product.value.name);
 
-        const { data: productCreated, error } = await client
-            .from('products')
-            .insert([
-                product.value,
-            ])
-            .select();
+        const productCreated = await createFn('products', product.value)
 
-        if (error) throw (error);
+        const imageData = await createStorageFile('images', productCreated.id, images.value)
 
-        for (const image of images.value) {
-            const { data: imageData, error } = await client
-                .storage
-                .from('images')
-                .upload(`${productCreated[0].id}/${image.uuid}`, image.file)
+        imageUrls.value = imageData
 
-            imageUrls.value.push(imageData.path.split('/')[1]);
+        await updateFn('products', 'id', productCreated.id, { image_url: imageUrls.value })
 
-            if (error) throw (error);
-        }
-
-        await client
-            .from('products')
-            .update({ image_url: imageUrls.value })
-            .eq('id', productCreated[0].id)
-            .select();
-
-        await client
-            .from('product_category')
-            .insert([
-                { id_category: id_category.value, id_product: productCreated[0].id },
-            ])
-            .select();
+        await createFn('product_category', { id_category: id_category.value, id_product: productCreated.id })
 
         isLoading.value = false;
 
+        navigateTo('/dashboard');
     } catch (error) {
         isLoading.value = false;
         errorMessage.value = error?.message;
-        console.log(error)
     }
 }
-
 </script>
 
 <template>
@@ -128,9 +94,13 @@ async function create() {
                     </p>
                     <input class="sr-only" type="file" id="images" name="images" multiple accept="image/*"
                         @change="handleFileChange" :disabled="images.length >= 5" />
-                    <div v-if="images.length <= 5"
+                    <div v-if="images.length < 5"
                         class="h-24 w-24 aspect-square rounded-lg bg-pcasa-text/10 flex justify-center items-center cursor-pointer">
                         <IconPlus />
+                    </div>
+                    <div v-if="images.length == 5"
+                        class="h-24 w-24 aspect-square rounded-lg bg-pcasa-text/10 flex justify-center items-center cursor-pointer">
+                        5/5
                     </div>
                 </label>
                 <div v-if="images.length > 0" class="flex items-center justify-center gap-4">

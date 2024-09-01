@@ -3,7 +3,7 @@ let headerState = menuState();
 let isExpanded = menuToggleState();
 
 const closeMenu = () => {
-    if (this.headerState !== 'opened') return
+    if (headerState.value !== 'opened') return
 
     isExpanded.value = !isExpanded.value
 

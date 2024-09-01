@@ -1,7 +1,17 @@
-<script setup>
-const props = defineProps(['category']);
+<script setup lang="ts">
+const { deleteFn } = useMySupabaseApi()
 
-const element = ref(props.category);
+const props = defineProps(['element']);
+
+const element = ref(props.element);
+
+async function deleteCategory() {
+    try {
+        await deleteFn('categories', 'id', element.id);
+    } catch (error) {
+        console.log(error);
+    }
+}
 </script>
 
 <template>
@@ -9,11 +19,11 @@ const element = ref(props.category);
         <h4 class="font-semibold text-xl">{{ element.name }}</h4>
         <p class="grow truncate">{{ element.description }}</p>
         <div class="flex gap-4 justify-end items-center">
-            <NuxtLink :to="'/dashboard/edit/category/' + element.id"
+            <NuxtLink :to="'/dashboard/edit/category/' + element.slug"
                 class="px-4 py-1 border-2 border-pcasa-accent hover:bg-pcasa-accent hover:text-pcasa-text rounded-lg transition font-semibold">
                 Modifica
             </NuxtLink>
-            <button type="button"
+            <button type="button" @click="deleteCategory"
                 class="px-4 py-1 border-2 border-pcasa-error hover:bg-pcasa-error hover:text-pcasa-text rounded-lg transition font-semibold">
                 Elimina
             </button>

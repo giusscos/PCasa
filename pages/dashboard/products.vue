@@ -1,10 +1,11 @@
 <script setup>
-const client = useSupabaseClient();
+const { fetchData } = useMySupabaseApi()
 
-const { data } = await client
-    .from('products')
-    .select('*');
+const runtimeConfig = useRuntimeConfig()
 
+const BASE_CREATE_URL = runtimeConfig.public.baseUrlCreate;
+
+const products = await fetchData('products');
 </script>
 
 <template>
@@ -16,16 +17,16 @@ const { data } = await client
                 <h1 class="title-standard leading-none mb-4 font-serif">
                     Prodotti
                 </h1>
-                <NuxtLink to="/dashboard/create/product"
-                    class="block px-4 py-1 border border-pcasa-accent hover:bg-pcasa-accent rounded-lg text-pcasa-text transition">
-                    Aggiungi prodotto
-                </NuxtLink>
+                <ButtonAddToLink :element="{ link: BASE_CREATE_URL + '/product', title: 'Aggiungi prodotto' }" />
             </div>
 
-            <div v-if="data" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <template v-for="(element, i) in data" :key="i + '-product'">
-                    <CardProducts :product="element" />
+            <div v-if="products" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <template v-for="(product, i) in products" :key="i + '-product'">
+                    <CardProducts :element="product" />
                 </template>
+            </div>
+            <div v-else-if="!products || products.length == 0">
+                <p class="text-pcasa-text">Nessun prodotto caricato</p>
             </div>
         </div>
     </section>

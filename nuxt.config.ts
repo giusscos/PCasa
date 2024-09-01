@@ -56,8 +56,13 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/css/main.css"],
   runtimeConfig: {
+    supabaseUrl: process.env.SUPABASE_URL,
+    supabaseKey: process.env.SUPABASE_KEY,
+    supabaseBaseStorage: process.env.NUXT_PUBLIC_BASE_STORAGE_URL,
+    
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://pcasa.it",
+      baseUrlCreate: '/dashboard/create',
     },
   },
   postcss: {
@@ -85,11 +90,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: [
-    "@nuxt/image",
-    "nuxt-simple-sitemap",
-    "@nuxtjs/supabase",
-  ],
+  modules: ["@nuxt/image", "nuxt-simple-sitemap", "@nuxtjs/supabase"],
   supabase: {
     redirect: false,
     redirectOptions: {

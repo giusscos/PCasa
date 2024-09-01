@@ -7,6 +7,7 @@
     --color-white: #f7f7f7;
     --color-black: #101010;
     --color-blue: #0063a5;
+    --color-green: #008048;
 
     --animation-fast: 400ms cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
     --animation-fast-delay: 400ms cubic-bezier(0.215, 0.610, 0.355, 1) forwards 500ms;

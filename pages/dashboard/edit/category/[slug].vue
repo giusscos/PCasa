@@ -1,53 +1,15 @@
 <script setup>
-const client = useSupabaseClient()
-
 const route = useRoute();
 
+const { fetchDataId, updateFn } = useMySupabaseApi();
+
+const catSlug = route.params.slug;
+
+const category = await fetchDataId('categories', 'slug', catSlug);
+
 const errorMessage = ref(null);
+
 const isLoading = ref(false);
-
-const category = ref({
-    name: null,
-    description: null,
-    slug: null,
-});
-
-onMounted(() => {
-    getData();
-})
-
-async function getData() {
-    isLoading.value = true;
-
-    try {
-        errorMessage.value = null;
-
-        const { data, error } = await client
-            .from('categories')
-            .select()
-            .eq('id', route.params.id);
-
-        if (error) throw (error);
-
-        category.value = data[0];
-        isLoading.value = false;
-
-    } catch (error) {
-        isLoading.value = false;
-        errorMessage.value = error?.message;
-        console.log(error)
-    }
-}
-
-function createSlug(string) {
-    return string
-        .toLowerCase()                       // Convert to lowercase
-        .trim()                              // Remove leading/trailing spaces
-        .replace(/[^a-z0-9\s-]/g, '')        // Remove special characters
-        .replace(/\s+/g, '-')                // Replace spaces with hyphens
-        .replace(/-+/g, '-')                 // Replace multiple hyphens with a single hyphen
-        .replace(/^-+|-+$/g, '');            // Trim hyphens from the start and end
-}
 
 async function update() {
     isLoading.value = true;
@@ -55,25 +17,18 @@ async function update() {
     try {
         errorMessage.value = null;
 
-        category.value.slug = createSlug(category.value.name);
+        category.slug = createSlug(category.name);
 
-        const { data, error } = await client
-            .from('categories')
-            .update(category.value)
-            .eq('id', route.params.id)
-            .select();
-
-        if (error) throw (error);
+        await updateFn('categories', 'slug', catSlug, category);
 
         isLoading.value = false;
 
+        navigateTo('/dashboard');
     } catch (error) {
         isLoading.value = false;
         errorMessage.value = error?.message;
-        console.log(error)
     }
 }
-
 </script>
 
 <template>
