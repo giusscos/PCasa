@@ -1,5 +1,5 @@
 <script setup>
-const client = useSupabaseClient()
+const { signUpFn } = useMySupabaseApi();
 
 const credentials = ref({
     email: null,
@@ -7,6 +7,7 @@ const credentials = ref({
 });
 
 const errorMessage = ref(null);
+
 const successMessage = ref(null);
 
 async function login() {
@@ -15,14 +16,11 @@ async function login() {
 
         successMessage.value = null;
 
-        const { data, error } = await client.auth.signUp({
-            email: credentials.value.email,
-            password: credentials.value.password,
-        })
+        const data = await signUpFn(credentials.value);
 
-        if (error) throw (error)
-
-        successMessage.value = "Controlla la tua email per verificarla"
+        if (data) {
+            successMessage.value = "Controlla la tua email per verificarla"
+        }
     } catch (error) {
         errorMessage.value = error?.message
     }
@@ -57,8 +55,7 @@ async function login() {
                     <input class="bg-transparent focus:outline-none w-full" type="email" id="email" name="email"
                         v-model="credentials.email" placeholder="Inserisci la tua email" required>
                 </label>
-                <label class="font-semibold text-lg" for="password"
-                    title="Inserisci una password sicura">
+                <label class="font-semibold text-lg" for="password" title="Inserisci una password sicura">
                     <p class="text-xs mb-1">
                         Password
                     </p>
@@ -73,7 +70,8 @@ async function login() {
                     class="block w-fit font-semibold text-2xl text-pcasa-text/75 hover:text-pcasa-text">
                     Registrati
                 </button>
-                <NuxtLink to="/login" class="font-semibold hover:underline text-pcasa-accent/75 hover:text-pcasa-accent">
+                <NuxtLink to="/login"
+                    class="font-semibold hover:underline text-pcasa-accent/75 hover:text-pcasa-accent">
                     Hai già creato un profilo? Accedi da qui
                 </NuxtLink>
             </div>

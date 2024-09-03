@@ -61,7 +61,7 @@ async function create() {
 
         const productCreated = await createFn('products', product.value)
 
-        const imageData = await createStorageFile('images', productCreated.id, images.value)
+        const imageData = await createStorageFile('images', productCreated.slug, images.value)
 
         imageUrls.value = imageData
 
@@ -71,7 +71,7 @@ async function create() {
 
         isLoading.value = false;
 
-        navigateTo('/dashboard');
+        await navigateTo('/dashboard');
     } catch (error) {
         isLoading.value = false;
         errorMessage.value = error?.message;

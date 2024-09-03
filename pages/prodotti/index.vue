@@ -30,11 +30,11 @@ const products = await fetchData('products');
     <div class="container mx-auto font-sans">
       <ButtonBack />
 
-      <h1 class="title-standard leading-none mb-4 font-serif">
+      <h2 class="title-standard leading-none mb-4 font-serif">
         Prodotti
-      </h1>
+      </h2>
 
-      <div v-if="products" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div v-if="products || products.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <template v-for="(product, i) in products" :key="i + '-product'">
           <CardProductsInfo :element="product" />
         </template>

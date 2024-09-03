@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { deleteFn } = useMySupabaseApi()
+const { deleteFn, deleteStorage } = useMySupabaseApi()
 
 const props = defineProps(['element']);
 
@@ -7,7 +7,9 @@ const element = ref(props.element);
 
 async function deleteCategory() {
     try {
-        await deleteFn('categories', 'id', element.id);
+        await deleteStorage('images', element.value.slug, element.value.image_url);
+
+        await deleteFn('categories', 'id', element.value.id);
     } catch (error) {
         console.log(error);
     }

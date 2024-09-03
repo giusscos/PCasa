@@ -41,7 +41,7 @@
       </div>
     </div>
   </section>
-  <MainProd />
+  <Categories />
   <section class="section py-20">
     <div class="container mx-auto px-4">
       <h2 class="pb-4 title-sm leading-none">

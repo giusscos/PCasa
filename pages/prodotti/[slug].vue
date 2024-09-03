@@ -1,21 +1,42 @@
 <script setup>
 const route = useRoute();
 
+const BASE_STORAGE_URL = "https://eaayjammgfuuuqsxetie.supabase.co/storage/v1/object/public/images";
+
 const { fetchDataId } = useMySupabaseApi();
 
 const product = await fetchDataId('products', 'slug', route.params.slug, '*, categories(*)');
 
-const BASE_STORAGE_URL = "https://eaayjammgfuuuqsxetie.supabase.co/storage/v1/object/public/images";
+useHead({
+    title: product.name + " - Pcasa",
+    meta: [
+        { name: 'description', content: product.description },
+
+        // Facebook
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://pcasa.it/prodotti' },
+        { property: 'og:title', content: product.name + " - Pcasa" },
+        { property: 'og:description', content: product.description },
+        { property: 'og:image', content: 'https://pcasa.it/pcasa-social-meta.png' },
+
+        // Twitter 
+        { property: 'twitter:card', content: 'summary_large_image' },
+        { property: 'twitter:url', content: 'https://pcasa.it/prodotti' },
+        { property: 'twitter:title', content: product.name + " - Pcasa" },
+        { property: 'twitter:description', content: product.description },
+        { property: 'twitter:image', content: 'https://pcasa.it/pcasa-social-meta.png' }
+    ]
+});
 </script>
 <template>
     <section>
         <div v-if="product" class="container mx-auto font-sans">
             <ButtonBack />
 
-            <div class="py-5 grid grid-cols-2 gap-6">
+            <div class="py-5 grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="w-full h-full grid grid-cols-2 gap-6 overflow-hidden">
                     <template v-for="(image, i) in product.image_url" :key="'template-image-' + i">
-                        <img :src="BASE_STORAGE_URL + '/' + product.id + '/' + image"
+                        <img :src="BASE_STORAGE_URL + '/' + product.slug + '/' + image"
                             :title="'Immagine ' + product.name + ' ' + i"
                             class="object-center object-cover h-full w-full rounded-lg"
                             :class="(i == 0 || i == 3) && 'col-span-2'" />
@@ -30,19 +51,15 @@ const BASE_STORAGE_URL = "https://eaayjammgfuuuqsxetie.supabase.co/storage/v1/ob
                     <span class="block mb-2"
                         :class="product.quantity > 10 ? 'text-pcasa-accent-alt' : 'text-pcasa-error'">
                         {{ product.quantity > 10 ? 'Più di 10 rimasti' : 'Meno di 10 rimasti!' }}</span>
-                    <button
-                        class="px-4 w-full py-1 border-2 border-pcasa-text hover:bg-pcasa-text hover:text-pcasa-bg rounded-lg transition font-semibold">
-                        Aggiungi al carrello
-                    </button>
                 </div>
             </div>
-
         </div>
+
         <div v-else-if="!product" class="container mx-auto font-sans">
             <ButtonBack />
 
             <span class="title-standard leading-none mb-4 font-serif">
-                Nessun prodotto trovato :(
+                Nessun prodotto trovato
             </span>
         </div>
     </section>

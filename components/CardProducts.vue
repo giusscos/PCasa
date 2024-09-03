@@ -9,9 +9,9 @@ const element = ref(props.element);
 
 async function deleteProduct() {
     try {
-        await deleteStorage('images', element.id, element.imageUrls);
-
-        await deleteFn('products', 'id', element.id);
+        await deleteStorage('images', element.value.slug, element.value.image_url);
+        
+        await deleteFn('products', 'id', element.value.id);
     } catch (error) {
         console.log(error);
     }
@@ -21,7 +21,7 @@ async function deleteProduct() {
 <template>
     <div class="border border-pcasa-text/25 bg-pcasa-text/10 rounded-xl p-4 flex flex-col gap-2">
         <img class="object-contain object-center rounded-md aspect-square"
-            :src="BASE_STORAGE_URL + '/' + element.id + '/' + element.image_url[0]"
+            :src="BASE_STORAGE_URL + '/' + element.slug + '/' + element.image_url[0]"
             :title="'Copertina prodotto ' + element.name" />
         <h4 class="font-semibold text-xl">{{ element.name }}</h4>
         <div class="flex gap-4 justify-end items-center">

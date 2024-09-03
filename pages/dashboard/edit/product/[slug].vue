@@ -13,9 +13,9 @@ const categories = await fetchData('categories', 'id, name');
 
 const idCategory = ref(0);
 
-const imageUrls = ref([]);
-
 const product = ref();
+
+const imageUrls = ref([]);
 
 const data = await fetchDataId('products', 'slug', prodSlug, '*, categories(id, name)');
 
@@ -37,7 +37,7 @@ const removeImage = (index) => {
 
 const removeExistingImage = async (uuid) => {
     try {
-        await deleteStorage('images', product.value.id, [uuid]);
+        await deleteStorage('images', product.value.slug, [uuid]);
 
         const newImageUrls = await updateFn('products', 'id', product.value.id, { image_url: product.value.image_url.filter((url) => url != uuid) }, 'image_url');
 
@@ -78,13 +78,11 @@ async function update() {
             await updateFn('product_category', 'id_product', product.value.id, { id_category: idCategory.value })
         }
 
-        const imageData = await createStorageFile('images', product.value.id, images.value)
+        const imageData = await createStorageFile('images', product.value.slug, images.value)
 
         imageData.forEach(element => {
             product.value.image_url.push(element);
         });
-
-        images.value = [];
 
         product.value.slug = createSlug(product.value.name);
 
@@ -107,7 +105,7 @@ async function update() {
 
 async function deleteProduct() {
     try {
-        await deleteStorage('images', product.value.id, product.value.image_url);
+        await deleteStorage('images', product.value.slug, product.value.image_url);
 
         await deleteFn('products', 'id', product.value.id);
 
@@ -155,7 +153,7 @@ async function deleteProduct() {
                                 class="h-7 w-auto aspect-square p-1 bg-pcasa-error text-pcasa-text rounded-full absolute -top-2 -right-2">
                                 <IconMinus />
                             </button>
-                            <img :src="BASE_STORAGE_URL + '/' + product.id + '/' + imageUrl"
+                            <img :src="BASE_STORAGE_URL + '/' + product.slug + '/' + imageUrl"
                                 :alt="'Anteprima immagine prodotto caricato ' + i"
                                 class="h-24 w-24 aspect-square object-contain object-center rounded-lg" />
                         </div>

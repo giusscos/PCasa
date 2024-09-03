@@ -1,6 +1,36 @@
 export const useMySupabaseApi = () => {
   const client = useSupabaseClient();
 
+  const signUpFn = async (credentials: { email: string; password: string }) => {
+    try {
+      const { data, error } = await client.auth.signUp({
+        email: credentials.email,
+        password: credentials.password,
+      });
+
+      if (error) throw error;
+
+      return data;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const loginFn = async (credentials: { email: string; password: string }) => {
+    try {
+      const { error } = await client.auth.signInWithPassword({
+        email: credentials.email,
+        password: credentials.password,
+      });
+
+      if (error) throw error;
+
+      return true;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const logoutFn = async () => {
     try {
       const { error } = await client.auth.signOut();
@@ -165,6 +195,8 @@ export const useMySupabaseApi = () => {
   };
 
   return {
+    signUpFn,
+    loginFn,
     logoutFn,
     fetchData,
     fetchDataId,

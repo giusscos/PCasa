@@ -1,5 +1,5 @@
 <script setup>
-const client = useSupabaseClient();
+const { loginFn } = useMySupabaseApi();
 
 const credentials = ref({
     email: null,
@@ -12,17 +12,13 @@ async function login() {
     try {
         errorMessage.value = null;
 
-        const { error } = await client.auth.signInWithPassword({
-            email: credentials.value.email,
-            password: credentials.value.password,
-        })
+        const data = await loginFn(credentials.value);
 
-        if (error) throw (error)
-
-        await navigateTo('/dashboard')
-
+        if (data) {
+            await navigateTo('/dashboard');
+        }
     } catch (error) {
-        errorMessage.value = error?.message
+        errorMessage.value = error?.message;
     }
 }
 </script>
@@ -45,18 +41,19 @@ async function login() {
                     <p class="text-xs mb-1">
                         Password
                     </p>
-                    <input class="bg-transparent focus:outline-none w-full" type="password" id="password" name="password"
-                        v-model="credentials.password" placeholder="Inserisci la tua password" required>
+                    <input class="bg-transparent focus:outline-none w-full" type="password" id="password"
+                        name="password" v-model="credentials.password" placeholder="Inserisci la tua password" required>
                 </label>
                 <p v-if="errorMessage" class="font-bold text-md text-red-500">{{ errorMessage }}</p>
             </div>
             <div class="flex flex-col gap-4">
-                <button type="submit" class="block w-fit font-semibold text-2xl text-pcasa-text/75 hover:text-pcasa-text">
+                <button type="submit"
+                    class="block w-fit font-semibold text-2xl text-pcasa-text/75 hover:text-pcasa-text">
                     Accedi
                 </button>
-                <NuxtLink to="/register" class="font-semibold hover:underline text-pcasa-accent/75 hover:text-pcasa-accent">
+                <!-- <NuxtLink to="/register" class="font-semibold hover:underline text-pcasa-accent/75 hover:text-pcasa-accent">
                     Non hai ancora un profilo? Crealo da qui
-                </NuxtLink>
+                </NuxtLink> -->
             </div>
         </form>
     </section>
