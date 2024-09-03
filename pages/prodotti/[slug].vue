@@ -14,14 +14,14 @@ useHead({
 
         // Facebook
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://pcasa.it/prodotti' },
+        { property: 'og:url', content: 'https://pcasa.it/prodotti/' + route.params.slug },
         { property: 'og:title', content: product.name + " - Pcasa" },
         { property: 'og:description', content: product.description },
         { property: 'og:image', content: 'https://pcasa.it/pcasa-social-meta.png' },
 
         // Twitter 
         { property: 'twitter:card', content: 'summary_large_image' },
-        { property: 'twitter:url', content: 'https://pcasa.it/prodotti' },
+        { property: 'twitter:url', content: 'https://pcasa.it/prodotti/' + route.params.slug },
         { property: 'twitter:title', content: product.name + " - Pcasa" },
         { property: 'twitter:description', content: product.description },
         { property: 'twitter:image', content: 'https://pcasa.it/pcasa-social-meta.png' }

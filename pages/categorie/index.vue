@@ -2,20 +2,20 @@
 useHead({
     title: "Categorie prodotti - Pcasa",
     meta: [
-        { name: 'description', content: "Scopri e acquista detersivi alla spina ecologici e prodotti tipici calabresi. Scopri e porta i sapori della calabria sulla tua tavola." },
+        { name: 'description', content: "Scopri tutte le categorie di prodotti Pcasa. Dai detersivi, all'artigianato, dai prodotti per la casa ecologici ai prodotti tipici calabresi pronti per essere serviti sulla tua tavola." },
 
         // Facebook
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://pcasa.it/categorie' },
         { property: 'og:title', content: 'Categorie prodotti - Pcasa' },
-        { property: 'og:description', content: "Scopri e acquista detersivi alla spina ecologici e prodotti tipici calabresi. Scopri e porta i sapori della calabria sulla tua tavola." },
+        { property: 'og:description', content: "Scopri tutte le categorie di prodotti Pcasa. Dai detersivi, all'artigianato, dai prodotti per la casa ecologici ai prodotti tipici calabresi pronti per essere serviti sulla tua tavola." },
         { property: 'og:image', content: 'https://pcasa.it/pcasa-social-meta.png' },
 
         // Twitter 
         { property: 'twitter:card', content: 'summary_large_image' },
         { property: 'twitter:url', content: 'https://pcasa.it/categorie' },
         { property: 'twitter:title', content: 'Categorie prodotti - Pcasa' },
-        { property: 'twitter:description', content: "Scopri e acquista detersivi alla spina ecologici e prodotti tipici calabresi. Scopri e porta i sapori della calabria sulla tua tavola." },
+        { property: 'twitter:description', content: "Scopri tutte le categorie di prodotti Pcasa. Dai detersivi, all'artigianato, dai prodotti per la casa ecologici ai prodotti tipici calabresi pronti per essere serviti sulla tua tavola." },
         { property: 'twitter:image', content: 'https://pcasa.it/pcasa-social-meta.png' }
     ]
 })
@@ -30,15 +30,12 @@ const categories = await fetchData('categories');
         <div class="container mx-auto font-sans">
             <ButtonBack />
 
-            <h1 class="title-standard leading-none mb-4 font-serif">
+            <h2 class="title-standard leading-none mb-4 font-serif">
                 Categorie
-            </h1>
+            </h2>
 
-            <div v-if="categories || categories.length > 0"
-                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <template v-for="(category, i) in categories" :key="i + '-category'">
-                    <CardCategoriesInfo :element="category" />
-                </template>
+            <div v-if="categories" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
+                <CardCategoryInfo :element="category" v-for="(category, i) in categories" :key="'category-' + i" />
             </div>
             <div v-else-if="!categories || categories.length == 0">
                 <p class="text-pcasa-text">Nessuna categoria disponibile</p>

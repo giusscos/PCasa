@@ -14,14 +14,14 @@ useHead({
 
         // Facebook
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://pcasa.it/categorie' },
+        { property: 'og:url', content: 'https://pcasa.it/categorie/' + route.params.slug },
         { property: 'og:title', content: category.name + " - Pcasa" },
         { property: 'og:description', content: category.description },
         { property: 'og:image', content: 'https://pcasa.it/pcasa-social-meta.png' },
 
         // Twitter 
         { property: 'twitter:card', content: 'summary_large_image' },
-        { property: 'twitter:url', content: 'https://pcasa.it/categorie' },
+        { property: 'twitter:url', content: 'https://pcasa.it/categorie/' + route.params.slug },
         { property: 'twitter:title', content: category.name + " - Pcasa" },
         { property: 'twitter:description', content: category.description },
         { property: 'twitter:image', content: 'https://pcasa.it/pcasa-social-meta.png' }

@@ -11,6 +11,11 @@ const navLinks = ref([
         'title': 'Visita la pagina dei prodotti',
     },
     {
+        'name': 'categorie',
+        'nameRoute': '/categorie',
+        'title': 'Visita la pagina delle categorie',
+    },
+    {
         'name': 'ecologia',
         'nameRoute': '/ecologia',
         'title': 'Scopri come fare ecologia',
