@@ -76,8 +76,9 @@ async function logout() {
                 </template>
             </div>
         </div>
+
         <button type="button" @click="logout()"
-            class="font-semibold text-xl text-pcasa-error/75 hover:text-pcasa-error">
+            class="my-4 font-semibold text-xl text-pcasa-error/75 hover:text-pcasa-error transition">
             Disconnettiti
         </button>
     </div>

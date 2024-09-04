@@ -6,19 +6,14 @@ const user = useSupabaseUser();
 
 const navLinks = ref([
     {
-        'name': 'prodotti',
-        'nameRoute': '/prodotti',
-        'title': 'Visita la pagina dei prodotti',
-    },
-    {
         'name': 'categorie',
         'nameRoute': '/categorie',
         'title': 'Visita la pagina delle categorie',
     },
     {
-        'name': 'ecologia',
-        'nameRoute': '/ecologia',
-        'title': 'Scopri come fare ecologia',
+        'name': 'prodotti',
+        'nameRoute': '/prodotti',
+        'title': 'Visita la pagina dei prodotti',
     },
     {
         'name': 'chi siamo',
