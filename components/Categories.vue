@@ -4,7 +4,7 @@ const { fetchDataWithLimit } = useMySupabaseApi();
 const categories = await fetchDataWithLimit('categories', 2);
 </script>
 <template>
-    <section class="section py-20">
+    <section v-if="categories.length > 0" class="section py-20">
         <div class="container mx-auto px-4 flex flex-col gap-y-4">
             <div class="flex gap-4 items-center">
                 <h2 class="title-sm leading-none mr-auto">

@@ -34,12 +34,12 @@ const categories = await fetchData('categories');
                 Categorie
             </h2>
 
-            <div v-if="categories" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
+            <div v-if="categories.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
                 <CardCategoryInfo :element="category" v-for="(category, i) in categories" :key="'category-' + i" />
             </div>
-            <div v-else-if="!categories || categories.length == 0">
-                <p class="text-pcasa-text">Nessuna categoria disponibile</p>
-            </div>
+            <template v-else-if="!categories || categories.length == 0">
+                <p class="text-pcasa-text">Nessuna categoria al momento disponibile</p>
+            </template>
         </div>
     </section>
 </template>

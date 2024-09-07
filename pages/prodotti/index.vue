@@ -34,14 +34,14 @@ const products = await fetchData('products');
         Prodotti
       </h2>
 
-      <div v-if="products || products.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div v-if="products.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <template v-for="(product, i) in products" :key="i + '-product'">
           <CardProductsInfo :element="product" />
         </template>
       </div>
-      <div v-else-if="!products || products.length == 0">
-        <p class="text-pcasa-text">Nessun prodotto caricato</p>
-      </div>
+      <template v-else-if="!products || products.length == 0">
+        <p class="text-pcasa-text">Nessun prodotto al momento disponibile</p>
+      </template>
     </div>
   </section>
 </template>
