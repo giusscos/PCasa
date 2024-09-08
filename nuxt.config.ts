@@ -92,13 +92,13 @@ export default defineNuxtConfig({
   },
   modules: ["@nuxt/image", "nuxt-simple-sitemap", "@nuxtjs/supabase"],
   supabase: {
-    // redirect: false,
-    // redirectOptions: {
-    //   login: "/",
-    //   callback: "/confirm",
-    //   include: undefined,
-    //   exclude: [],
-    //   cookieRedirect: false,
-    // },
+    redirect: false,
+    redirectOptions: {
+      login: "/",
+      callback: "/confirm",
+      include: undefined,
+      exclude: [],
+      cookieRedirect: false,
+    },
   },
 });
