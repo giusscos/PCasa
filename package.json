@@ -8,6 +8,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/devtools": "^1.5.1",
     "@nuxt/image": "^1.0.0-rc.1",
     "@nuxtjs/supabase": "^1.2.2",
     "@types/uuid": "^10.0.0",

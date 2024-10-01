@@ -6,12 +6,12 @@ export default defineNuxtConfig({
         lang: "it",
       },
       title:
-        "Ecologia in modo semplice, prodotti tipici e artigianato locale - Pcasa",
+        "Pcasa artigianato e prodotti per la casa",
       meta: [
         {
           name: "description",
           content:
-            "Ecologia smart con detersivi alla spina e artigianato locale pensati per ridurre l'utilizzo della plastica. Prodotti tipici locali per portare sulle vostre tavole i sapori della Calabria.",
+            "Scegli tra numerosi prodotti per l'arredamento della tua casa. Rendi la tua casa più sostenibile e confortevole con i prodotti Pcasa!",
         },
         { name: "author", content: "Giuseppe Pio Cosenza - giusscos" },
         { name: "theme-color", content: "#f0f0f0" },
@@ -21,12 +21,12 @@ export default defineNuxtConfig({
         {
           property: "og:title",
           content:
-            "Ecologia in modo semplice, prodotti tipici e artigianato locale - Pcasa",
+            "Pcasa artigianato e prodotti per la casa",
         },
         {
           property: "og:description",
           content:
-            "Ecologia smart con detersivi alla spina e artigianato locale pensati per ridurre l'utilizzo della plastica. Prodotti tipici locali per portare sulle vostre tavole i sapori della Calabria.",
+            "Scegli tra numerosi prodotti per l'arredamento della tua casa. Rendi la tua casa più sostenibile e confortevole con i prodotti Pcasa!",
         },
         {
           property: "og:image",
@@ -39,12 +39,12 @@ export default defineNuxtConfig({
         {
           property: "twitter:title",
           content:
-            "Ecologia in modo semplice, prodotti tipici e artigianato locale - Pcasa",
+            "Pcasa artigianato e prodotti per la casa",
         },
         {
           property: "twitter:description",
           content:
-            "Ecologia smart con detersivi alla spina e artigianato locale pensati per ridurre l'utilizzo della plastica. Prodotti tipici locali per portare sulle vostre tavole i sapori della Calabria.",
+            "Scegli tra numerosi prodotti per l'arredamento della tua casa. Rendi la tua casa più sostenibile e confortevole con i prodotti Pcasa!",
         },
         {
           property: "twitter:image",
