@@ -6,7 +6,7 @@ export default defineNuxtConfig({
         lang: "it",
       },
       title:
-        "Pcasa artigianato e prodotti per la casa",
+        "Pcasa | artigianato e prodotti per la casa",
       meta: [
         {
           name: "description",
@@ -21,7 +21,7 @@ export default defineNuxtConfig({
         {
           property: "og:title",
           content:
-            "Pcasa artigianato e prodotti per la casa",
+            "Pcasa | artigianato e prodotti per la casa",
         },
         {
           property: "og:description",
@@ -39,7 +39,7 @@ export default defineNuxtConfig({
         {
           property: "twitter:title",
           content:
-            "Pcasa artigianato e prodotti per la casa",
+            "Pcasa | artigianato e prodotti per la casa",
         },
         {
           property: "twitter:description",
