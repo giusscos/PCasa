@@ -105,7 +105,7 @@ const items = ref([
         "title": "Contatti",
         "paragraph": "Per domande sulla presente Privacy Policy o per esercitare i tuoi diritti, puoi contattarci tramite:",
         "list": [
-            "Email: privacy@pcasa.it",
+            "Email: giusscos@icloud.com",
             "Modulo di contatto disponibile sul nostro sito web."
         ]
     }
