@@ -90,7 +90,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ["@nuxt/image", "nuxt-simple-sitemap", "@nuxtjs/supabase"],
+  modules: ["@nuxt/image", "@nuxtjs/supabase"],
   supabase: {
     redirect: false,
     redirectOptions: {
