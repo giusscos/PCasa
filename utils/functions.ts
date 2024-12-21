@@ -1,5 +1,3 @@
-import { v4 } from 'uuid';
-
 export function createSlug(text: string) {
   return text
     .toLowerCase() // Convert to lowercase
