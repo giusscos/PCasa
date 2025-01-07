@@ -118,7 +118,7 @@ const items = ref([
         <h2 class="text-5xl font-bold">
             Privacy Policy
         </h2>
-        <p class="text-xl">
+        <p class="text-xl pt-2 pb-5">
             La presente Informativa sulla Privacy descrive le modalità di raccolta, utilizzo e protezione delle
             informazioni personali raccolte quando utilizzi il nostro sito e i nostri servizi.
         </p>
@@ -126,7 +126,7 @@ const items = ref([
             <h3 class="text-lg font-semibold">
                 {{ i + 1 }} - {{ item.title }}
             </h3>
-            <p>
+            <p class="py-2">
                 {{ item.paragraph }}
             <ul v-if="item.list.length > 0" class="list-disc px-8">
                 <template v-for="(itemList, j) in item.list" :key="j">
