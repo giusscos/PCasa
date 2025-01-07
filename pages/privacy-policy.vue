@@ -114,7 +114,7 @@ const items = ref([
 </script>
 
 <template>
-    <section class="sm:container sm:mx-auto">
+    <section class="sm:container sm:mx-auto font-sans">
         <h2 class="text-5xl font-bold">
             Privacy Policy
         </h2>
