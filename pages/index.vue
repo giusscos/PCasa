@@ -1,20 +1,25 @@
+<script setup lang="ts"></script>
+
 <template>
-  <section class="container mx-auto px-5 md:px-10 py-10 md:py-20 bg-pcasa-accent rounded-xl">
-    <div class="flex items-center py-10">
-      <div class="flex flex-col gap-y-4">
-        <h1 class="title-standard leading-none">
-          Ecologia smart
-        </h1>
-        <h2 class="paragraph-standard leading-tight">
-          Riutiliziamo la plastica in modo intelligente<br>evitando gli sprechi.
+  <!-- Jumbo -->
+  <section class="sm:container sm:mx-auto min-h-screen py-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      <div
+        class="min-h-96 bg-neutral-500 border border-neutral-300 rounded-xl flex items-center justify-center uppercase text-xl font-bold">
+        Photo
+      </div>
+      <div>
+        <h2 class="text-6xl font-bold">
+          Trova il prodotto giusto per le migliori occasioni
         </h2>
-        <NuxtLink to="/ecologia" title="Scopri come facciamo ecologia"
-          class="btn-standard border-pcasa-text hover:bg-pcasa-text hover:text-pcasa-accent shadow-xl">
-          Scopri come
-        </NuxtLink>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, porro earum! Veniam dolorum cum dignissimos
+          ut. Necessitatibus temporibus ullam mollitia sapiente, odit culpa id provident adipisci velit ea magni aut?
+        </p>
       </div>
     </div>
   </section>
+
   <section class="section py-20 rounded-t-2xl mt-[-1rem]">
     <div class="container mx-auto px-4">
       <h2 class="title-sm pb-4 leading-none">
