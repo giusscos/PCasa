@@ -54,7 +54,9 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", href: "/pcasa-icon.png" }],
     },
   },
+
   css: ["~/assets/css/main.css"],
+
   runtimeConfig: {
     supabaseUrl: process.env.SUPABASE_URL,
     supabaseKey: process.env.SUPABASE_KEY,
@@ -65,12 +67,14 @@ export default defineNuxtConfig({
       baseUrlCreate: '/dashboard/create',
     },
   },
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
   image: {
     // The screen sizes predefined by `@nuxt/image`:
     screens: {
@@ -90,7 +94,9 @@ export default defineNuxtConfig({
       },
     },
   },
+
   modules: ["@nuxt/image", "@nuxtjs/supabase"],
+
   supabase: {
     redirect: false,
     redirectOptions: {
@@ -101,4 +107,6 @@ export default defineNuxtConfig({
       cookieRedirect: false,
     },
   },
+
+  compatibilityDate: "2025-01-07",
 });

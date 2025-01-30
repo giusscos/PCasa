@@ -114,24 +114,26 @@ const items = ref([
 </script>
 
 <template>
-    <section>
-        <div class="container mx-auto flex flex-col gap-4">
-            <h1 class="title-standard">Privacy Policy</h1>
-            <p class="paragraph-sm">
-                La presente Informativa sulla Privacy descrive le modalità di raccolta, utilizzo e protezione delle
-                informazioni personali raccolte quando utilizzi il nostro sito e i nostri servizi.
+    <section class="sm:container sm:mx-auto font-sans">
+        <h2 class="text-5xl font-bold">
+            Privacy Policy
+        </h2>
+        <p class="text-xl pt-2 pb-5">
+            La presente Informativa sulla Privacy descrive le modalità di raccolta, utilizzo e protezione delle
+            informazioni personali raccolte quando utilizzi il nostro sito e i nostri servizi.
+        </p>
+        <template v-for="(item, i) in items" :key="i">
+            <h3 class="text-lg font-semibold">
+                {{ i + 1 }} - {{ item.title }}
+            </h3>
+            <p class="py-2">
+                {{ item.paragraph }}
+            <ul v-if="item.list.length > 0" class="list-disc px-8">
+                <template v-for="(itemList, j) in item.list" :key="j">
+                    <li>{{ itemList }}</li>
+                </template>
+            </ul>
             </p>
-            <template v-for="(item, i) in items" :key="i">
-                <h2 class="title-xs">{{ i + 1 }} - {{ item.title }}</h2>
-                <p class="paragraph-sm">
-                    {{ item.paragraph }}
-                <ul v-if="item.list.length > 0" class="list-disc px-8">
-                    <template v-for="(itemList, j) in item.list" :key="j">
-                        <li>{{ itemList }}</li>
-                    </template>
-                </ul>
-                </p>
-            </template>
-        </div>
+        </template>
     </section>
 </template>
