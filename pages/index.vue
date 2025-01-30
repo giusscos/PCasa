@@ -1,20 +1,18 @@
-<script setup lang="ts"></script>
-
 <template>
   <!-- Jumbo -->
   <section class="sm:container sm:mx-auto min-h-screen py-20">
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-      <div
+    <!-- <div class="grid grid-cols-1 sm:grid-cols-2 gap-8"> -->
+    <div class="grid grid-cols-1 text-center gap-8">
+      <!-- <div
         class="min-h-96 bg-neutral-500 border border-neutral-300 rounded-xl flex items-center justify-center uppercase text-xl font-bold">
         Photo
-      </div>
+      </div> -->
       <div>
         <h2 class="text-6xl font-bold">
-          Trova il prodotto giusto per le migliori occasioni
+          Il prodotto giusto per le migliori occasioni
         </h2>
         <p class="text-xl">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, porro earum! Veniam dolorum cum dignissimos
-          ut. Necessitatibus temporibus ullam mollitia sapiente, odit culpa id provident adipisci velit ea magni aut?
+          Scopri i nostri prodotti per la casa scelta con cura e attenzione per l'ambiente
         </p>
       </div>
     </div>
