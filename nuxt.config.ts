@@ -69,7 +69,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@nuxt/image"],
+  modules: ["@nuxt/image", "@nuxthub/core"],
 
   compatibilityDate: "2025-01-07",
 });
