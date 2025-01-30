@@ -58,13 +58,8 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
 
   runtimeConfig: {
-    supabaseUrl: process.env.SUPABASE_URL,
-    supabaseKey: process.env.SUPABASE_KEY,
-    supabaseBaseStorage: process.env.NUXT_PUBLIC_BASE_STORAGE_URL,
-    
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://pcasa.it",
-      baseUrlCreate: '/dashboard/create',
     },
   },
 
@@ -74,27 +69,6 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-
-  image: {
-    // The screen sizes predefined by `@nuxt/image`:
-    screens: {
-      xs: 320,
-      sm: 640,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
-      xxl: 1536,
-      "2xl": 1536,
-    },
-    presets: {
-      landingVertical: {
-        modifiers: {
-          format: "webp",
-        },
-      },
-    },
-  },
-
   modules: ["@nuxt/image"],
 
   compatibilityDate: "2025-01-07",
