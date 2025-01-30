@@ -95,18 +95,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/image", "@nuxtjs/supabase"],
-
-  supabase: {
-    redirect: false,
-    redirectOptions: {
-      login: "/",
-      callback: "/confirm",
-      include: undefined,
-      exclude: [],
-      cookieRedirect: false,
-    },
-  },
+  modules: ["@nuxt/image"],
 
   compatibilityDate: "2025-01-07",
 });
