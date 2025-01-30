@@ -8,10 +8,10 @@ let headerState = menuState();
         @animationend="headerState === 'closing' ? headerState = 'closed' : null">
         <div class="container mx-auto py-5 flex flex-wrap items-center justify-between gap-6">
             <TheLogo />
-            <p>👷‍♂️ Manutenzione 👷‍♀️</p>
             <ToggleMenu />
             <TheNav />
         </div>
+        <p class="py-2 text-center whitespace-nowrap">👷‍♂️ Manutenzione 👷‍♀️</p>
     </header>
 </template>
 <style>
