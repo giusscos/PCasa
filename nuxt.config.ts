@@ -57,19 +57,12 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/main.css"],
 
-  runtimeConfig: {
-    public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://pcasa.it",
-    },
-  },
-
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
-  modules: ["@nuxt/image", "@nuxthub/core"],
 
   compatibilityDate: "2025-01-07",
 });
